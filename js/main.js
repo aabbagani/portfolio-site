@@ -40,6 +40,9 @@
   var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal, .reveal-stagger"));
   if (revealEls.length) {
     if ("IntersectionObserver" in window) {
+      // threshold 0 + a bottom rootMargin fires as soon as the element's
+      // top edge crosses into view, regardless of how tall the element is
+      // (a fixed area-ratio threshold fails for tall stacked grids).
       var reveal = new IntersectionObserver(
         function (entries, obs) {
           entries.forEach(function (entry) {
@@ -49,7 +52,7 @@
             }
           });
         },
-        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        { threshold: 0, rootMargin: "0px 0px -12% 0px" }
       );
       revealEls.forEach(function (el) { reveal.observe(el); });
     } else {
