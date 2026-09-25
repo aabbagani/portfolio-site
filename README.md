@@ -7,10 +7,26 @@ Static site, no build step. Two pages:
 
 ## Before this goes live, fill in:
 
-- **Contact links** in `index.html` hero: `mailto:you@example.com` and the LinkedIn URL placeholder.
 - **Certificate links** — each cert card has a placeholder "Certificate" chip; swap in the real links.
-- **CliniCalm PRD link** — marked "link TBD" in the Projects section.
+- **Project links marked "link TBD"** — edit directly in `js/projects-data.js`, or use Admin Mode (below).
 - **Stellantis "View Presentation" link** — marked "link TBD" in Experience.
+
+## Editing Projects (Admin Mode)
+
+The Projects grid on `index.html` is data-driven from `js/projects-data.js` and rendered by `js/projects-render.js`. You can hand-edit that data file directly, or use the built-in Admin Mode:
+
+1. Open the site and click **Admin Mode** (floating button, bottom-right of Home).
+2. Each project card gets a pencil button — click it to edit name, category (dropdown, or "Other…" for a custom one), headline, description, tags, cover photo, and links (add/remove rows freely, leave a URL blank to show it as "link TBD").
+3. **+ Add Project** in the toolbar adds a new card the same way.
+4. A cover photo can be a URL/path, or use the file picker to upload an image directly — it's read into the page as a data URL, no server involved.
+
+**Important — this is client-side only.** Edits save to that browser's `localStorage`, so they're visible only to you, only on that browser, and only until you clear site data. They do **not** change the live site other visitors see, and they are **not** saved to this repo automatically. To make an edit permanent:
+
+1. Click **Export data file** in the Admin Mode toolbar — this downloads an updated `projects-data.js`.
+2. Replace `js/projects-data.js` in the repo with the downloaded file.
+3. Commit and push.
+
+**Reset changes** discards everything in `localStorage` and reverts to whatever is currently in the committed `js/projects-data.js`.
 
 ## Adding experience photos
 
