@@ -42,7 +42,7 @@
     });
   }
 
-  function cardHTML(project, index) {
+  function cardHTML(project, index, total) {
     var tags = (project.tags || []).map(function (t) {
       return '<span class="tag">' + esc(t) + "</span>";
     }).join("");
@@ -58,15 +58,28 @@
       ? '<div class="project-cover"><img src="' + esc(project.cover) + '" alt="" /></div>'
       : "";
 
-    var editBtn = document.body.classList.contains("admin-mode")
+    var admin = document.body.classList.contains("admin-mode");
+    var editBtn = admin
       ? '<button type="button" class="project-edit-btn" data-edit-index="' + index + '" aria-label="Edit project">' +
         '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg>' +
         "</button>"
       : "";
 
+    var moveControls = admin
+      ? '<div class="project-move-controls">' +
+        (index > 0
+          ? '<button type="button" class="project-move-btn" data-move-index="' + index + '" data-dir="up" aria-label="Move project earlier">▲</button>'
+          : '<span class="project-move-btn project-move-btn-disabled" aria-hidden="true">▲</span>') +
+        (index < total - 1
+          ? '<button type="button" class="project-move-btn" data-move-index="' + index + '" data-dir="down" aria-label="Move project later">▼</button>'
+          : '<span class="project-move-btn project-move-btn-disabled" aria-hidden="true">▼</span>') +
+        "</div>"
+      : "";
+
     return (
       '<article class="project-card reveal" id="project-' + esc(project.id) + '" data-index="' + index + '">' +
         editBtn +
+        moveControls +
         cover +
         '<div class="project-card-body">' +
           '<div class="project-card-top">' +
@@ -85,7 +98,8 @@
   function renderProjects(skipReveal) {
     var mount = document.getElementById("project-grid");
     if (!mount) return;
-    mount.innerHTML = state.projects.map(cardHTML).join("");
+    var total = state.projects.length;
+    mount.innerHTML = state.projects.map(function (p, i) { return cardHTML(p, i, total); }).join("");
 
     if (skipReveal) {
       mount.querySelectorAll(".reveal").forEach(function (el) {

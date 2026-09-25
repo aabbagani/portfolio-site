@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Quicksand:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=25" />
+<link rel="stylesheet" href="css/style.css?v=32" />
 </head>
 <body data-page="home">
 <script>try{if(localStorage.getItem('portfolio_admin_mode_v1')==='1')document.body.classList.add('admin-mode');}catch(e){}</script>
@@ -76,56 +76,7 @@
       <div class="eyebrow">Capabilities</div>
       <h2>Skill Set <img class="title-sticker" src="assets/empire-state-sticker.png" alt="" aria-hidden="true" /></h2>
     </div>
-    <div class="skill-groups reveal-stagger">
-      <div class="skill-card">
-        <h3>Technical Stack</h3>
-        <div class="tag-row">
-          <span class="tag">Google AI Studio</span>
-          <span class="tag">SQL</span>
-          <span class="tag">Python</span>
-          <span class="tag">Tableau</span>
-          <span class="tag">Figma</span>
-          <span class="tag">UiPath</span>
-          <span class="tag">Agile SDLC</span>
-          <span class="tag">Antigravity</span>
-          <span class="tag">Stitch AI</span>
-          <span class="tag">Power BI</span>
-          <span class="tag">JIRA UI Path Studio</span>
-          <span class="tag">Kiro</span>
-          <span class="tag">Lovable AI</span>
-          <span class="tag">Cursor</span>
-          <span class="tag">Microsoft Office</span>
-          <span class="tag">Adobe Creative Cloud</span>
-          <span class="tag">Monday.com</span>
-          <span class="tag">Salesforce Sandbox</span>
-          <span class="tag">Rork AI</span>
-          <span class="tag">Market Analysis</span>
-          <span class="tag">Product Life Cycle</span>
-          <span class="tag">Roadmap Planning</span>
-          <span class="tag">Prompt Engineering</span>
-          <span class="tag">AI Prototyping</span>
-          <span class="tag">RAG Pipelines</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <h3>Soft Intelligence</h3>
-        <div class="tag-row">
-          <span class="tag">Adaptability</span>
-          <span class="tag">Curiosity</span>
-          <span class="tag">Storytelling</span>
-          <span class="tag">Leadership</span>
-          <span class="tag">Problem-Solving</span>
-          <span class="tag">Interpersonal Intelligence</span>
-          <span class="tag">Cross-Functional Collaboration</span>
-          <span class="tag">Presentation Skills</span>
-          <span class="tag">Proactivity</span>
-          <span class="tag">Organizational Skills</span>
-          <span class="tag">Analytics</span>
-          <span class="tag">Entrepreneurship</span>
-          <span class="tag">Multi-Tasking</span>
-        </div>
-      </div>
-    </div>
+    <div class="skill-groups reveal-stagger" id="skill-groups"></div>
   </div>
 </section>
 
@@ -159,50 +110,7 @@
       <div class="eyebrow">Continued Learning</div>
       <h2>Certifications <img class="title-sticker" src="assets/empire-state-sticker.png" alt="" aria-hidden="true" /></h2>
     </div>
-    <div class="cert-grid reveal-stagger">
-      <div class="cert-card">
-        <div>
-          <div class="cert-name">Introduction to Agent Skills</div>
-          <div class="cert-meta">Anthropic · June 2026</div>
-        </div>
-        <span class="link-chip" data-tbd="true">Certificate</span>
-      </div>
-      <div class="cert-card">
-        <div>
-          <div class="cert-name">AI Builder Sprint</div>
-          <div class="cert-meta">HelloPM · July 2026</div>
-        </div>
-        <span class="link-chip" data-tbd="true">Certificate</span>
-      </div>
-      <div class="cert-card">
-        <div>
-          <div class="cert-name">AI Product Management</div>
-          <div class="cert-meta">HelloPM · June 2026</div>
-        </div>
-        <span class="link-chip" data-tbd="true">Certificate</span>
-      </div>
-      <div class="cert-card">
-        <div>
-          <div class="cert-name">AI Fluency: Framework &amp; Foundations</div>
-          <div class="cert-meta">Anthropic · June 2026</div>
-        </div>
-        <span class="link-chip" data-tbd="true">Certificate</span>
-      </div>
-      <div class="cert-card">
-        <div>
-          <div class="cert-name">Claude Code 101</div>
-          <div class="cert-meta">Anthropic · June 2026</div>
-        </div>
-        <span class="link-chip" data-tbd="true">Certificate</span>
-      </div>
-      <div class="cert-card">
-        <div>
-          <div class="cert-name">Claude 101</div>
-          <div class="cert-meta">Anthropic · June 2026</div>
-        </div>
-        <span class="link-chip" data-tbd="true">Certificate</span>
-      </div>
-    </div>
+    <div class="cert-grid reveal-stagger" id="cert-grid"></div>
   </div>
 </section>
 
@@ -213,9 +121,15 @@
 </footer>
 
 <script src="js/projects-data.js"></script>
+<script src="js/certs-data.js"></script>
+<script src="js/skills-data.js"></script>
 <script src="js/projects-render.js"></script>
+<script src="js/certs-render.js"></script>
+<script src="js/skills-render.js"></script>
 <script src="js/main.js"></script>
 <script src="js/admin-shared.js"></script>
 <script src="js/admin.js"></script>
+<script src="js/certs-admin.js"></script>
+<script src="js/skills-admin.js"></script>
 </body>
 </html>

@@ -47,6 +47,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
@@ -491,6 +492,33 @@ section:first-of-type { padding-top: 64px; }
 .project-edit-btn svg { width: 16px; height: 16px; }
 .project-edit-btn:hover { background: var(--accent); color: var(--tertiary); border-color: var(--accent); }
 
+.project-move-controls {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.project-move-btn {
+  width: 26px;
+  height: 22px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: 0.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.project-move-btn:hover { background: var(--accent); color: var(--tertiary); border-color: var(--accent); }
+.project-move-btn-disabled { opacity: 0.3; cursor: default; pointer-events: none; }
+
 .project-card::after {
   content: "";
   position: absolute;
@@ -620,6 +648,41 @@ section:first-of-type { padding-top: 64px; }
 .skill-card .tag-row { gap: 9px; }
 .skill-card .tag { background: var(--bg-elevated); }
 
+.tag-admin { padding-right: 6px; display: inline-flex; align-items: center; gap: 6px; }
+.tag-remove {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+.tag-remove:hover { color: var(--tertiary); background: var(--accent); }
+
+.tag-add {
+  background: transparent;
+  border-style: dashed;
+  color: var(--text-dim);
+  cursor: pointer;
+}
+.tag-add:hover { color: var(--accent-strong); border-color: var(--accent); }
+
+.skill-group-remove {
+  margin-top: 16px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.skill-group-remove:hover { border-color: #e5484d; color: #e5484d; }
+
 /* ===== Education ===== */
 .edu-card {
   position: relative;
@@ -675,6 +738,7 @@ section:first-of-type { padding-top: 64px; }
   gap: 16px;
 }
 .cert-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -692,6 +756,25 @@ section:first-of-type { padding-top: 64px; }
 }
 .cert-name { font-weight: 600; font-size: 0.96rem; }
 .cert-meta { color: var(--text-faint); font-size: 0.82rem; margin-top: 4px; }
+
+.cert-edit-btn {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.cert-edit-btn svg { width: 13px; height: 13px; }
+.cert-edit-btn:hover { background: var(--accent); color: var(--tertiary); border-color: var(--accent); }
 .cert-link {
   font-size: 0.78rem;
   font-weight: 600;
@@ -730,6 +813,8 @@ section:first-of-type { padding-top: 64px; }
 }
 
 .exp-card {
+  position: relative;
+  overflow: visible;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -740,6 +825,33 @@ section:first-of-type { padding-top: 64px; }
   transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 .exp-card:hover { border-color: var(--border-strong); box-shadow: 0 0 30px -8px var(--glow-soft); }
+
+.exp-move-controls {
+  position: absolute;
+  top: 14px;
+  left: -14px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.exp-move-btn {
+  width: 26px;
+  height: 22px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: 0.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.exp-move-btn:hover { background: var(--accent); color: var(--tertiary); border-color: var(--accent); }
+.exp-move-btn-disabled { opacity: 0.3; cursor: default; pointer-events: none; }
 
 .exp-card-head {
   display: flex;
@@ -766,28 +878,41 @@ section:first-of-type { padding-top: 64px; }
 
 .exp-links { display: flex; gap: 10px; flex-wrap: wrap; }
 
-/* Scrapbook: scattered polaroid-style photos for an Experience card */
+/* Scrapbook: photos pinned onto an Experience card like the Fordham
+   sticker on the Education card — rotated, hanging mostly past the
+   card's own left/right edge rather than boxed inside it. They sit
+   relative to the whole card (vertically centered, like the Fordham
+   sticker), not stacked one below another, so a card with photos
+   takes no more height than one without — the only reserved space is
+   the (in-flow) "+ Add Photo" button itself. */
 .scrapbook {
-  margin-top: 22px;
-  padding-top: 6px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 22px 16px;
+  margin-top: 10px;
+}
+.scrap-add {
+  position: relative;
+  z-index: 4;
 }
 
 .scrap-photo {
-  position: relative;
-  width: 148px;
+  position: absolute;
+  top: 50%;
+  width: 132px;
   background: var(--secondary);
-  padding: 8px 8px 10px;
+  padding: 6px 6px 8px;
   border-radius: 3px;
   box-shadow: var(--shadow-lg);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  z-index: 3;
 }
+.scrap-photo:nth-child(odd) { right: -100px; }
+.scrap-photo:nth-child(even) { left: -100px; }
+.scrap-photo:nth-child(1) { transform: translateY(-78%) rotate(8deg); }
+.scrap-photo:nth-child(2) { transform: translateY(-32%) rotate(-7deg); }
+.scrap-photo:nth-child(3) { transform: translateY(6%) rotate(6deg); }
 .scrap-photo:hover {
-  transform: rotate(0deg) scale(1.06) !important;
-  z-index: 5;
+  transform: translateY(-50%) scale(1.1) !important;
+  z-index: 6;
   box-shadow: var(--shadow-lg), 0 0 30px -6px var(--glow-soft);
 }
 .scrap-photo img {
@@ -851,6 +976,9 @@ section:first-of-type { padding-top: 64px; }
   .primary-links a { padding: 7px 12px; font-size: 0.86rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .btn { justify-content: center; }
+  .scrap-photo { width: 96px; }
+  .scrap-photo:nth-child(odd) { right: -22px; }
+  .scrap-photo:nth-child(even) { left: -22px; }
 }
 
 /* ===== Admin Mode (client-side only — see README) ===== */

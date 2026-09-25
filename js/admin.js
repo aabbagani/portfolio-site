@@ -23,12 +23,13 @@
 
   var toolbar = document.createElement("div");
   toolbar.className = "admin-toolbar";
+  toolbar.id = "home-admin-toolbar";
   toolbar.style.display = window.isAdminMode() ? "flex" : "none";
   toolbar.innerHTML =
-    '<span class="admin-toolbar-label">Admin Mode — editing Projects</span>' +
-    '<button type="button" class="admin-toolbar-btn" data-action="add">+ Add Project</button>' +
-    '<button type="button" class="admin-toolbar-btn" data-action="export">Export data file</button>' +
-    '<button type="button" class="admin-toolbar-btn" data-action="reset">Reset changes</button>';
+    '<span class="admin-toolbar-label">Admin Mode</span>' +
+    '<button type="button" class="admin-toolbar-btn" data-action="add-project">+ Add Project</button>' +
+    '<button type="button" class="admin-toolbar-btn" data-action="export-projects">Export projects data</button>' +
+    '<button type="button" class="admin-toolbar-btn" data-action="reset-projects">Reset project changes</button>';
 
   document.body.appendChild(toolbar);
 
@@ -41,9 +42,9 @@
     var btn = e.target.closest("[data-action]");
     if (!btn) return;
     var action = btn.getAttribute("data-action");
-    if (action === "add") openModal(null);
-    if (action === "export") exportDataFile();
-    if (action === "reset") {
+    if (action === "add-project") openModal(null);
+    if (action === "export-projects") exportDataFile();
+    if (action === "reset-projects") {
       if (confirm("Discard all Admin Mode edits and revert to the shipped project list?")) {
         window.resetProjects();
       }
@@ -53,9 +54,24 @@
   // Edit-button clicks are on cards re-rendered by projects-render.js
   document.addEventListener("click", function (e) {
     var editBtn = e.target.closest(".project-edit-btn");
-    if (!editBtn) return;
-    var index = parseInt(editBtn.getAttribute("data-edit-index"), 10);
-    openModal(index);
+    if (editBtn) {
+      var index = parseInt(editBtn.getAttribute("data-edit-index"), 10);
+      openModal(index);
+      return;
+    }
+
+    var moveBtn = e.target.closest(".project-move-btn:not(.project-move-btn-disabled)");
+    if (moveBtn) {
+      var from = parseInt(moveBtn.getAttribute("data-move-index"), 10);
+      var dir = moveBtn.getAttribute("data-dir");
+      var to = dir === "up" ? from - 1 : from + 1;
+      var projects = window.getProjects().slice();
+      if (to < 0 || to >= projects.length) return;
+      var tmp = projects[from];
+      projects[from] = projects[to];
+      projects[to] = tmp;
+      window.setProjects(projects, { animate: false });
+    }
   });
 
   // ---- Modal -----------------------------------------------------------
