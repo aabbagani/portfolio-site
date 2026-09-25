@@ -334,25 +334,17 @@ section:first-of-type { padding-top: 64px; }
   font-size: 0.92rem;
   transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease), border-color 0.2s var(--ease);
 }
-.btn-primary {
-  background: var(--grad);
-  color: var(--tertiary);
-}
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 34px -6px var(--glow), 0 0 40px -8px rgba(255, 234, 234, 0.35);
-}
-
+.btn-primary,
 .btn-ghost {
+  background: #660033;
+  color: var(--secondary);
   border: 1px solid var(--border-strong);
-  color: var(--text);
-  background: var(--surface);
 }
+.btn-primary:hover,
 .btn-ghost:hover {
   border-color: var(--accent);
-  color: var(--accent-strong);
   transform: translateY(-2px);
-  box-shadow: 0 0 22px 0 var(--glow-soft);
+  box-shadow: 0 12px 34px -6px var(--glow), 0 0 22px 0 var(--glow-soft);
 }
 
 /* ===== Projects ===== */
