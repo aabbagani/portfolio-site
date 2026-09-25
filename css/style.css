@@ -178,28 +178,23 @@ img { max-width: 100%; display: block; }
 }
 
 /* ===== Sections / reveal motion ===== */
-section { padding: 96px 0; position: relative; }
+section { padding: 96px 0; }
 section:first-of-type { padding-top: 64px; }
 
-/* Empire State sticker — symbolic of hope, scattered sparingly (2-3
-   appearances) as the page scrolls, never over-explained or overused. */
-.scatter-sticker {
-  position: absolute;
-  width: 54px;
+/* Empire State sticker — symbolic of hope — sits beside every section title. */
+.title-sticker {
+  display: inline-block;
+  width: 34px;
   height: auto;
+  vertical-align: middle;
+  margin-left: 6px;
+  transform: rotate(-8deg) translateY(-4px);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
   pointer-events: none;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5));
-  opacity: 0.85;
-  z-index: 1;
 }
-/* Bottom-anchored (not top) so the sticky nav never covers them, including
-   when the quick-jump nav scrolls a section's top edge right up to it. */
-.scatter-sticker-1 { bottom: 20px; right: 24px; transform: rotate(-9deg); }
-.scatter-sticker-2 { bottom: 20px; left: 24px; transform: rotate(7deg); }
-.scatter-sticker-3 { bottom: 20px; right: 28px; transform: rotate(-6deg); }
 
 @media (max-width: 700px) {
-  .scatter-sticker { width: 38px; }
+  .title-sticker { width: 26px; }
 }
 
 .reveal {
@@ -627,6 +622,7 @@ section:first-of-type { padding-top: 64px; }
 
 /* ===== Education ===== */
 .edu-card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -634,11 +630,26 @@ section:first-of-type { padding-top: 64px; }
   display: flex;
   flex-direction: column;
   gap: 6px;
+  overflow: hidden;
 }
-.edu-school-row { display: flex; align-items: center; gap: 12px; }
 .edu-card .edu-school { font-size: 1.3rem; font-weight: 700; }
-.edu-logo { width: 34px; height: auto; flex: none; }
 .edu-card .edu-degree { color: var(--text-dim); font-size: 0.98rem; margin-top: 4px; }
+
+.edu-fordham-sticker {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%) rotate(8deg);
+  width: 190px;
+  height: auto;
+  opacity: 0.95;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .edu-fordham-sticker { width: 90px; right: 12px; top: 20px; transform: rotate(8deg); opacity: 0.4; }
+}
 .edu-meta {
   display: flex;
   flex-wrap: wrap;
