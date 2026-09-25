@@ -1,9 +1,9 @@
 /* ===== Design tokens ===== */
 :root {
   /* Brand palette (exact) */
-  --primary: #300000;
+  --primary: #660033;
   --secondary: #ffeaea;
-  --tertiary: #660033;
+  --tertiary: #300000;
   --quad: #c32148;
 
   /* Semantic mapping */
@@ -288,21 +288,31 @@ section:first-of-type { padding-top: 64px; }
 
 .hero-photo-badge {
   position: absolute;
-  right: -14px;
+  left: -14px;
   bottom: -14px;
   width: 92px;
   height: auto;
-  transform: rotate(-8deg);
+  transform: rotate(8deg);
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.55));
+}
+
+.hero-photo-caption {
+  margin: 16px 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
 }
 
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-photo { max-width: 360px; margin: 0 auto; }
+  .hero-photo-wrap { max-width: 360px; margin: 0 auto; }
 }
 
 @media (max-width: 560px) {
-  .hero-photo-badge { width: 68px; right: -8px; bottom: -8px; }
+  .hero-photo-badge { width: 68px; left: -8px; bottom: -8px; }
 }
 
 .hero-actions {
