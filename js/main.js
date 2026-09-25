@@ -62,20 +62,4 @@
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
     window.observeReveal = function (el) { el.classList.add("is-visible"); };
   }
-
-  // Graceful fallback for experience photos that haven't been added yet
-  document.querySelectorAll(".exp-photo img[data-fallback]").forEach(function (img) {
-    var showPlaceholder = function () {
-      img.style.display = "none";
-      var ph = img.parentElement.querySelector(".photo-placeholder");
-      if (ph) ph.style.display = "flex";
-    };
-    // A 404 on localhost can resolve before this listener attaches, so check
-    // the already-settled state first and only listen for the rest.
-    if (img.complete) {
-      if (img.naturalWidth === 0) showPlaceholder();
-    } else {
-      img.addEventListener("error", showPlaceholder);
-    }
-  });
 })();

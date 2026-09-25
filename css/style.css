@@ -1,27 +1,29 @@
 /* ===== Design tokens ===== */
 :root {
-  /* Brand palette (exact) */
-  --primary: #660033;
-  --secondary: #ffeaea;
-  --tertiary: #300000;
-  --quad: #c32148;
+  /* Brand palette — deepened from the supplied swatches for text contrast:
+     #6F428C -> #271731 (background), #A47FB3 -> #52405A (card surfaces).
+     #D7B07B (gold) and #FFFFFF used as given. */
+  --primary: #52405a;
+  --secondary: #ffffff;
+  --tertiary: #271731;
+  --quad: #d7b07b;
 
   /* Semantic mapping */
   --bg: var(--tertiary);
   --bg-elevated: color-mix(in srgb, var(--tertiary) 70%, var(--primary) 30%);
   --surface: var(--primary);
   --surface-hover: color-mix(in srgb, var(--primary) 85%, var(--quad) 15%);
-  --border: rgba(195, 33, 72, 0.25);
-  --border-strong: rgba(195, 33, 72, 0.45);
+  --border: rgba(215, 176, 123, 0.25);
+  --border-strong: rgba(215, 176, 123, 0.45);
   --text: var(--secondary);
-  --text-dim: rgba(255, 234, 234, 0.68);
-  --text-faint: rgba(255, 234, 234, 0.42);
+  --text-dim: rgba(255, 255, 255, 0.68);
+  --text-faint: rgba(255, 255, 255, 0.42);
   --accent: var(--quad);
   --accent-strong: var(--secondary);
-  --glow: rgba(195, 33, 72, 0.5);
-  --glow-soft: rgba(195, 33, 72, 0.24);
+  --glow: rgba(215, 176, 123, 0.5);
+  --glow-soft: rgba(215, 176, 123, 0.24);
   --grad: linear-gradient(120deg, var(--quad) 0%, var(--secondary) 65%, var(--secondary) 100%);
-  --shadow-lg: 0 20px 60px -20px rgba(48, 0, 0, 0.85);
+  --shadow-lg: 0 20px 60px -20px rgba(39, 23, 49, 0.85);
   --radius: 16px;
   --radius-sm: 10px;
   --nav-h: 64px;
@@ -96,7 +98,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(48, 0, 0, 0.78);
+  background: rgba(39, 23, 49, 0.78);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   border-bottom: 1px solid var(--border);
@@ -172,7 +174,7 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
   border-color: var(--border-strong);
   background: var(--surface);
-  box-shadow: 0 0 14px 0 var(--glow-soft), inset 0 0 0 1px rgba(195, 33, 72, 0.35);
+  box-shadow: 0 0 14px 0 var(--glow-soft), inset 0 0 0 1px rgba(215, 176, 123, 0.35);
 }
 
 /* ===== Sections / reveal motion ===== */
@@ -247,9 +249,9 @@ section:first-of-type { padding-top: 64px; }
   position: absolute;
   inset: -20% -10% auto -10%;
   height: 560px;
-  background: radial-gradient(55% 55% at 25% 25%, rgba(255, 234, 234, 0.14), transparent 70%),
-              radial-gradient(45% 45% at 78% 12%, rgba(195, 33, 72, 0.4), transparent 70%),
-              radial-gradient(50% 50% at 55% 60%, rgba(48, 0, 0, 0.7), transparent 75%);
+  background: radial-gradient(55% 55% at 25% 25%, rgba(255, 255, 255, 0.14), transparent 70%),
+              radial-gradient(45% 45% at 78% 12%, rgba(215, 176, 123, 0.4), transparent 70%),
+              radial-gradient(50% 50% at 55% 60%, rgba(39, 23, 49, 0.7), transparent 75%);
   pointer-events: none;
   z-index: -1;
   animation: drift 16s ease-in-out infinite alternate;
@@ -431,7 +433,7 @@ section:first-of-type { padding-top: 64px; }
 }
 .btn-primary,
 .btn-ghost {
-  background: #660033;
+  background: var(--primary);
   color: var(--secondary);
   border: 1px solid var(--border-strong);
 }
@@ -755,41 +757,75 @@ section:first-of-type { padding-top: 64px; }
 
 .exp-links { display: flex; gap: 10px; flex-wrap: wrap; }
 
-.exp-photos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 14px;
+/* Scrapbook: scattered polaroid-style photos for an Experience card */
+.scrapbook {
+  margin-top: 22px;
+  padding-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 22px 16px;
 }
 
-.exp-photo {
+.scrap-photo {
   position: relative;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  aspect-ratio: 4 / 3;
+  width: 148px;
+  background: var(--secondary);
+  padding: 8px 8px 10px;
+  border-radius: 3px;
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
-.exp-photo img { width: 100%; height: 100%; object-fit: cover; }
-.exp-photo .photo-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
-  padding: 14px 14px 40% 14px;
-  font-size: 0.72rem;
-  color: var(--text-faint);
+.scrap-photo:hover {
+  transform: rotate(0deg) scale(1.06) !important;
+  z-index: 5;
+  box-shadow: var(--shadow-lg), 0 0 30px -6px var(--glow-soft);
+}
+.scrap-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   background: repeating-linear-gradient(135deg, var(--bg-elevated), var(--bg-elevated) 10px, var(--surface-hover) 10px, var(--surface-hover) 20px);
 }
-.exp-photo figcaption {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  padding: 8px 10px 6px;
-  font-size: 0.72rem;
-  color: var(--text);
-  background: linear-gradient(0deg, rgba(48,0,0,0.8), transparent);
+.scrap-photo img.img-missing { font-size: 0; color: transparent; }
+.scrap-photo figcaption {
+  padding: 8px 4px 2px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  line-height: 1.35;
+  color: var(--tertiary);
+  text-align: center;
 }
+
+.scrap-remove {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elevated);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.scrap-remove:hover { background: var(--accent); color: var(--tertiary); }
+
+.scrap-add {
+  align-self: center;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-strong);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.scrap-add:hover { border-color: var(--accent); color: var(--accent-strong); }
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
@@ -863,7 +899,7 @@ section:first-of-type { padding-top: 64px; }
   position: fixed;
   inset: 0;
   z-index: 300;
-  background: rgba(48, 0, 0, 0.7);
+  background: rgba(39, 23, 49, 0.7);
   display: flex;
   align-items: flex-start;
   justify-content: center;

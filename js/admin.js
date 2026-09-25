@@ -3,31 +3,6 @@
 
   if (document.body.getAttribute("data-page") !== "home") return;
 
-  var ADMIN_KEY = "portfolio_admin_mode_v1";
-
-  function isAdmin() {
-    try { return localStorage.getItem(ADMIN_KEY) === "1"; } catch (e) { return false; }
-  }
-
-  // Updates the toggle/toolbar chrome to match the given state, without
-  // touching the project grid. An inline snippet at the top of <body>
-  // already added the "admin-mode" class before the grid's first render,
-  // so this alone is correct for page load.
-  function applyAdminChrome(on) {
-    document.body.classList.toggle("admin-mode", on);
-    toggleBtn.textContent = on ? "Exit Admin Mode" : "Admin Mode";
-    toggleBtn.classList.toggle("is-active", on);
-    toolbar.style.display = on ? "flex" : "none";
-  }
-
-  // Toggling is a real state change: persist it and re-render the grid so
-  // every card's edit button appears or disappears.
-  function setAdmin(on) {
-    try { localStorage.setItem(ADMIN_KEY, on ? "1" : "0"); } catch (e) {}
-    applyAdminChrome(on);
-    if (window.renderProjectsGrid) window.renderProjectsGrid(true);
-  }
-
   function esc(str) {
     return String(str == null ? "" : str).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -44,26 +19,23 @@
       .replace(/(^-|-$)/g, "") || ("project-" + Date.now());
   }
 
-  // ---- Floating toggle + toolbar --------------------------------------
-
-  var toggleBtn = document.createElement("button");
-  toggleBtn.type = "button";
-  toggleBtn.className = "admin-toggle";
-  toggleBtn.textContent = "Admin Mode";
+  // ---- Toolbar (the floating toggle itself lives in admin-shared.js) ---
 
   var toolbar = document.createElement("div");
   toolbar.className = "admin-toolbar";
-  toolbar.style.display = "none";
+  toolbar.style.display = window.isAdminMode() ? "flex" : "none";
   toolbar.innerHTML =
     '<span class="admin-toolbar-label">Admin Mode — editing Projects</span>' +
     '<button type="button" class="admin-toolbar-btn" data-action="add">+ Add Project</button>' +
     '<button type="button" class="admin-toolbar-btn" data-action="export">Export data file</button>' +
     '<button type="button" class="admin-toolbar-btn" data-action="reset">Reset changes</button>';
 
-  document.body.appendChild(toggleBtn);
   document.body.appendChild(toolbar);
 
-  toggleBtn.addEventListener("click", function () { setAdmin(!isAdmin()); });
+  window.addEventListener("adminmode:change", function (e) {
+    toolbar.style.display = e.detail.on ? "flex" : "none";
+    if (window.renderProjectsGrid) window.renderProjectsGrid(true);
+  });
 
   toolbar.addEventListener("click", function (e) {
     var btn = e.target.closest("[data-action]");
@@ -259,8 +231,6 @@
       closeModal();
     }
   });
-
-  applyAdminChrome(isAdmin());
 
   // ---- Export ------------------------------------------------------------
 

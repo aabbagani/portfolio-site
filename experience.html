@@ -8,9 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Arima+Madurai:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=10" />
+<link rel="stylesheet" href="css/style.css?v=13" />
 </head>
 <body data-page="experience">
+<script>try{if(localStorage.getItem('portfolio_admin_mode_v1')==='1')document.body.classList.add('admin-mode');}catch(e){}</script>
 
 <nav class="site-nav">
   <div class="wrap nav-row">
@@ -40,7 +41,7 @@
     <div class="timeline">
 
       <!-- LightsKiddo -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="lightskiddo">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">Product Test Lead Intern</div>
@@ -58,7 +59,7 @@
       </article>
 
       <!-- Blumetra Solutions — Associate Product Manager -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="blumetra-apm">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">Associate Product Manager</div>
@@ -83,7 +84,7 @@
       </article>
 
       <!-- CURE Foundation -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="cure-foundation">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">Product Operations Lead</div>
@@ -101,27 +102,10 @@
           <li>Built 4 structured tracking workflows from scratch spanning donor/sponsor data, player registrations, logistics, and event coordination — validated and cleaned data for 1,000+ stakeholders via Excel, Tableau, and Power BI; templates were adopted as the standard for all future events.</li>
           <li>Managed on-site operations for 2,500 attendees and 50 golf players, identifying process breakdowns in real time and restructuring workflows mid-event to maintain execution quality across all workstreams.</li>
         </ul>
-        <div class="exp-photos">
-          <figure class="exp-photo">
-            <img data-fallback src="assets/experience/cure-foundation-1.jpg" alt="At the Golf Charity Fundraiser with Padma Shri Dr Vijay Anand Reddy & Dr Shashi Palkonda" />
-            <div class="photo-placeholder" style="display:none">Add photo:<br>assets/experience/cure-foundation-1.jpg</div>
-            <figcaption>At the Golf Charity Fundraiser with Padma Shri Dr Vijay Anand Reddy &amp; Dr Shashi Palkonda</figcaption>
-          </figure>
-          <figure class="exp-photo">
-            <img data-fallback src="assets/experience/cure-foundation-2.jpg" alt="At the CURE Foundation Gala" />
-            <div class="photo-placeholder" style="display:none">Add photo:<br>assets/experience/cure-foundation-2.jpg</div>
-            <figcaption>At the CURE Foundation Gala</figcaption>
-          </figure>
-          <figure class="exp-photo">
-            <img data-fallback src="assets/experience/cure-foundation-3.jpg" alt="Anchoring the Press Meet & Inauguration: Cancer Crusaders Golf Championship, alongside chief guests Jagapati Babu and Chaitanya Menon" />
-            <div class="photo-placeholder" style="display:none">Add photo:<br>assets/experience/cure-foundation-3.jpg</div>
-            <figcaption>Anchoring the Press Meet &amp; Inauguration: Cancer Crusaders Golf Championship, alongside chief guests Jagapati Babu and Chaitanya Menon</figcaption>
-          </figure>
-        </div>
       </article>
 
       <!-- Stellantis -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="stellantis">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">IT Software Quality Assurance Analyst Intern</div>
@@ -139,20 +123,13 @@
           <li>Authored and executed 150+ UAT test cases across borrower and agent workflows; tracked defects in Jira and Confluence.</li>
           <li>Organized 4 sessions with PMs, POs, and the CIO on prioritization, journey mapping, and release planning; drove alignment across functions and unblocked a critical release; work spotlighted at company-wide Town Hall.</li>
         </ul>
-        <div class="exp-photos">
-          <figure class="exp-photo">
-            <img data-fallback src="assets/experience/stellantis-1.jpg" alt="Contributions highlighted in Town Hall for driving operational efficiency" />
-            <div class="photo-placeholder" style="display:none">Add photo:<br>assets/experience/stellantis-1.jpg</div>
-            <figcaption>Contributions highlighted in Town Hall for driving operational efficiency</figcaption>
-          </figure>
-        </div>
         <div class="exp-links">
           <span class="link-chip" data-tbd="true">View Presentation (link TBD)</span>
         </div>
       </article>
 
       <!-- Louisa AI -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="louisa-ai">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">Product Manager Intern</div>
@@ -167,17 +144,10 @@
           <li>Designed onboarding flows for 4 enterprise client deployments using CapCut for custom video production — adopted as the company standard post-internship.</li>
           <li>Conducted competitive analysis across 7 AI platforms to identify positioning gaps and improvement opportunities, directly informing feature prioritization and product roadmap discussions.</li>
         </ul>
-        <div class="exp-photos">
-          <figure class="exp-photo">
-            <img data-fallback src="assets/experience/louisa-ai-1.jpg" alt="With Muriel Daccache (Product Strategist) & Relina Vas (Product Manager)" />
-            <div class="photo-placeholder" style="display:none">Add photo:<br>assets/experience/louisa-ai-1.jpg</div>
-            <figcaption>With Muriel Daccache (Product Strategist) &amp; Relina Vas (Product Manager)</figcaption>
-          </figure>
-        </div>
       </article>
 
       <!-- Blumetra Solutions — Associate Product Manager Intern -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="blumetra-apm-intern">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">Associate Product Manager Intern</div>
@@ -194,7 +164,7 @@
       </article>
 
       <!-- Rose Trust NGO -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="rose-trust">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">Python Developer</div>
@@ -217,7 +187,7 @@
       </article>
 
       <!-- Blumetra Solutions — Business Analyst -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="blumetra-ba">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">Business Analyst</div>
@@ -233,7 +203,7 @@
       </article>
 
       <!-- Sthirta Thrift Store -->
-      <article class="exp-card reveal">
+      <article class="exp-card reveal" data-exp-id="sthirta">
         <div class="exp-card-head">
           <div>
             <div class="exp-role">Founder</div>
@@ -261,5 +231,7 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script src="js/admin-shared.js"></script>
+<script src="js/exp-photos.js"></script>
 </body>
 </html>
