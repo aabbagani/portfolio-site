@@ -38,26 +38,29 @@
 
   // Scroll-triggered fade/slide-in reveal
   var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal, .reveal-stagger"));
-  if (revealEls.length) {
-    if ("IntersectionObserver" in window) {
-      // threshold 0 + a bottom rootMargin fires as soon as the element's
-      // top edge crosses into view, regardless of how tall the element is
-      // (a fixed area-ratio threshold fails for tall stacked grids).
-      var reveal = new IntersectionObserver(
-        function (entries, obs) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              obs.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0, rootMargin: "0px 0px -12% 0px" }
-      );
-      revealEls.forEach(function (el) { reveal.observe(el); });
-    } else {
-      revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-    }
+  if ("IntersectionObserver" in window) {
+    // threshold 0 + a bottom rootMargin fires as soon as the element's
+    // top edge crosses into view, regardless of how tall the element is
+    // (a fixed area-ratio threshold fails for tall stacked grids).
+    var reveal = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "0px 0px -12% 0px" }
+    );
+    revealEls.forEach(function (el) { reveal.observe(el); });
+    // Exposed so content rendered later (e.g. Admin Mode edits to the
+    // Projects grid) can join the same observer instead of always
+    // skipping straight to visible.
+    window.observeReveal = function (el) { reveal.observe(el); };
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    window.observeReveal = function (el) { el.classList.add("is-visible"); };
   }
 
   // Graceful fallback for experience photos that haven't been added yet
