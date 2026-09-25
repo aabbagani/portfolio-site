@@ -6,22 +6,22 @@
   --primary: #52405a;
   --secondary: #ffffff;
   --tertiary: #271731;
-  --quad: #d7b07b;
+  --quad: #f2c02a;
 
   /* Semantic mapping */
   --bg: var(--tertiary);
   --bg-elevated: color-mix(in srgb, var(--tertiary) 70%, var(--primary) 30%);
   --surface: var(--primary);
   --surface-hover: color-mix(in srgb, var(--primary) 85%, var(--quad) 15%);
-  --border: rgba(215, 176, 123, 0.25);
-  --border-strong: rgba(215, 176, 123, 0.45);
+  --border: rgba(242, 192, 42, 0.25);
+  --border-strong: rgba(242, 192, 42, 0.45);
   --text: var(--secondary);
   --text-dim: rgba(255, 255, 255, 0.68);
   --text-faint: rgba(255, 255, 255, 0.42);
   --accent: var(--quad);
   --accent-strong: var(--secondary);
-  --glow: rgba(215, 176, 123, 0.5);
-  --glow-soft: rgba(215, 176, 123, 0.24);
+  --glow: rgba(242, 192, 42, 0.5);
+  --glow-soft: rgba(242, 192, 42, 0.24);
   --grad: linear-gradient(120deg, var(--quad) 0%, var(--secondary) 65%, var(--secondary) 100%);
   --shadow-lg: 0 20px 60px -20px rgba(39, 23, 49, 0.85);
   --radius: 16px;
@@ -32,8 +32,8 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Font stack */
-  --font-heading: "Poppins", "Inter", sans-serif;
-  --font-subheading: "Arima Madurai", "Georgia", serif;
+  --font-heading: "Arima Madurai", "Georgia", serif;
+  --font-subheading: "Poppins", "Inter", sans-serif;
   --font-body: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "Space Mono", "Space Grotesk", monospace;
 }
@@ -174,7 +174,7 @@ img { max-width: 100%; display: block; }
   color: var(--accent);
   border-color: var(--border-strong);
   background: var(--surface);
-  box-shadow: 0 0 14px 0 var(--glow-soft), inset 0 0 0 1px rgba(215, 176, 123, 0.35);
+  box-shadow: 0 0 14px 0 var(--glow-soft), inset 0 0 0 1px rgba(242, 192, 42, 0.35);
 }
 
 /* ===== Sections / reveal motion ===== */
@@ -250,7 +250,7 @@ section:first-of-type { padding-top: 64px; }
   inset: -20% -10% auto -10%;
   height: 560px;
   background: radial-gradient(55% 55% at 25% 25%, rgba(255, 255, 255, 0.14), transparent 70%),
-              radial-gradient(45% 45% at 78% 12%, rgba(215, 176, 123, 0.4), transparent 70%),
+              radial-gradient(45% 45% at 78% 12%, rgba(242, 192, 42, 0.4), transparent 70%),
               radial-gradient(50% 50% at 55% 60%, rgba(39, 23, 49, 0.7), transparent 75%);
   pointer-events: none;
   z-index: -1;
@@ -281,6 +281,8 @@ section:first-of-type { padding-top: 64px; }
   margin-bottom: 20px;
 }
 .kicker-icon { width: 18px; height: 18px; color: var(--accent); flex: none; }
+.kicker-label { color: var(--text-dim); }
+.kicker-status { color: var(--accent); }
 
 .hero-headline {
   display: flex;
@@ -346,45 +348,12 @@ section:first-of-type { padding-top: 64px; }
 .hero-photo-badge {
   position: absolute;
   z-index: 2;
-  right: 10%;
-  bottom: 2%;
+  right: 6%;
+  top: 2%;
   width: 100px;
   height: auto;
-  transform: rotate(-8deg);
+  transform: rotate(8deg);
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.55));
-}
-
-.hero-stat {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 2px;
-  max-width: 120px;
-}
-.hero-stat-left { left: -14%; bottom: 6%; align-items: flex-end; text-align: right; }
-.hero-stat-right { right: -14%; top: 4%; }
-
-.hero-doodle { width: 60px; height: 38px; color: var(--text-faint); flex: none; }
-.hero-stat-left .hero-doodle { transform: scaleX(-1); }
-
-.hero-stat-text { display: flex; flex-direction: column; }
-.hero-stat-text strong {
-  font-family: var(--font-heading);
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1;
-}
-.hero-stat-text span {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  white-space: nowrap;
 }
 
 .hero-photo-caption {
@@ -405,11 +374,7 @@ section:first-of-type { padding-top: 64px; }
 @media (max-width: 560px) {
   .hero-cutout-stage { min-height: 360px; }
   .hero-photo-cutout { max-width: 220px; }
-  .hero-photo-badge { width: 78px; right: 4%; }
-  .hero-stat-text strong { font-size: 1.3rem; }
-  .hero-doodle { width: 48px; height: 30px; }
-  .hero-stat-left { left: -2%; }
-  .hero-stat-right { right: -2%; }
+  .hero-photo-badge { width: 78px; right: 3%; }
 }
 
 .hero-actions {
