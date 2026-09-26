@@ -253,6 +253,9 @@ body[data-page="home"] .site-footer {
   margin-bottom: 0;
   width: fit-content;
   cursor: pointer;
+  background: var(--bg-alt);
+  border-radius: 999px;
+  padding: 10px 20px 10px 10px;
 }
 .tour-guide-hero .tour-guide-avatar {
   animation: tour-guide-bounce 2.2s ease-in-out infinite;
