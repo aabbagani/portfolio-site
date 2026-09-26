@@ -10,6 +10,7 @@
 window.EXPERIENCE_DATA = [
   {
     id: "lightskiddo",
+    logo: "assets/experience/lightskiddo-logo.png",
     role: "Product Test Lead Intern",
     org: "LightsKiddo — an AI-powered OS for film production",
     location: "Remote / New York, NY",
@@ -38,6 +39,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "blumetra-apm",
+    logo: "assets/experience/blumetra-logo.png",
     role: "Associate Product Manager",
     org: "Blumetra Solutions",
     location: "Pleasanton, CA",
@@ -146,6 +148,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "blumetra-apm-intern",
+    logo: "assets/experience/blumetra-logo.png",
     role: "Associate Product Manager Intern",
     org: "Blumetra Solutions",
     location: "Pleasanton, California",
@@ -195,6 +198,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "blumetra-ba",
+    logo: "assets/experience/blumetra-logo.png",
     role: "Business Analyst",
     org: "Blumetra Solutions",
     location: "Pleasanton, CA",
