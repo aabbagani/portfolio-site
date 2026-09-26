@@ -875,10 +875,10 @@ body[data-page="home"] .site-footer {
 .cert-name { font-weight: 600; font-size: 0.96rem; }
 .cert-meta { color: var(--text-faint); font-size: 0.82rem; margin-top: 4px; }
 
-.cert-issuer-badge {
-  flex: none;
-  width: 34px;
-  height: 34px;
+.cert-issuer-badge { flex: none; }
+.cert-issuer-monogram {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -887,6 +887,15 @@ body[data-page="home"] .site-footer {
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--secondary);
+}
+.cert-issuer-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background: var(--secondary);
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
 }
 
 .cert-edit-btn {

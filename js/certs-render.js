@@ -34,17 +34,29 @@
     });
   }
 
-  // No real issuer logo files on hand, so a small deterministic-color
-  // monogram stands in for one — same issuer always gets the same
-  // letter/color, no hardcoded per-issuer list to keep updated.
-  function issuerBadgeHTML(issuer) {
+  // Real logo files for known issuers; anything else (or a per-cert
+  // override uploaded in Admin Mode) falls back to a deterministic-color
+  // monogram — same issuer always gets the same letter/color, no
+  // hardcoded list to keep updated as new issuers show up.
+  var DEFAULT_ISSUER_LOGOS = {
+    "Anthropic": "assets/issuers/anthropic-logo.png",
+    "HelloPM": "assets/issuers/hellopm-logo.png"
+  };
+
+  function monogramHTML(issuer) {
     var palette = ["#5c4566", "#b98fcb", "#1c0f24", "#8a6a9c"];
     var name = issuer || "?";
     var hash = 0;
     for (var i = 0; i < name.length; i++) hash = (hash * 31 + name.charCodeAt(i)) >>> 0;
     var color = palette[hash % palette.length];
     var letter = name.trim().charAt(0).toUpperCase();
-    return '<span class="cert-issuer-badge" style="background:' + color + '" aria-hidden="true">' + esc(letter) + "</span>";
+    return '<span class="cert-issuer-badge cert-issuer-monogram" style="background:' + color + '" aria-hidden="true">' + esc(letter) + "</span>";
+  }
+
+  function issuerBadgeHTML(cert) {
+    var logo = cert.logo || DEFAULT_ISSUER_LOGOS[cert.issuer];
+    if (!logo) return monogramHTML(cert.issuer);
+    return '<img class="cert-issuer-badge cert-issuer-logo" src="' + esc(logo) + '" alt="" aria-hidden="true" />';
   }
 
   function cardHTML(cert, index) {
@@ -60,7 +72,7 @@
     return (
       '<div class="cert-card" data-index="' + index + '">' +
         editBtn +
-        issuerBadgeHTML(cert.issuer) +
+        issuerBadgeHTML(cert) +
         "<div>" +
           '<div class="cert-name">' + esc(cert.name) + "</div>" +
           '<div class="cert-meta">' + esc(cert.issuer) + " · " + esc(cert.date) + "</div>" +

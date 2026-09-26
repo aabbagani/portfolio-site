@@ -16,7 +16,7 @@
   }
 
   function emptyCert() {
-    return { id: "new-cert-" + Date.now(), name: "", issuer: "", date: "", url: "" };
+    return { id: "new-cert-" + Date.now(), name: "", issuer: "", date: "", url: "", logo: "" };
   }
 
   // Buttons are appended to the shared home-page toolbar admin.js creates,
@@ -80,6 +80,11 @@
       '<label class="admin-label">Certificate URL (leave blank for TBD)</label>' +
       '<input type="url" class="admin-input" data-field="url" value="' + esc(cert.url) + '" />' +
 
+      '<label class="admin-label">Issuer logo (URL/path, or upload below — leave blank to use the default for a known issuer)</label>' +
+      '<input type="text" class="admin-input" data-field="logo" value="' + esc(cert.logo || "") + '" />' +
+      '<input type="file" accept="image/*" class="admin-file" data-field="logo-file" />' +
+      (cert.logo ? '<img class="admin-cover-preview" src="' + esc(cert.logo) + '" alt="" style="max-height:80px;object-fit:contain;background:#fff;" />' : "") +
+
       '<div class="admin-modal-actions">' +
         (editingIndex === null ? "" : '<button type="button" class="admin-btn admin-btn-danger" data-action="delete">Delete</button>') +
         '<button type="button" class="admin-btn" data-action="cancel">Cancel</button>' +
@@ -103,6 +108,25 @@
     if (e.target === overlay) closeModal();
   });
 
+  modal.addEventListener("change", function (e) {
+    if (!e.target.matches('[data-field="logo-file"]')) return;
+    var file = e.target.files && e.target.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      modal.querySelector('[data-field="logo"]').value = reader.result;
+      var preview = modal.querySelector(".admin-cover-preview");
+      if (!preview) {
+        preview = document.createElement("img");
+        preview.className = "admin-cover-preview";
+        preview.style.cssText = "max-height:80px;object-fit:contain;background:#fff;";
+        e.target.after(preview);
+      }
+      preview.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+
   modal.addEventListener("click", function (e) {
     var btn = e.target.closest("[data-action]");
     if (!btn) return;
@@ -124,7 +148,8 @@
         name: modal.querySelector('[data-field="name"]').value.trim(),
         issuer: modal.querySelector('[data-field="issuer"]').value.trim(),
         date: modal.querySelector('[data-field="date"]').value.trim(),
-        url: modal.querySelector('[data-field="url"]').value.trim()
+        url: modal.querySelector('[data-field="url"]').value.trim(),
+        logo: modal.querySelector('[data-field="logo"]').value.trim()
       };
       if (!data.name) { alert("Give the certification a name before saving."); return; }
       var certs = window.getCerts().slice();
