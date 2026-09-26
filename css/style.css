@@ -284,8 +284,8 @@ body[data-page="home"] .site-footer {
 
 /* ===== Hero ===== */
 .hero {
-  padding-top: 104px;
-  padding-bottom: 76px;
+  padding-top: 76px;
+  padding-bottom: 44px;
   position: relative;
   overflow: hidden;
 }
