@@ -649,69 +649,49 @@ body[data-page="home"] .site-footer {
   pointer-events: none;
 }
 
-/* ===== Skills — a numbered, click-to-expand index (01 Think, 02 Build, ...)
-   rather than a static tag cloud. Built on <details>/<summary> so the
-   expand/collapse interaction is free: native, keyboard- and
-   screen-reader-accessible, no JS event wiring needed. */
-.skill-groups { display: block; }
-
-.skill-index-row {
-  border-top: 1px solid rgba(28, 15, 36, 0.14);
+/* ===== Skills — four bold, always-visible panels (01 Think, 02 Build,
+   03 Ship, 04 Lead). A recruiter skimming shouldn't have to click
+   anything to see the full skill list, so nothing here is collapsed. */
+.skill-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 48px;
 }
-.skill-index-row:last-of-type { border-bottom: 1px solid rgba(28, 15, 36, 0.14); }
 
-.skill-index-row > summary {
-  list-style: none;
-  cursor: pointer;
+.skill-panel {
+  border-left: 3px solid var(--accent);
+  padding: 2px 0 2px 22px;
+}
+
+.skill-panel-head {
   display: flex;
   align-items: baseline;
-  gap: 22px;
-  padding: 22px 4px;
+  gap: 16px;
+  margin-bottom: 16px;
 }
-.skill-index-row > summary::-webkit-details-marker { display: none; }
-.skill-index-row > summary::marker { content: ""; }
-
-.skill-index-num {
+.skill-panel-num {
   font-family: var(--font-mono);
-  color: var(--accent);
+  font-size: 2.4rem;
   font-weight: 700;
-  font-size: 0.85rem;
-  flex: none;
+  color: var(--accent);
+  line-height: 1;
 }
-.skill-index-title {
+.skill-panel-title {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-on-alt);
-  flex: 1;
-}
-.skill-index-chevron {
-  font-family: var(--font-mono);
-  font-size: 1.1rem;
-  color: var(--text-on-alt-dim);
-  transition: transform 0.25s var(--ease);
-}
-.skill-index-row[open] .skill-index-chevron { transform: rotate(45deg); }
-.skill-index-row:hover .skill-index-title { color: var(--primary); }
-
-.skill-index-body {
-  padding: 0 4px 26px 46px;
-  animation: skill-reveal 0.22s var(--ease);
-}
-@keyframes skill-reveal {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
-.skill-index-body .tag-row { gap: 8px; }
-.skill-index-body .tag {
+.skill-panel .tag-row { gap: 8px; }
+.skill-panel .tag {
   background: color-mix(in srgb, var(--quad) 14%, white);
   border-color: color-mix(in srgb, var(--quad) 32%, white);
   color: var(--text-on-alt);
 }
-.skill-index-body .tag:hover { border-color: var(--accent); color: var(--text-on-alt); }
+.skill-panel .tag:hover { border-color: var(--accent); color: var(--text-on-alt); }
 
 .tag-admin { padding-right: 6px; display: inline-flex; align-items: center; gap: 6px; }
 .tag-remove {
@@ -1028,7 +1008,7 @@ body[data-page="home"] .site-footer {
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
-  .project-grid, .cert-grid { grid-template-columns: 1fr; }
+  .project-grid, .cert-grid, .skill-groups { grid-template-columns: 1fr; }
   .exp-card-head { flex-direction: column; }
   .exp-meta { text-align: left; }
   .hero { padding-top: 56px; }

@@ -56,17 +56,14 @@
     var num = String(gIndex + 1).padStart(2, "0");
 
     return (
-      '<details class="skill-index-row">' +
-        '<summary>' +
-          '<span class="skill-index-num">' + num + '</span>' +
-          '<span class="skill-index-title">' + esc(group.title) + '</span>' +
-          '<span class="skill-index-chevron" aria-hidden="true">+</span>' +
-        '</summary>' +
-        '<div class="skill-index-body">' +
-          '<div class="tag-row">' + tags + addTagBtn + '</div>' +
-          removeGroupBtn +
+      '<div class="skill-panel">' +
+        '<div class="skill-panel-head">' +
+          '<span class="skill-panel-num">' + num + '</span>' +
+          '<span class="skill-panel-title">' + esc(group.title) + '</span>' +
         '</div>' +
-      '</details>'
+        '<div class="tag-row">' + tags + addTagBtn + '</div>' +
+        removeGroupBtn +
+      '</div>'
     );
   }
 
