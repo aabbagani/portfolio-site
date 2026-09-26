@@ -55,6 +55,39 @@
       return "<li>" + esc(b) + "</li>";
     }).join("");
 
+    var statsHTML = (exp.stats || []).length
+      ? '<div class="exp-block-label">At a Glance</div>' +
+        '<div class="exp-stats">' + (exp.stats || []).map(function (s) {
+          return (
+            '<div class="exp-stat">' +
+              '<span class="exp-stat-value">' + esc(s.value) + "</span>" +
+              '<span class="exp-stat-label">' + esc(s.label) + "</span>" +
+            "</div>"
+          );
+        }).join('<span class="exp-stat-arrow" aria-hidden="true">→</span>') +
+        "</div>"
+      : "";
+
+    var highlightsHTML = (exp.highlights || []).length
+      ? '<div class="exp-block-label">What I Worked On</div>' +
+        '<div class="exp-highlights">' + (exp.highlights || []).map(function (h) {
+          return (
+            '<div class="exp-highlight">' +
+              '<span class="exp-highlight-icon" aria-hidden="true">' + esc(h.icon || "") + "</span>" +
+              '<div>' +
+                '<div class="exp-highlight-title">' + esc(h.title) + "</div>" +
+                '<p class="exp-highlight-desc">' + esc(h.description) + "</p>" +
+              "</div>" +
+            "</div>"
+          );
+        }).join("") +
+        "</div>"
+      : "";
+
+    var body = highlightsHTML
+      ? statsHTML + highlightsHTML
+      : (bullets ? '<ul class="exp-bullets">' + bullets + "</ul>" : "");
+
     var links = (exp.links || []).length
       ? '<div class="exp-links">' + (exp.links || []).map(function (l) {
           if (!l.url) return '<span class="link-chip" data-tbd="true">' + esc(l.label) + " (link TBD)</span>";
@@ -92,7 +125,7 @@
           '<div class="exp-meta">' + esc(exp.location) + "<br />" + esc(exp.dates) + "</div>" +
         "</div>" +
         tags +
-        (bullets ? '<ul class="exp-bullets">' + bullets + "</ul>" : "") +
+        body +
         links +
       "</article>"
     );

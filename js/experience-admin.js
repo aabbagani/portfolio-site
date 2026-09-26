@@ -195,7 +195,13 @@
         data.id = slugify(data.role + "-" + data.org);
         experience.push(data);
       } else {
-        data.id = experience[editingIndex].id;
+        // The modal only edits the plain fields — carry over stats/
+        // highlights (the "at a glance" numbers and worked-on cards),
+        // which aren't editable here, so saving doesn't wipe them.
+        var previous = experience[editingIndex];
+        data.id = previous.id;
+        if (previous.stats) data.stats = previous.stats;
+        if (previous.highlights) data.highlights = previous.highlights;
         experience[editingIndex] = data;
       }
       window.setExperience(experience, { animate: false });
