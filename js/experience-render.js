@@ -64,7 +64,7 @@
               '<span class="exp-stat-label">' + esc(s.label) + "</span>" +
             "</div>"
           );
-        }).join('<span class="exp-stat-arrow" aria-hidden="true">→</span>') +
+        }).join('<span class="exp-stat-divider" aria-hidden="true"></span>') +
         "</div>"
       : "";
 
