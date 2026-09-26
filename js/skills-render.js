@@ -36,7 +36,10 @@
 
   // A few standout skills get a filled, bolder treatment so a recruiter's
   // eye lands somewhere specific first instead of scanning ~40 tags evenly.
-  var SIGNATURE_SKILLS = ["Roadmap Planning", "AI Prototyping", "Figma", "Cross-Functional Collaboration"];
+  var SIGNATURE_SKILLS = [
+    "Go-to-Market Strategy", "Product Sense", "Agile SDLC", "JIRA",
+    "Interpersonal Intelligence", "Cross-Functional Collaboration", "Adaptability"
+  ];
 
   function groupHTML(group, gIndex) {
     var admin = document.body.classList.contains("admin-mode");

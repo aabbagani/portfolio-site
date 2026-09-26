@@ -7,14 +7,14 @@ window.SKILLS_DATA = [
     title: "Think",
     tags: [
       "Market Analysis", "Product Life Cycle", "Roadmap Planning", "Go-to-Market Strategy",
-      "Prioritization", "Problem-Solving", "Analytics", "Curiosity"
+      "Product Sense", "User Empathy", "Prioritization", "Problem-Solving", "Analytics", "Curiosity"
     ]
   },
   {
     id: "build",
     title: "Build",
     tags: [
-      "AI Prototyping", "RAG Pipelines", "Prompt Engineering", "Python", "SQL",
+      "Claude", "AI Prototyping", "RAG Pipelines", "Prompt Engineering", "Python", "SQL",
       "Google AI Studio", "Antigravity", "Replit", "Stitch AI", "Kiro", "Lovable AI",
       "Cursor", "Rork AI", "UiPath Studio"
     ]
