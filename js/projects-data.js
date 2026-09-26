@@ -23,7 +23,7 @@ window.PROJECTS_DATA = [
       },
       {
         "label": "PRD",
-        "url": "https://doc-08-4c-docstext.googleusercontent.com/export/i99h1bptbejhu5114utqvq228o/umdkmd4v6vnihckt09r1qehu8k/1790311560000/112521975513829773514/112521975513829773514/1klPG_QAZY6RnD6F8rEGZiiVKxgdGBS2QaG1O6vs4nNw?format=pdf&id=1klPG_QAZY6RnD6F8rEGZiiVKxgdGBS2QaG1O6vs4nNw&token=AJagN6S1d3FbcBpc3xFp1HOGp9Io:1790216858858&ouid=112521975513829773514&includes_info_params=true&usp=docs_web&cros_files=false&nded=false&tab=t.p7tnavy6e09a&inspectorResult=%7B%22pc%22:14,%22lplc%22:29%7D&dat=AEnQ8CchZWFHU4t8JfNeZr0jP7FCAPJCxF16bo-FHVW7vDr6_8E41xqxaATe2cahmp7EaHl0sO_nXDt44CiNQyyiV4RtZXsEijs1NgpVoqFQufWG_kIUoT52K5B0_daqIX5s5g6NdzvDhc7n0hKsZtpgP5Px3Cz4s0FhbP8w4JowCCm-oaRLfowZogi053nkxrsxq7UiUTgJWoHHb0B8vnW3a4fYfH_ZnKAW4J-y7SglZRWBaX0C6nvwbevhRM-a2ZjtVbAXG7uTrkcnifKOjQXjH-A0w6hMD8r2qdxOpH1DYSeqNfjLOJjdm_nFTGcgujfSPEm-G3EuakMna7-68wNMXtFiwvoZTB0fPW5Wwx1zgkhh-2rRahFh4Nib9JQqp1GkmR_p-y8i0hO8eBZ12drPB9hvZeg7_eWhqUa5IraheSlx31onfnlmSQjQkv5uCw6RY8dXQ8iU2mpqyKbaAmzgklQvHLtAy3JK9_4GWgZIHqOoiVOL7hVRxc7iacKywfkX-A8i7CGDS9zlQ2eJ3MZ-7BnW3EgAVzJmPh4JgErNmV0gbGlha405dzy00ecwbcUehIb7IZkXgEkfUI10WGyzPlMIRWZcQugAJ85agknW5F5WKWwCV6AdEW6UO4u8woMMy52h3VLc2us6wbRxefWz2muG4Lcx2j9bo7wG1HJUlTpfVMvLq02rV_9eIn7uOWUxFepvL-dlxHD5YhEjo--9-iMGQF57DW-B6WeDIMSKLtXJw56Q9EnluMNHYVfUQNr9D1WXBoyxhPNOZ3wV6Kd5KGquhvcNIMHj8DZ2iwQ5EkvgGK7lxiSlbboYPfxUQE0fPnJQ1M4C0uSVnJfjKuT6koywn_vdj7MrR9nAdB3wpTqUUVCfW_UkO57LNXI8CIzUf3eTidrRw028XHv8sEaVFIda_m7ZMGzDqD2i36zcmOOuhezVGDZaIumOXlemJWOjreVs266bxf3ss0r69UsOQMsyQ44"
+        "url": "assets/projects/clinicalm-prd.pdf"
       }
     ],
     "id": "clinicalm"

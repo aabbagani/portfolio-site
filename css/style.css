@@ -11,6 +11,11 @@
   /* Semantic mapping */
   --bg: var(--tertiary);
   --bg-elevated: color-mix(in srgb, var(--tertiary) 70%, var(--primary) 30%);
+  /* Page background from the Projects section onward — card/surface
+     colors are untouched, only the space around them turns light. */
+  --bg-alt: #f7f3fa;
+  --text-on-alt: color-mix(in srgb, var(--tertiary) 88%, var(--primary) 12%);
+  --text-on-alt-dim: color-mix(in srgb, var(--tertiary) 60%, transparent);
   --surface: var(--primary);
   --surface-hover: color-mix(in srgb, var(--primary) 85%, var(--quad) 15%);
   --border: rgba(185, 143, 203, 0.25);
@@ -182,6 +187,22 @@ img { max-width: 100%; display: block; }
 section { padding: 96px 0; }
 section:first-of-type { padding-top: 64px; }
 
+/* From Projects onward the page background itself turns light — card/tag/
+   accent colors inside each section are untouched (only the space around
+   them changes), so only the bare text that sits directly on the section
+   background (eyebrow, heading, intro) needs to flip to a dark tone. */
+#projects,
+#skills,
+#education,
+#certifications {
+  background: var(--bg-alt);
+}
+body[data-page="home"] .site-footer {
+  background: var(--bg-alt);
+  color: var(--text-on-alt-dim);
+  border-top-color: rgba(28, 15, 36, 0.15);
+}
+
 /* Empire State sticker — symbolic of hope — sits beside every section title. */
 .title-sticker {
   display: inline-block;
@@ -238,20 +259,20 @@ section:first-of-type { padding-top: 64px; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text-on-alt);
   margin-bottom: 14px;
 }
 .eyebrow::before {
   content: "";
   width: 22px;
   height: 2px;
-  background: var(--grad);
+  background: var(--accent);
   border-radius: 2px;
 }
 
 .section-head { margin-bottom: 40px; }
-.section-head h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
-.section-head p { color: var(--text-dim); margin-top: 10px; max-width: 60ch; }
+.section-head h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); color: var(--text-on-alt); }
+.section-head p { color: var(--text-on-alt-dim); margin-top: 10px; max-width: 60ch; }
 
 /* ===== Hero ===== */
 .hero {
@@ -441,7 +462,7 @@ section:first-of-type { padding-top: 64px; }
 /* ===== Projects ===== */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -536,6 +557,7 @@ section:first-of-type { padding-top: 64px; }
 .project-card > .project-edit-btn,
 .project-card > .project-move-controls {
   position: absolute;
+  z-index: 5;
 }
 
 .project-card:hover {
@@ -1106,9 +1128,20 @@ section:first-of-type { padding-top: 64px; }
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }
-.admin-link-row .admin-input { margin-top: 0; }
-.admin-link-file { flex: 1 1 100%; font-size: 0.82rem; color: var(--text-dim); }
-.admin-file-attached { flex: 1 1 100%; font-size: 0.78rem; color: var(--accent-strong); }
+.admin-link-row .admin-input {
+  margin-top: 0;
+  width: auto;
+  min-width: 0;
+  flex: 1 1 140px;
+}
+.admin-link-row .admin-input:disabled { color: var(--text-faint); font-style: italic; }
+
+.admin-link-upload-btn { font-size: 0.95rem; }
+.admin-link-upload-btn.has-file {
+  background: var(--accent);
+  color: var(--tertiary);
+  border-color: var(--accent);
+}
 
 .admin-icon-btn {
   flex: none;

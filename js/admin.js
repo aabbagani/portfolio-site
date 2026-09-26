@@ -97,12 +97,13 @@
 
   function linkRowHTML(link, i) {
     var isFile = /^data:/.test(link.url || "");
+    var fileTitle = isFile ? "File attached" + (link.fileName ? ": " + link.fileName : "") : "Upload a file instead of a URL";
     return (
       '<div class="admin-link-row" data-link-row="' + i + '">' +
         '<input type="text" class="admin-input" data-field="link-label" data-i="' + i + '" placeholder="Label (e.g. Prototype)" value="' + esc(link.label) + '" />' +
-        '<input type="url" class="admin-input" data-field="link-url" data-i="' + i + '" placeholder="https:// (leave blank for TBD)" value="' + (isFile ? "" : esc(link.url)) + '" />' +
-        '<input type="file" class="admin-file admin-link-file" data-field="link-file" data-i="' + i + '" />' +
-        (isFile ? '<span class="admin-file-attached">File attached' + (link.fileName ? ": " + esc(link.fileName) : "") + '</span>' : "") +
+        '<input type="url" class="admin-input" data-field="link-url" data-i="' + i + '" placeholder="' + (isFile ? "(file attached)" : "https:// (leave blank for TBD)") + '" value="' + (isFile ? "" : esc(link.url)) + '" data-original-url="' + esc(link.url || "") + '" data-original-filename="' + esc(link.fileName || "") + '" />' +
+        '<button type="button" class="admin-icon-btn admin-link-upload-btn' + (isFile ? " has-file" : "") + '" data-action="upload-link" data-i="' + i + '" title="' + esc(fileTitle) + '" aria-label="' + esc(fileTitle) + '">\u{1F4CE}</button>' +
+        '<input type="file" class="admin-link-file" data-field="link-file" data-i="' + i + '" hidden />' +
         '<button type="button" class="admin-icon-btn" data-action="remove-link" data-i="' + i + '" aria-label="Remove link">×</button>' +
       "</div>"
     );
@@ -156,9 +157,18 @@
     var fileInputs = Array.prototype.slice.call(modal.querySelectorAll('[data-field="link-file"]'));
     var links = labels.map(function (l, i) {
       var uploaded = uploadedLinkFiles.get(fileInputs[i]);
-      return uploaded
-        ? { label: l.value.trim(), url: uploaded.dataURL, fileName: uploaded.fileName }
-        : { label: l.value.trim(), url: urls[i].value.trim() };
+      if (uploaded) {
+        return { label: l.value.trim(), url: uploaded.dataURL, fileName: uploaded.fileName };
+      }
+      var typed = urls[i].value.trim();
+      if (typed) return { label: l.value.trim(), url: typed };
+      // Untouched row: fall back to whatever it already had (a plain URL,
+      // an already-attached file, or nothing) rather than wiping a file
+      // out just because its input is shown blank for readability.
+      var fileName = urls[i].getAttribute("data-original-filename") || "";
+      var result = { label: l.value.trim(), url: urls[i].getAttribute("data-original-url") || "" };
+      if (fileName) result.fileName = fileName;
+      return result;
     }).filter(function (l) { return l.label; });
 
     return {
@@ -219,13 +229,14 @@
       linkReader.onload = function () {
         uploadedLinkFiles.set(e.target, { dataURL: linkReader.result, fileName: linkFile.name });
         var row = e.target.closest(".admin-link-row");
-        var existingNote = row.querySelector(".admin-file-attached");
-        if (existingNote) existingNote.remove();
-        var note = document.createElement("span");
-        note.className = "admin-file-attached";
-        note.textContent = "File attached: " + linkFile.name;
-        e.target.after(note);
-        row.querySelector('[data-field="link-url"]').value = "";
+        var urlInput = row.querySelector('[data-field="link-url"]');
+        urlInput.value = "";
+        urlInput.placeholder = "(file attached)";
+        var uploadBtn = row.querySelector(".admin-link-upload-btn");
+        uploadBtn.classList.add("has-file");
+        var title = "File attached: " + linkFile.name;
+        uploadBtn.title = title;
+        uploadBtn.setAttribute("aria-label", title);
       };
       linkReader.readAsDataURL(linkFile);
     }
@@ -247,6 +258,11 @@
 
     if (action === "remove-link") {
       btn.closest(".admin-link-row").remove();
+      return;
+    }
+
+    if (action === "upload-link") {
+      btn.closest(".admin-link-row").querySelector('[data-field="link-file"]').click();
       return;
     }
 
