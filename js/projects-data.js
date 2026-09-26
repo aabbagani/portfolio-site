@@ -4,8 +4,8 @@ window.PROJECTS_DATA = [
   {
     "category": "Trust & Data Quality",
     "name": "CliniCalm: An Intake Quality Gate for Clinical Trial Data",
-    "headline": "Catches what dataset-level validation detects too late",
-    "description": "Flatiron Health validates AI-curated oncology data only after the fact — never in real time, thereby lacking trust. CliniCalm catches that gap: flagging risky records, routing them to a reviewer, and logging every decision before analytics.",
+    "headline": "Flatiron Health never validates AI-curated oncology data in real time, thereby lacking trust.",
+    "description": "CliniCalm catches that gap: flagging risky records, routing them to a reviewer, and logging every decision before analytics.",
     "tags": [
       "Claude",
       "GitHub Pages",
