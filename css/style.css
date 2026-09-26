@@ -629,6 +629,16 @@ body[data-page="home"] .site-footer {
   padding-top: 4px;
 }
 
+/* Project cards narrowed to 3 columns, so their link chips (Slide Deck,
+   PRD, Prototype, ...) get a tighter, single-line treatment to avoid
+   wrapping onto extra rows and inflating card height. */
+.project-card .link-row { gap: 6px; }
+.project-card .link-chip {
+  font-size: 0.72rem;
+  padding: 5px 9px;
+  white-space: nowrap;
+}
+
 .link-chip {
   font-size: 0.82rem;
   font-weight: 600;
