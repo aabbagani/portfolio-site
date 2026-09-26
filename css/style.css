@@ -406,9 +406,10 @@ body[data-page="home"] .site-footer {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 300px;
+  max-width: 330px;
   height: auto;
   margin: 0 auto;
+  transform: translateX(-24px);
   filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.5));
 }
 
@@ -430,7 +431,7 @@ body[data-page="home"] .site-footer {
 
 @media (max-width: 560px) {
   .hero-cutout-stage { min-height: 340px; }
-  .hero-photo-cutout { max-width: 230px; }
+  .hero-photo-cutout { max-width: 245px; transform: translateX(-12px); }
   .hero-building { max-width: 280px; }
   .hero-photo-badge { width: 68px; right: 3%; }
 }
