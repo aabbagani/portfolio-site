@@ -76,7 +76,6 @@ h1, h2, h3, h4,
 }
 
 /* Tiny labels, tags, and metadata read as mono throughout */
-.eyebrow,
 .hero-kicker,
 .project-category,
 .tag,
@@ -190,7 +189,7 @@ section:first-of-type { padding-top: 64px; }
 /* From Projects onward the page background itself turns light — card/tag/
    accent colors inside each section are untouched (only the space around
    them changes), so only the bare text that sits directly on the section
-   background (eyebrow, heading, intro) needs to flip to a dark tone. */
+   background (heading, intro) needs to flip to a dark tone. */
 #projects,
 #skills,
 #education,
@@ -249,25 +248,6 @@ body[data-page="home"] .site-footer {
     transition: none !important;
   }
   .hero::before { animation: none !important; }
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-on-alt);
-  margin-bottom: 14px;
-}
-.eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 2px;
 }
 
 .section-head { margin-bottom: 40px; }
