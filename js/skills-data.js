@@ -6,8 +6,8 @@ window.SKILLS_DATA = [
     id: "think",
     title: "Think",
     tags: [
-      "Market Analysis", "Product Life Cycle", "Roadmap Planning", "Prioritization",
-      "Problem-Solving", "Analytics", "Curiosity"
+      "Market Analysis", "Product Life Cycle", "Roadmap Planning", "Go-to-Market Strategy",
+      "Prioritization", "Problem-Solving", "Analytics", "Curiosity"
     ]
   },
   {
@@ -15,15 +15,15 @@ window.SKILLS_DATA = [
     title: "Build",
     tags: [
       "AI Prototyping", "RAG Pipelines", "Prompt Engineering", "Python", "SQL",
-      "Google AI Studio", "Antigravity", "Stitch AI", "Kiro", "Lovable AI",
-      "Cursor", "Rork AI", "UiPath"
+      "Google AI Studio", "Antigravity", "Replit", "Stitch AI", "Kiro", "Lovable AI",
+      "Cursor", "Rork AI", "UiPath Studio"
     ]
   },
   {
     id: "ship",
     title: "Ship",
     tags: [
-      "Figma", "Tableau", "Power BI", "Agile SDLC", "JIRA", "Monday.com",
+      "Figma", "Tableau", "Power BI", "Agile SDLC", "JIRA", "Confluence", "Monday.com",
       "Salesforce Sandbox", "Microsoft Office", "Adobe Creative Cloud",
       "Organizational Skills", "Multi-Tasking"
     ]
