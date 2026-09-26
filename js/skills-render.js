@@ -38,7 +38,8 @@
   // eye lands somewhere specific first instead of scanning ~40 tags evenly.
   var SIGNATURE_SKILLS = [
     "Go-to-Market Strategy", "Product Sense", "Agile SDLC", "JIRA",
-    "Interpersonal Intelligence", "Cross-Functional Collaboration", "Adaptability"
+    "Interpersonal Intelligence", "Cross-Functional Collaboration", "Adaptability",
+    "AI Prototyping", "Prompt Engineering"
   ];
 
   function groupHTML(group, gIndex) {
