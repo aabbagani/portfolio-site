@@ -16,7 +16,7 @@
   --bg-alt: #f7f3fa;
   --text-on-alt: color-mix(in srgb, var(--tertiary) 88%, var(--primary) 12%);
   --text-on-alt-dim: color-mix(in srgb, var(--tertiary) 60%, transparent);
-  --band: color-mix(in srgb, var(--quad) 16%, white);
+  --band: #DFC5FE;
   --surface: var(--primary);
   --surface-hover: color-mix(in srgb, var(--primary) 85%, var(--quad) 15%);
   --border: rgba(185, 143, 203, 0.25);
