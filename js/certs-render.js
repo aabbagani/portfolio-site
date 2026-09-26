@@ -34,6 +34,19 @@
     });
   }
 
+  // No real issuer logo files on hand, so a small deterministic-color
+  // monogram stands in for one — same issuer always gets the same
+  // letter/color, no hardcoded per-issuer list to keep updated.
+  function issuerBadgeHTML(issuer) {
+    var palette = ["#5c4566", "#b98fcb", "#1c0f24", "#8a6a9c"];
+    var name = issuer || "?";
+    var hash = 0;
+    for (var i = 0; i < name.length; i++) hash = (hash * 31 + name.charCodeAt(i)) >>> 0;
+    var color = palette[hash % palette.length];
+    var letter = name.trim().charAt(0).toUpperCase();
+    return '<span class="cert-issuer-badge" style="background:' + color + '" aria-hidden="true">' + esc(letter) + "</span>";
+  }
+
   function cardHTML(cert, index) {
     var admin = document.body.classList.contains("admin-mode");
     var link = cert.url
@@ -47,6 +60,7 @@
     return (
       '<div class="cert-card" data-index="' + index + '">' +
         editBtn +
+        issuerBadgeHTML(cert.issuer) +
         "<div>" +
           '<div class="cert-name">' + esc(cert.name) + "</div>" +
           '<div class="cert-meta">' + esc(cert.issuer) + " · " + esc(cert.date) + "</div>" +
