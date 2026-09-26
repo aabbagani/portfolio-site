@@ -626,6 +626,27 @@ body[data-page="home"] .site-footer {
   padding: 5px 9px;
   white-space: nowrap;
 }
+.project-card .link-chip:not([data-tbd="true"]) {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--tertiary);
+  font-weight: 700;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.4);
+}
+.project-card .link-chip:not([data-tbd="true"])::after {
+  content: "↗";
+  font-size: 0.95em;
+}
+.project-card .link-chip:not([data-tbd="true"]):hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--tertiary);
+  box-shadow: 0 4px 14px -2px var(--glow);
+  transform: translateY(-2px);
+}
 
 .link-chip {
   font-size: 0.82rem;
@@ -734,20 +755,20 @@ body[data-page="home"] .site-footer {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 44px;
+  padding: 44px 44px 44px 250px;
   display: flex;
   flex-direction: column;
   gap: 6px;
   overflow: hidden;
 }
-.edu-card .edu-school { font-size: 1.9rem; font-weight: 700; }
-.edu-card .edu-degree { color: var(--text-dim); font-size: 1.25rem; margin-top: 8px; }
+.edu-card .edu-school { font-size: 1.6rem; font-weight: 700; }
+.edu-card .edu-degree { color: var(--text-dim); font-size: 1.08rem; margin-top: 8px; }
 
 .edu-fordham-sticker {
   position: absolute;
-  right: 24px;
+  left: 24px;
   top: 50%;
-  transform: translateY(-50%) rotate(8deg);
+  transform: translateY(-50%) rotate(-8deg);
   width: 190px;
   height: auto;
   opacity: 0.95;
@@ -756,7 +777,8 @@ body[data-page="home"] .site-footer {
 }
 
 @media (max-width: 700px) {
-  .edu-fordham-sticker { width: 90px; right: 12px; top: 20px; transform: rotate(8deg); opacity: 0.4; }
+  .edu-card { padding: 44px 24px 24px; }
+  .edu-fordham-sticker { width: 90px; left: 12px; top: 20px; transform: rotate(-8deg); opacity: 0.4; }
 }
 .edu-meta {
   display: flex;
@@ -765,7 +787,7 @@ body[data-page="home"] .site-footer {
   margin-top: 20px;
 }
 .edu-meta span {
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   color: var(--text-faint);
 }
 .edu-meta strong { color: var(--text-dim); font-weight: 600; }
@@ -773,9 +795,9 @@ body[data-page="home"] .site-footer {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 24px;
+  margin-top: 22px;
 }
-.edu-honors .tag { font-size: 0.9rem; padding: 8px 16px; }
+.edu-honors .tag { font-size: 0.8rem; padding: 7px 14px; }
 
 /* ===== Certifications ===== */
 .cert-grid {
