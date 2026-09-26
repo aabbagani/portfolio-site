@@ -238,7 +238,7 @@ section:first-of-type { padding-top: 64px; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--text-dim);
   margin-bottom: 14px;
 }
 .eyebrow::before {
@@ -533,6 +533,10 @@ section:first-of-type { padding-top: 64px; }
 }
 
 .project-card > * { position: relative; z-index: 1; }
+.project-card > .project-edit-btn,
+.project-card > .project-move-controls {
+  position: absolute;
+}
 
 .project-card:hover {
   transform: translateY(-6px) scale(1.01);
@@ -1093,9 +1097,18 @@ section:first-of-type { padding-top: 64px; }
   border: 1px solid var(--border-strong);
 }
 
-.admin-links { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
-.admin-link-row { display: flex; gap: 8px; align-items: center; }
+.admin-links { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+.admin-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
 .admin-link-row .admin-input { margin-top: 0; }
+.admin-link-file { flex: 1 1 100%; font-size: 0.82rem; color: var(--text-dim); }
+.admin-file-attached { flex: 1 1 100%; font-size: 0.78rem; color: var(--accent-strong); }
 
 .admin-icon-btn {
   flex: none;

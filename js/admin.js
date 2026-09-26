@@ -96,10 +96,13 @@
   }
 
   function linkRowHTML(link, i) {
+    var isFile = /^data:/.test(link.url || "");
     return (
       '<div class="admin-link-row" data-link-row="' + i + '">' +
         '<input type="text" class="admin-input" data-field="link-label" data-i="' + i + '" placeholder="Label (e.g. Prototype)" value="' + esc(link.label) + '" />' +
-        '<input type="url" class="admin-input" data-field="link-url" data-i="' + i + '" placeholder="https:// (leave blank for TBD)" value="' + esc(link.url) + '" />' +
+        '<input type="url" class="admin-input" data-field="link-url" data-i="' + i + '" placeholder="https:// (leave blank for TBD)" value="' + (isFile ? "" : esc(link.url)) + '" />' +
+        '<input type="file" class="admin-file admin-link-file" data-field="link-file" data-i="' + i + '" />' +
+        (isFile ? '<span class="admin-file-attached">File attached' + (link.fileName ? ": " + esc(link.fileName) : "") + '</span>' : "") +
         '<button type="button" class="admin-icon-btn" data-action="remove-link" data-i="' + i + '" aria-label="Remove link">×</button>' +
       "</div>"
     );
@@ -150,8 +153,12 @@
 
     var labels = Array.prototype.slice.call(modal.querySelectorAll('[data-field="link-label"]'));
     var urls = Array.prototype.slice.call(modal.querySelectorAll('[data-field="link-url"]'));
+    var fileInputs = Array.prototype.slice.call(modal.querySelectorAll('[data-field="link-file"]'));
     var links = labels.map(function (l, i) {
-      return { label: l.value.trim(), url: urls[i].value.trim() };
+      var uploaded = uploadedLinkFiles.get(fileInputs[i]);
+      return uploaded
+        ? { label: l.value.trim(), url: uploaded.dataURL, fileName: uploaded.fileName }
+        : { label: l.value.trim(), url: urls[i].value.trim() };
     }).filter(function (l) { return l.label; });
 
     return {
@@ -165,8 +172,11 @@
     };
   }
 
+  var uploadedLinkFiles = new Map();
+
   function openModal(index) {
     editingIndex = index;
+    uploadedLinkFiles.clear();
     var project = index === null ? emptyProject() : JSON.parse(JSON.stringify(window.getProjects()[index]));
     renderModal(project);
     overlay.style.display = "flex";
@@ -201,6 +211,23 @@
         preview.src = reader.result;
       };
       reader.readAsDataURL(file);
+    }
+    if (e.target.matches('[data-field="link-file"]')) {
+      var linkFile = e.target.files && e.target.files[0];
+      if (!linkFile) return;
+      var linkReader = new FileReader();
+      linkReader.onload = function () {
+        uploadedLinkFiles.set(e.target, { dataURL: linkReader.result, fileName: linkFile.name });
+        var row = e.target.closest(".admin-link-row");
+        var existingNote = row.querySelector(".admin-file-attached");
+        if (existingNote) existingNote.remove();
+        var note = document.createElement("span");
+        note.className = "admin-file-attached";
+        note.textContent = "File attached: " + linkFile.name;
+        e.target.after(note);
+        row.querySelector('[data-field="link-url"]').value = "";
+      };
+      linkReader.readAsDataURL(linkFile);
     }
   });
 
