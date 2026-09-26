@@ -16,7 +16,7 @@
   }
 
   function emptyExperience() {
-    return { id: "new-role-" + Date.now(), role: "", org: "", location: "", dates: "", tags: [], bullets: [""], links: [] };
+    return { id: "new-role-" + Date.now(), role: "", org: "", logo: "", location: "", dates: "", tags: [], bullets: [""], links: [] };
   }
 
   // ---- Toolbar (shared with exp-photos.js, which appends its own
@@ -102,6 +102,11 @@
       '<label class="admin-label">Organization</label>' +
       '<input type="text" class="admin-input" data-field="org" value="' + esc(exp.org) + '" />' +
 
+      '<label class="admin-label">Organization logo (URL/path, or upload below — leave blank for a monogram)</label>' +
+      '<input type="text" class="admin-input" data-field="logo" value="' + esc(exp.logo || "") + '" />' +
+      '<input type="file" accept="image/*" class="admin-file" data-field="logo-file" />' +
+      (exp.logo ? '<img class="admin-cover-preview" src="' + esc(exp.logo) + '" alt="" style="max-height:80px;object-fit:contain;background:#fff;" />' : "") +
+
       '<label class="admin-label">Location</label>' +
       '<input type="text" class="admin-input" data-field="location" value="' + esc(exp.location) + '" />' +
 
@@ -135,6 +140,7 @@
     return {
       role: modal.querySelector('[data-field="role"]').value.trim(),
       org: modal.querySelector('[data-field="org"]').value.trim(),
+      logo: modal.querySelector('[data-field="logo"]').value.trim(),
       location: modal.querySelector('[data-field="location"]').value.trim(),
       dates: modal.querySelector('[data-field="dates"]').value.trim(),
       tags: modal.querySelector('[data-field="tags"]').value.split(",").map(function (t) { return t.trim(); }).filter(Boolean),
@@ -157,6 +163,25 @@
 
   overlay.addEventListener("click", function (e) {
     if (e.target === overlay) closeModal();
+  });
+
+  modal.addEventListener("change", function (e) {
+    if (!e.target.matches('[data-field="logo-file"]')) return;
+    var file = e.target.files && e.target.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      modal.querySelector('[data-field="logo"]').value = reader.result;
+      var preview = modal.querySelector(".admin-cover-preview");
+      if (!preview) {
+        preview = document.createElement("img");
+        preview.className = "admin-cover-preview";
+        preview.style.cssText = "max-height:80px;object-fit:contain;background:#fff;";
+        e.target.after(preview);
+      }
+      preview.src = reader.result;
+    };
+    reader.readAsDataURL(file);
   });
 
   modal.addEventListener("click", function (e) {

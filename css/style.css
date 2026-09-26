@@ -1001,10 +1001,31 @@ body[data-page="home"] .site-footer {
 
 .exp-card-head {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
+}
+.exp-card-head-text { flex: 1 1 auto; min-width: 200px; }
+
+.exp-org-badge { flex: none; }
+.exp-org-monogram {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+.exp-org-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-strong);
 }
 
 .exp-role { font-size: 1.25rem; font-weight: 700; }
@@ -1037,12 +1058,15 @@ body[data-page="home"] .site-footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 12px 6px;
   padding: 4px 0 6px;
+  text-align: center;
 }
 .exp-stat {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2px;
   min-width: 96px;
 }
@@ -1098,34 +1122,59 @@ body[data-page="home"] .site-footer {
 
 .exp-links { display: flex; gap: 10px; flex-wrap: wrap; }
 
-/* Scrapbook: a real "Moments" photo row for roles with photos —
-   polaroid-styled thumbnails, gently rotated for a scrapbook feel, but
-   sitting in normal flow rather than stickers pinned off the card
-   edge — more photos just wrap onto another line. */
-.scrapbook { margin-top: 18px; }
-.scrap-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  align-items: flex-start;
+/* Scrapbook: photos pinned onto the card like the Fordham sticker on
+   the Education card — peeking in from the edge, overlapping the
+   content a little. On hover (recruiters skimming, not editing) they
+   slide further out and fade, so nothing sits on top of the text for
+   longer than a glance. Admin Mode keeps them put (and clickable) so
+   editing isn't fighting a disappearing target. */
+.scrapbook { margin: 0; }
+.scrap-add {
+  position: relative;
+  z-index: 4;
+  margin-top: 14px;
+  align-self: center;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-strong);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
 }
+.scrap-add:hover { border-color: var(--accent); color: var(--accent-strong); }
 
 .scrap-photo {
-  position: relative;
-  width: 150px;
+  position: absolute;
+  top: 50%;
+  width: 100px;
   background: var(--secondary);
-  padding: 7px 7px 9px;
+  padding: 6px 6px 8px;
   border-radius: 3px;
   box-shadow: var(--shadow-lg);
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+  z-index: 3;
 }
-.scrap-photo:nth-child(odd) { transform: rotate(-4deg); }
-.scrap-photo:nth-child(even) { transform: rotate(3deg); }
+.scrap-photo:nth-child(odd) { right: -20px; }
+.scrap-photo:nth-child(even) { left: -20px; }
+.scrap-photo:nth-child(1) { transform: translateY(-65%) rotate(7deg); }
+.scrap-photo:nth-child(2) { transform: translateY(-20%) rotate(-6deg); }
+.scrap-photo:nth-child(3) { transform: translateY(25%) rotate(5deg); }
 .scrap-photo:hover {
-  transform: rotate(0deg) scale(1.08) !important;
-  z-index: 2;
+  transform: translateY(-50%) scale(1.1) !important;
+  z-index: 6;
   box-shadow: var(--shadow-lg), 0 0 30px -6px var(--glow-soft);
 }
+
+body:not(.admin-mode) .exp-card:hover .scrap-photo {
+  opacity: 0;
+  pointer-events: none;
+}
+body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(1) { transform: translateY(-65%) translateX(40px) rotate(0deg); }
+body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(2) { transform: translateY(-20%) translateX(-40px) rotate(0deg); }
+body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(3) { transform: translateY(25%) translateX(40px) rotate(0deg); }
 .scrap-photo img {
   display: block;
   width: 100%;
@@ -1159,19 +1208,6 @@ body[data-page="home"] .site-footer {
 }
 .scrap-remove:hover { background: var(--accent); color: var(--tertiary); }
 
-.scrap-add {
-  align-self: center;
-  padding: 10px 16px;
-  border-radius: var(--radius-sm);
-  border: 1px dashed var(--border-strong);
-  background: transparent;
-  color: var(--text-dim);
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-.scrap-add:hover { border-color: var(--accent); color: var(--accent-strong); }
-
 /* ===== Responsive ===== */
 @media (max-width: 860px) {
   .project-grid, .cert-grid, .skill-groups { grid-template-columns: 1fr; }
@@ -1186,7 +1222,9 @@ body[data-page="home"] .site-footer {
   .primary-links a { padding: 7px 12px; font-size: 0.86rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .btn { justify-content: center; }
-  .scrap-photo { width: 120px; }
+  .scrap-photo { width: 82px; }
+  .scrap-photo:nth-child(odd) { right: -8px; }
+  .scrap-photo:nth-child(even) { left: -8px; }
 }
 
 /* ===== Admin Mode (client-side only — see README) ===== */

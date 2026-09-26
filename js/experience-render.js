@@ -42,6 +42,22 @@
     });
   }
 
+  // No logo uploaded yet for most roles, so a deterministic-color
+  // monogram stands in — same org always gets the same letter/color.
+  // Admin Mode can upload a real logo per role to override this.
+  function orgBadgeHTML(exp) {
+    var name = (exp.org || "?").split(" — ")[0].trim();
+    if (exp.logo) {
+      return '<img class="exp-org-badge exp-org-logo" src="' + esc(exp.logo) + '" alt="" aria-hidden="true" />';
+    }
+    var palette = ["#5c4566", "#b98fcb", "#1c0f24", "#8a6a9c"];
+    var hash = 0;
+    for (var i = 0; i < name.length; i++) hash = (hash * 31 + name.charCodeAt(i)) >>> 0;
+    var color = palette[hash % palette.length];
+    var letter = name.charAt(0).toUpperCase();
+    return '<span class="exp-org-badge exp-org-monogram" style="background:' + color + '" aria-hidden="true">' + esc(letter) + "</span>";
+  }
+
   function cardHTML(exp, index, total) {
     var admin = document.body.classList.contains("admin-mode");
 
@@ -118,7 +134,8 @@
         editBtn +
         moveControls +
         '<div class="exp-card-head">' +
-          '<div>' +
+          orgBadgeHTML(exp) +
+          '<div class="exp-card-head-text">' +
             '<div class="exp-role">' + esc(exp.role) + "</div>" +
             '<div class="exp-org">' + esc(exp.org) + "</div>" +
           "</div>" +

@@ -89,12 +89,11 @@
         container.className = "scrapbook";
         card.appendChild(container);
       }
-      var label = photos.length ? '<div class="exp-block-label">Moments</div>' : "";
-      var html = '<div class="scrap-row">' +
-        photos.map(function (p, i) { return photoHTML(p, i, admin); }).join("") +
-        (admin ? '<button type="button" class="scrap-add" data-add-for="' + esc(id) + '">+ Add Photo</button>' : "") +
-        "</div>";
-      container.innerHTML = label + html;
+      var html = photos.map(function (p, i) { return photoHTML(p, i, admin); }).join("");
+      if (admin) {
+        html += '<button type="button" class="scrap-add" data-add-for="' + esc(id) + '">+ Add Photo</button>';
+      }
+      container.innerHTML = html;
     });
   }
 
