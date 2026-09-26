@@ -3,23 +3,37 @@
 // button there to get an updated copy of this file.
 window.SKILLS_DATA = [
   {
-    id: "technical-stack",
-    title: "Technical Stack",
+    id: "think",
+    title: "Think",
     tags: [
-      "Google AI Studio", "SQL", "Python", "Tableau", "Figma", "UiPath", "Agile SDLC",
-      "Antigravity", "Stitch AI", "Power BI", "JIRA UI Path Studio", "Kiro", "Lovable AI",
-      "Cursor", "Microsoft Office", "Adobe Creative Cloud", "Monday.com", "Salesforce Sandbox",
-      "Rork AI", "Market Analysis", "Product Life Cycle", "Roadmap Planning",
-      "Prompt Engineering", "AI Prototyping", "RAG Pipelines"
+      "Market Analysis", "Product Life Cycle", "Roadmap Planning", "Prioritization",
+      "Problem-Solving", "Analytics", "Curiosity"
     ]
   },
   {
-    id: "soft-intelligence",
-    title: "Soft Intelligence",
+    id: "build",
+    title: "Build",
     tags: [
-      "Adaptability", "Curiosity", "Storytelling", "Leadership", "Problem-Solving",
-      "Interpersonal Intelligence", "Cross-Functional Collaboration", "Presentation Skills",
-      "Proactivity", "Organizational Skills", "Analytics", "Entrepreneurship", "Multi-Tasking"
+      "AI Prototyping", "RAG Pipelines", "Prompt Engineering", "Python", "SQL",
+      "Google AI Studio", "Antigravity", "Stitch AI", "Kiro", "Lovable AI",
+      "Cursor", "Rork AI", "UiPath"
+    ]
+  },
+  {
+    id: "ship",
+    title: "Ship",
+    tags: [
+      "Figma", "Tableau", "Power BI", "Agile SDLC", "JIRA", "Monday.com",
+      "Salesforce Sandbox", "Microsoft Office", "Adobe Creative Cloud",
+      "Organizational Skills", "Multi-Tasking"
+    ]
+  },
+  {
+    id: "lead",
+    title: "Lead",
+    tags: [
+      "Leadership", "Storytelling", "Presentation Skills", "Cross-Functional Collaboration",
+      "Interpersonal Intelligence", "Adaptability", "Proactivity", "Entrepreneurship"
     ]
   }
 ];

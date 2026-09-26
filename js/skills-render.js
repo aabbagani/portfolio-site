@@ -53,12 +53,20 @@
       ? '<button type="button" class="skill-group-remove" data-remove-group="' + gIndex + '" aria-label="Delete group">Delete group</button>'
       : "";
 
+    var num = String(gIndex + 1).padStart(2, "0");
+
     return (
-      '<div class="skill-card" data-group-index="' + gIndex + '">' +
-        "<h3>" + esc(group.title) + "</h3>" +
-        '<div class="tag-row">' + tags + addTagBtn + "</div>" +
-        removeGroupBtn +
-      "</div>"
+      '<details class="skill-index-row">' +
+        '<summary>' +
+          '<span class="skill-index-num">' + num + '</span>' +
+          '<span class="skill-index-title">' + esc(group.title) + '</span>' +
+          '<span class="skill-index-chevron" aria-hidden="true">+</span>' +
+        '</summary>' +
+        '<div class="skill-index-body">' +
+          '<div class="tag-row">' + tags + addTagBtn + '</div>' +
+          removeGroupBtn +
+        '</div>' +
+      '</details>'
     );
   }
 
