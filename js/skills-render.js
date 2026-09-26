@@ -34,11 +34,16 @@
     });
   }
 
+  // A few standout skills get a filled, bolder treatment so a recruiter's
+  // eye lands somewhere specific first instead of scanning ~40 tags evenly.
+  var SIGNATURE_SKILLS = ["Roadmap Planning", "AI Prototyping", "Figma", "Cross-Functional Collaboration"];
+
   function groupHTML(group, gIndex) {
     var admin = document.body.classList.contains("admin-mode");
     var tags = (group.tags || []).map(function (tag, tIndex) {
+      var signature = SIGNATURE_SKILLS.indexOf(tag) !== -1;
       return (
-        '<span class="tag' + (admin ? " tag-admin" : "") + '">' +
+        '<span class="tag' + (signature ? " tag-signature" : "") + (admin ? " tag-admin" : "") + '">' +
           esc(tag) +
           (admin ? '<button type="button" class="tag-remove" data-group-index="' + gIndex + '" data-tag-index="' + tIndex + '" aria-label="Remove tag">×</button>' : "") +
         "</span>"
