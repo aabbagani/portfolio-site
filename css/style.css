@@ -1192,21 +1192,26 @@ body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(3) { transform: tra
   text-align: center;
 }
 
-.scrap-remove {
+.scrap-controls {
   position: absolute;
   top: -8px;
   right: -8px;
-  width: 26px;
-  height: 26px;
+  display: flex;
+  gap: 4px;
+}
+.scrap-controls button {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   border: 1px solid var(--border-strong);
   background: var(--bg-elevated);
   color: var(--text);
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1;
   cursor: pointer;
 }
-.scrap-remove:hover { background: var(--accent); color: var(--tertiary); }
+.scrap-controls button:hover { background: var(--accent); color: var(--tertiary); }
+.scrap-remove { font-size: 1rem; }
 
 /* ===== Responsive ===== */
 @media (max-width: 860px) {

@@ -64,7 +64,13 @@
       '<figure class="scrap-photo">' +
         '<img src="' + esc(photo.src) + '" alt="' + esc(photo.caption || "") + '" onerror="this.classList.add(\'img-missing\')" />' +
         (photo.caption ? '<figcaption>' + esc(photo.caption) + "</figcaption>" : "") +
-        (admin ? '<button type="button" class="scrap-remove" data-remove-index="' + i + '" aria-label="Remove photo">×</button>' : "") +
+        (admin
+          ? '<div class="scrap-controls">' +
+            '<button type="button" class="scrap-edit" data-edit-index="' + i + '" aria-label="Replace photo">⤴</button>' +
+            '<button type="button" class="scrap-caption" data-caption-index="' + i + '" aria-label="Edit caption">✎</button>' +
+            '<button type="button" class="scrap-remove" data-remove-index="' + i + '" aria-label="Remove photo">×</button>' +
+            "</div>"
+          : "") +
       "</figure>"
     );
   }
@@ -136,6 +142,43 @@
       var updated = JSON.parse(JSON.stringify(state.data));
       updated[expId].splice(index, 1);
       save(updated);
+      return;
+    }
+
+    var captionBtn = e.target.closest(".scrap-caption");
+    if (captionBtn) {
+      var captionCard = captionBtn.closest(".exp-card[data-exp-id]");
+      var captionExpId = captionCard.getAttribute("data-exp-id");
+      var captionIndex = parseInt(captionBtn.getAttribute("data-caption-index"), 10);
+      var current = state.data[captionExpId][captionIndex];
+      var nextCaption = prompt("Caption for this photo:", current.caption || "");
+      if (nextCaption === null) return;
+      var withCaption = JSON.parse(JSON.stringify(state.data));
+      withCaption[captionExpId][captionIndex].caption = nextCaption;
+      save(withCaption);
+      return;
+    }
+
+    var editBtn = e.target.closest(".scrap-edit");
+    if (editBtn) {
+      var editCard = editBtn.closest(".exp-card[data-exp-id]");
+      var editExpId = editCard.getAttribute("data-exp-id");
+      var editIndex = parseInt(editBtn.getAttribute("data-edit-index"), 10);
+      var replaceInput = document.createElement("input");
+      replaceInput.type = "file";
+      replaceInput.accept = "image/*";
+      replaceInput.addEventListener("change", function () {
+        var file = replaceInput.files && replaceInput.files[0];
+        if (!file) return;
+        var reader = new FileReader();
+        reader.onload = function () {
+          var withImage = JSON.parse(JSON.stringify(state.data));
+          withImage[editExpId][editIndex].src = reader.result;
+          save(withImage);
+        };
+        reader.readAsDataURL(file);
+      });
+      replaceInput.click();
     }
   });
 
