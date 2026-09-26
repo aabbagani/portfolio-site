@@ -1098,41 +1098,32 @@ body[data-page="home"] .site-footer {
 
 .exp-links { display: flex; gap: 10px; flex-wrap: wrap; }
 
-/* Scrapbook: photos pinned onto an Experience card like the Fordham
-   sticker on the Education card — rotated, hanging mostly past the
-   card's own left/right edge rather than boxed inside it. They sit
-   relative to the whole card (vertically centered, like the Fordham
-   sticker), not stacked one below another, so a card with photos
-   takes no more height than one without — the only reserved space is
-   the (in-flow) "+ Add Photo" button itself. */
-.scrapbook {
-  margin-top: 10px;
-}
-.scrap-add {
-  position: relative;
-  z-index: 4;
+/* Scrapbook: a real "Moments" photo row for roles with photos —
+   polaroid-styled thumbnails, gently rotated for a scrapbook feel, but
+   sitting in normal flow rather than stickers pinned off the card
+   edge — more photos just wrap onto another line. */
+.scrapbook { margin-top: 18px; }
+.scrap-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: flex-start;
 }
 
 .scrap-photo {
-  position: absolute;
-  top: 50%;
-  width: 132px;
+  position: relative;
+  width: 150px;
   background: var(--secondary);
-  padding: 6px 6px 8px;
+  padding: 7px 7px 9px;
   border-radius: 3px;
   box-shadow: var(--shadow-lg);
-  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
-  z-index: 3;
 }
-.scrap-photo:nth-child(odd) { right: -100px; }
-.scrap-photo:nth-child(even) { left: -100px; }
-.scrap-photo:nth-child(1) { transform: translateY(-78%) rotate(8deg); }
-.scrap-photo:nth-child(2) { transform: translateY(-32%) rotate(-7deg); }
-.scrap-photo:nth-child(3) { transform: translateY(6%) rotate(6deg); }
+.scrap-photo:nth-child(odd) { transform: rotate(-4deg); }
+.scrap-photo:nth-child(even) { transform: rotate(3deg); }
 .scrap-photo:hover {
-  transform: translateY(-50%) scale(1.1) !important;
-  z-index: 6;
+  transform: rotate(0deg) scale(1.08) !important;
+  z-index: 2;
   box-shadow: var(--shadow-lg), 0 0 30px -6px var(--glow-soft);
 }
 .scrap-photo img {
@@ -1146,7 +1137,7 @@ body[data-page="home"] .site-footer {
 .scrap-photo figcaption {
   padding: 8px 4px 2px;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   line-height: 1.35;
   color: var(--tertiary);
   text-align: center;
@@ -1195,9 +1186,7 @@ body[data-page="home"] .site-footer {
   .primary-links a { padding: 7px 12px; font-size: 0.86rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .btn { justify-content: center; }
-  .scrap-photo { width: 96px; }
-  .scrap-photo:nth-child(odd) { right: -22px; }
-  .scrap-photo:nth-child(even) { left: -22px; }
+  .scrap-photo { width: 120px; }
 }
 
 /* ===== Admin Mode (client-side only — see README) ===== */
