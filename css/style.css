@@ -184,7 +184,7 @@ img { max-width: 100%; display: block; }
 
 /* ===== Sections / reveal motion ===== */
 section { padding: 56px 0; }
-section:first-of-type { padding-top: 28px; }
+section:first-of-type { padding-top: 10px; }
 
 /* From Projects onward the page background itself turns light — card/tag/
    accent colors inside each section are untouched (only the space around
@@ -245,32 +245,6 @@ body[data-page="home"] .site-footer {
   .tour-guide-bubble { font-size: 0.8rem; padding: 8px 12px; }
 }
 
-/* The one guide the visitor sees before scrolling at all — cues that
-   there's a Projects section waiting below, and doubles as a shortcut
-   to it. Same avatar/bubble, just nudged with a soft bounce. */
-.tour-guide-hero {
-  margin-top: 34px;
-  margin-bottom: 0;
-  width: fit-content;
-  cursor: pointer;
-  background: var(--bg-alt);
-  border-radius: 999px;
-  padding: 10px 20px 10px 10px;
-}
-.tour-guide-hero .tour-guide-avatar {
-  animation: tour-guide-bounce 2.2s ease-in-out infinite;
-}
-.tour-guide-hero:hover .tour-guide-bubble {
-  box-shadow: 0 6px 16px -6px rgba(28, 15, 36, 0.35), 0 0 0 2px var(--accent);
-}
-@keyframes tour-guide-bounce {
-  0%, 100% { transform: rotate(-6deg) translateY(0); }
-  50% { transform: rotate(-6deg) translateY(8px); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .tour-guide-hero .tour-guide-avatar { animation: none; }
-}
 
 .reveal {
   opacity: 0;
@@ -497,7 +471,7 @@ body[data-page="home"] .site-footer {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 16px;
 }
 
 .project-card {
@@ -641,10 +615,10 @@ body[data-page="home"] .site-footer {
 
 /* Project cards narrowed to 3 columns — shrink tool tags to match the
    link-chip treatment so a typical 2-3 tag project stays on one line. */
-.project-card .tag-row { gap: 4px; }
+.project-card .tag-row { gap: 6px; }
 .project-card .tag {
-  font-size: 0.58rem;
-  padding: 3px 6px;
+  font-size: 0.68rem;
+  padding: 4px 9px;
 }
 
 .tag {
