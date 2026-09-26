@@ -202,20 +202,47 @@ body[data-page="home"] .site-footer {
   border-top-color: rgba(28, 15, 36, 0.15);
 }
 
-/* Empire State sticker — symbolic of hope — sits beside every section title. */
-.title-sticker {
-  display: inline-block;
-  width: 34px;
+/* Empire State sticker — symbolic of hope — now doubles as a tiny tour
+   guide, introducing each section with a one-line caption before its
+   heading, rather than just riding along beside the title text. */
+.tour-guide {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.tour-guide-avatar {
+  width: 42px;
   height: auto;
-  vertical-align: middle;
-  margin-left: 6px;
-  transform: rotate(-8deg) translateY(-4px);
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
-  pointer-events: none;
+  flex: none;
+  transform: rotate(-6deg);
+  filter: drop-shadow(0 6px 12px rgba(28, 15, 36, 0.4));
+}
+.tour-guide-bubble {
+  position: relative;
+  background: var(--secondary);
+  color: var(--tertiary);
+  font-family: var(--font-subheading);
+  font-style: italic;
+  font-size: 0.88rem;
+  padding: 10px 16px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px -6px rgba(28, 15, 36, 0.35);
+}
+.tour-guide-bubble::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 7px 8px 7px 0;
+  border-style: solid;
+  border-color: transparent var(--secondary) transparent transparent;
 }
 
 @media (max-width: 700px) {
-  .title-sticker { width: 26px; }
+  .tour-guide-avatar { width: 32px; }
+  .tour-guide-bubble { font-size: 0.8rem; padding: 8px 12px; }
 }
 
 .reveal {
