@@ -245,6 +245,30 @@ body[data-page="home"] .site-footer {
   .tour-guide-bubble { font-size: 0.8rem; padding: 8px 12px; }
 }
 
+/* The one guide the visitor sees before scrolling at all — cues that
+   there's a Projects section waiting below, and doubles as a shortcut
+   to it. Same avatar/bubble, just nudged with a soft bounce. */
+.tour-guide-hero {
+  margin-top: 34px;
+  margin-bottom: 0;
+  width: fit-content;
+  cursor: pointer;
+}
+.tour-guide-hero .tour-guide-avatar {
+  animation: tour-guide-bounce 2.2s ease-in-out infinite;
+}
+.tour-guide-hero:hover .tour-guide-bubble {
+  box-shadow: 0 6px 16px -6px rgba(28, 15, 36, 0.35), 0 0 0 2px var(--accent);
+}
+@keyframes tour-guide-bounce {
+  0%, 100% { transform: rotate(-6deg) translateY(0); }
+  50% { transform: rotate(-6deg) translateY(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-guide-hero .tour-guide-avatar { animation: none; }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px) scale(0.98);
