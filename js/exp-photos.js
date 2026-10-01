@@ -13,9 +13,9 @@
     "lightskiddo": [],
     "blumetra-apm": [],
     "cure-foundation": [
-      { src: "assets/experience/cure-foundation-1.jpg", caption: "At the Golf Charity Fundraiser with Padma Shri Dr Vijay Anand Reddy & Dr Shashi Palkonda" },
-      { src: "assets/experience/cure-foundation-2.jpg", caption: "At the CURE Foundation Gala" },
-      { src: "assets/experience/cure-foundation-3.jpg", caption: "Anchoring the Press Meet & Inauguration: Cancer Crusaders Golf Championship, alongside chief guests Jagapati Babu and Chaitanya Menon" }
+      { src: "assets/experience/cure-foundation-1.webp", caption: "At the CURE Foundation Gala" },
+      { src: "assets/experience/cure-foundation-2.webp", caption: "At the Golf Charity Fundraiser with Founder Padma Shri Dr Vijay Anand Reddy & Dr Shashi Palkonda" },
+      { src: "assets/experience/cure-foundation-3.webp", caption: "Anchoring the Golf Tournament Press Meet & Inauguration alongside Indian celebrities" }
     ],
     "stellantis": [
       { src: "assets/experience/stellantis-1.webp", caption: "Contributions highlighted in Town Hall for driving operational efficiency", fit: "contain" }
