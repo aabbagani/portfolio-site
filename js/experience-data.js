@@ -76,7 +76,7 @@ window.EXPERIENCE_DATA = [
     id: "cure-foundation",
     logo: "assets/experience/cure-foundation-logo.png",
     role: "Product Operations Lead",
-    org: "CURE Foundation",
+    org: "CURE Foundation — India's largest charity golf championship",
     location: "Hyderabad, India",
     dates: "Dec 2025 – Feb 2026",
     tags: ["Tableau", "Microsoft Excel", "Power BI"],
