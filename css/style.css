@@ -952,10 +952,21 @@ body[data-page="home"] .site-footer {
 }
 
 .timeline {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 28px;
   padding-bottom: 100px;
+  padding-left: 28px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  bottom: 60px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), var(--border-strong) 85%, transparent);
 }
 
 .exp-card {
@@ -971,6 +982,45 @@ body[data-page="home"] .site-footer {
   transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 .exp-card:hover { border-color: var(--border-strong); box-shadow: 0 0 30px -8px var(--glow-soft); }
+.exp-card::before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 38px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--border-strong);
+  box-shadow: 0 0 0 4px var(--bg-alt, var(--bg));
+}
+.exp-card-current::before {
+  border-color: var(--accent);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg-alt, var(--bg)), 0 0 12px 2px var(--glow-soft);
+}
+
+.exp-current-pill {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--tertiary);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+}
+
+@media (max-width: 560px) {
+  .timeline { padding-left: 18px; }
+  .timeline::before { left: 2px; }
+  .exp-card::before { left: -20px; width: 9px; height: 9px; top: 34px; }
+}
 
 .exp-move-controls {
   position: absolute;

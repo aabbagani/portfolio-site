@@ -7,6 +7,9 @@
 // `bullets`. When present, the render shows stats+highlights instead of
 // the bullet list; `bullets` stays as the underlying source text and as
 // a fallback for any role that doesn't have the richer fields yet.
+//
+// Ordered most-recent-first by END date (ongoing roles first), matching
+// how overlapping roles actually read on a career log.
 window.EXPERIENCE_DATA = [
   {
     id: "lightskiddo",
@@ -44,24 +47,27 @@ window.EXPERIENCE_DATA = [
     org: "Blumetra Solutions",
     location: "Pleasanton, CA",
     dates: "Dec 2025 – Present",
-    tags: ["Replit", "Google AI Studio", "Antigravity", "Stitch AI", "Kiro"],
+    tags: ["Replit", "Google AI Studio", "Antigravity", "Stitch AI", "Kiro", "Claude"],
     stats: [
+      { value: "20 min", label: "Onboarding time, down from months" },
       { value: "5", label: "AI features RICE-prioritized" },
-      { value: "3", label: "Sprints of backend planning" },
-      { value: "1 of 4", label: "Finalists — won by Exelixis" }
+      { value: "1 of 4", label: "Finalists — won by Exelixis" },
+      { value: "10", label: "Competing pitches beaten" }
     ],
     highlights: [
-      { icon: "🧪", title: "Prototyped the core feature", description: "Built ClinOps Study Build on Replit for Clintelligence, automating EDC-ready study models, CRF forms, edit checks, and UAT plans directly from protocol text." },
-      { icon: "📝", title: "Wrote the PRD", description: "Authored sections on autonomous protocol reasoning logic; partnered with engineering on CDISC ODM export and EDC system routing." },
-      { icon: "📊", title: "Prioritized the roadmap", description: "Applied RICE prioritization across 5 AI features to define build order and sequencing." },
-      { icon: "🏆", title: "Helped win the business", description: "Clintelligence beat 10 pitches to become 1 of 4 finalists, then was selected by Exelixis, a leading oncology biotech." },
+      { icon: "🏥", title: "Embedded on-site", description: "Scoped a product to cut clinical trial data processing time across the raw-to-gold pipeline at a leading oncology biotech." },
+      { icon: "🧪", title: "Prototyped the core feature", description: "Built ClinOps Study Build on Replit and Kiro for Clintelligence, automating EDC-ready study models, CRF forms, edit checks, and UAT plans directly from protocol text." },
+      { icon: "🔧", title: "Fixed the onboarding bottleneck", description: "Traced an OCR ingestion failure to watermarked pages and shipped a pre-chunking fix with Claude — cutting study onboarding from months to 20 minutes." },
+      { icon: "🛡️", title: "Wrote the guardrails", description: "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty." },
+      { icon: "🏆", title: "Helped win the business", description: "Applied RICE prioritization across 5 AI features to define build order; Clintelligence beat 10 pitches to become 1 of 4 finalists, then was selected by Exelixis, a leading oncology biotech." },
       { icon: "🔁", title: "Ran the process", description: "Owned Jira stories, documented backend architecture in Confluence, and recapped progress in daily standups." }
     ],
     bullets: [
-      "Prototyped ClinOps Study Build on Replit for Clintelligence, an agentic AI clinical trial SaaS — automating end-to-end generation of EDC-ready study models, CRF forms, data validation edit checks, and UAT test plans directly from protocol text.",
-      "Authored PRD sections for the feature's autonomous protocol reasoning logic; partnered with engineering on backend architecture decisions covering CDISC ODM export and EDC system routing across 3 sprints.",
-      "Applied RICE prioritization across 5 AI features to define build order and roadmap sequencing.",
-      "Clintelligence beat 10 pitches to 4 finalists, then won selection by Exelixis, a leading oncology biotech.",
+      "Embedded on-site at a leading oncology biotech; scoping a product to reduce clinical trial data processing time across raw-to-gold pipeline layers.",
+      "Prototyped ClinOps Study Build for Clintelligence, an agentic AI clinical trial platform, on Kiro and Replit.",
+      "Built and debugged SDTM metadata logic with Claude; traced an OCR ingestion failure to watermarked pages, implemented a pre-chunking fix, cutting onboarding from months to 20 minutes.",
+      "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty.",
+      "Applied RICE across 5 AI features to define build order; contributed to Clintelligence's selection over 9 competitors.",
       "Owned Jira stories for the platform, collaborated with engineering on backend architecture documentation in Confluence, and recapped progress in daily standups."
     ],
     links: []
@@ -72,7 +78,7 @@ window.EXPERIENCE_DATA = [
     org: "CURE Foundation",
     location: "Hyderabad, India",
     dates: "Dec 2025 – Feb 2026",
-    tags: ["Tableau", "Microsoft Excel"],
+    tags: ["Tableau", "Microsoft Excel", "Power BI"],
     stats: [
       { value: "2,500+", label: "Attendees managed on-site" },
       { value: "700+", label: "Stakeholders coordinated" },
@@ -82,14 +88,44 @@ window.EXPERIENCE_DATA = [
     highlights: [
       { icon: "🎤", title: "Led as the point of contact", description: "Head Intern for the 8th edition of the Cancer Crusaders Golf Championship, India's largest charity golf championship." },
       { icon: "📣", title: "Ran the press moment", description: "Anchored the official press meet and tournament inauguration alongside chief guests Jagapati Babu and Chaitanya Menon." },
-      { icon: "🗂️", title: "Built the tracking systems", description: "Created 4 workflows from scratch for donor/sponsor data, registrations, and logistics — adopted as the standard for future events." },
-      { icon: "🎯", title: "Ran the event floor", description: "Managed on-site operations for 2,500+ attendees, restructuring workflows in real time to maintain execution quality." }
+      { icon: "🗂️", title: "Built the tracking systems", description: "Created 4 workflows from scratch for donor/sponsor data, registrations, and logistics via Excel, Tableau, and Power BI — adopted as the standard for future events." },
+      { icon: "🎯", title: "Ran the event floor", description: "Managed on-site operations for 2,500+ attendees and 50 golf players, restructuring workflows in real time to maintain execution quality." }
     ],
     bullets: [
       "Served as Head Intern and primary point of contact for the 8th edition of the Cancer Crusaders Golf Championship: India's largest charity golf championship, founded by Padma Shri Dr. Palkonda Vijay Anand Reddy, India's leading oncologist.",
       "Anchored the official press meet and inaugurated the tournament alongside chief guests Jagapati Babu and Chaitanya Menon, coordinating across internal teams, external vendors, and 700+ stakeholders for 2,500+ attendees.",
       "Built 4 structured tracking workflows from scratch spanning donor/sponsor data, player registrations, logistics, and event coordination — validated and cleaned data for 1,000+ stakeholders via Excel, Tableau, and Power BI; templates were adopted as the standard for all future events.",
       "Managed on-site operations for 2,500 attendees and 50 golf players, identifying process breakdowns in real time and restructuring workflows mid-event to maintain execution quality across all workstreams."
+    ],
+    links: []
+  },
+  {
+    id: "louisa-ai",
+    role: "Product Manager Intern",
+    org: "Louisa AI",
+    location: "New York, NY",
+    dates: "Aug 2025 – Dec 2025",
+    tags: [],
+    stats: [
+      { value: "18%", label: "Lift in feature engagement" },
+      { value: "~20%", label: "Uptime improvement" },
+      { value: "4", label: "Enterprise deployments onboarded" },
+      { value: "7", label: "AI platforms benchmarked" }
+    ],
+    highlights: [
+      { icon: "🤝", title: "Helped close an enterprise client", description: "Co-pitched Louisa's collective intelligence platform to Apollo Global Management on day 3 of the internship; Apollo converted to a paying client." },
+      { icon: "📈", title: "Grew engagement", description: "Drove an 18% lift in feature engagement for the AI-curated News feature by tracking MAUs and surfacing insights." },
+      { icon: "🛠️", title: "Fixed what was breaking demos", description: "Partnered with engineering to resolve critical link redirect failures, improving platform uptime ~20% before demos at RBC and McKinsey." },
+      { icon: "🎬", title: "Standardized onboarding", description: "Designed onboarding flows for 4 enterprise deployments using CapCut — adopted as the company standard post-internship." },
+      { icon: "🔍", title: "Scoped the competition", description: "Conducted competitive analysis across 7 AI platforms to identify positioning gaps and inform the product roadmap." }
+    ],
+    bullets: [
+      "Co-pitched Louisa, an AI sales enablement platform, to Apollo Global Management on day 3 of the internship; Apollo converted to a paying client.",
+      "Synthesized executive feedback into a navigation redesign collapsing 6 tabs into 3, converting Apollo into a paying client.",
+      "Drove an 18% lift in feature engagement for the AI-curated News feature by tracking MAUs and surfacing insights that shaped product iterations.",
+      "Partnered with engineering to resolve critical link redirect failures, improving platform uptime by ~20% before high-stakes demos at RBC and McKinsey.",
+      "Produced video flows in CapCut for RBC and McKinsey, cutting support questions 60% with a replicable process adopted as company standard.",
+      "Maintained competitive intelligence across 7 AI platforms; surfaced gaps to inform product positioning and feature prioritization."
     ],
     links: []
   },
@@ -118,35 +154,6 @@ window.EXPERIENCE_DATA = [
     links: [{ label: "View Presentation", url: "" }]
   },
   {
-    id: "louisa-ai",
-    role: "Product Manager Intern",
-    org: "Louisa AI",
-    location: "New York, NY",
-    dates: "Sep 2025 – Dec 2025",
-    tags: [],
-    stats: [
-      { value: "18%", label: "Lift in feature engagement" },
-      { value: "~20%", label: "Uptime improvement" },
-      { value: "4", label: "Enterprise deployments onboarded" },
-      { value: "7", label: "AI platforms benchmarked" }
-    ],
-    highlights: [
-      { icon: "🤝", title: "Helped close an enterprise client", description: "Co-pitched Louisa's collective intelligence platform to Apollo on-site; demo feedback drove a navigation redesign that collapsed 6 tabs into 3." },
-      { icon: "📈", title: "Grew engagement", description: "Drove an 18% lift in feature engagement for the AI-curated News feature by tracking MAUs and surfacing insights." },
-      { icon: "🛠️", title: "Fixed what was breaking demos", description: "Partnered with engineering to resolve critical link redirect failures, improving platform uptime ~20% before demos at RBC and McKinsey." },
-      { icon: "🎬", title: "Standardized onboarding", description: "Designed onboarding flows for 4 enterprise deployments using CapCut — adopted as the company standard post-internship." },
-      { icon: "🔍", title: "Scoped the competition", description: "Conducted competitive analysis across 7 AI platforms to identify positioning gaps and inform the product roadmap." }
-    ],
-    bullets: [
-      "Contributed to acquiring Apollo as an enterprise client by co-pitching Louisa's collective intelligence platform on-site, translating demo feedback into a navigation restructure that collapsed 6 tabs into Home, Explore, and My Network.",
-      "Drove an 18% lift in feature engagement for the AI-curated News feature by tracking MAUs and surfacing insights that shaped product iterations.",
-      "Partnered with engineering to resolve critical link redirect failures, improving platform uptime by ~20% before high-stakes demos at RBC and McKinsey.",
-      "Designed onboarding flows for 4 enterprise client deployments using CapCut for custom video production — adopted as the company standard post-internship.",
-      "Conducted competitive analysis across 7 AI platforms to identify positioning gaps and improvement opportunities, directly informing feature prioritization and product roadmap discussions."
-    ],
-    links: []
-  },
-  {
     id: "blumetra-apm-intern",
     logo: "assets/experience/blumetra-logo.png",
     role: "Associate Product Manager Intern",
@@ -161,14 +168,14 @@ window.EXPERIENCE_DATA = [
     highlights: [
       { icon: "📄", title: "Defined the vision", description: "Wrote product vision, user stories, and KPIs for FileVantage, a no-code ETL platform, securing CPO alignment on GTM scope." },
       { icon: "✅", title: "Earned buy-in", description: "Earned C-suite approval for PixelPal UX by conducting 20+ user interviews and synthesizing findings into Figma user flows." },
-      { icon: "📊", title: "Built the dashboards", description: "Built Tableau dashboards for FileSense and ran competitor analysis to identify market gaps, cutting resolution time by 30%." },
+      { icon: "📊", title: "Built the dashboards", description: "Built Tableau dashboards for FileVantage adoption and ran competitor analysis to identify market gaps, cutting resolution time by 30%." },
       { icon: "🗺️", title: "Aligned the team", description: "Authored problem statements, OKRs, and roadmap documentation to align cross-functional teams on MVP scope and priorities." }
     ],
     bullets: [
-      "Wrote product vision, user stories, and KPIs for FileVantage, a no-code ETL platform, securing CPO alignment on GTM scope.",
-      "Earned C-suite approval for PixelPal UX by conducting 20+ user interviews and synthesizing findings into Figma user flows.",
-      "Built Tableau dashboards for FileSense; conducted competitor analysis to identify market gaps, cutting resolution time by 30%.",
-      "Authored problem statements, OKRs, and roadmap documentation to align cross-functional teams on MVP scope and priorities."
+      "Led 0→1 discovery for FileVantage, a no-code ETL platform; conducted market analysis, competitive research, and stakeholder interviews; authored product vision, user stories, and KPIs presented to the CPO.",
+      "Built Tableau dashboards tracking FileVantage adoption and test failures; contributed to a 30% reduction in bug fix resolution time.",
+      "Authored OKRs, roadmap documentation, and problem statements to align cross-functional teams on MVP scope and priorities.",
+      "Earned C-suite approval for PixelPal UX by conducting 20+ user interviews and synthesizing findings into Figma user flows."
     ],
     links: []
   },
@@ -185,39 +192,16 @@ window.EXPERIENCE_DATA = [
       { value: "3", label: "Months to measurable impact" }
     ],
     highlights: [
-      { icon: "🐍", title: "Built the platform", description: "Developed a Python job-matching platform connecting skilled workers across 8 rural Indian communities with local employers." },
-      { icon: "🤝", title: "Shaped it with the NGO", description: "Collaborated with Rose Trust stakeholders to translate real user needs into a functional matching solution." },
-      { icon: "📈", title: "Proved it worked", description: "Drove a 20% increase in job placements within 3 months; shared documentation to support ongoing adoption." }
+      { icon: "🐍", title: "Built the platform", description: "Independently scoped, built, tested, and deployed a Python job-matching platform connecting skilled workers across 8 rural Indian communities with local employers." },
+      { icon: "🤝", title: "Shaped it with the NGO", description: "Built a ranking algorithm sorting matches by occupation, rating, and availability; debugged edge cases across inconsistent rural employer data." },
+      { icon: "📈", title: "Proved it worked", description: "A/B tested the review format after low adoption; simplified to a numeric rating, driving a 20% lift in job placements in 3 months via NGO-tracked surveys." }
     ],
     bullets: [
-      "Built a Python job-matching platform connecting skilled workers across 8 rural Indian communities with local employers.",
-      "Collaborated with NGO stakeholders to translate user needs into a functional matching solution.",
-      "Drove a 20% increase in job placements within 3 months; shared documentation with Rose Trust to support ongoing adoption."
+      "Independently scoped, built, tested, and deployed a Python job-matching platform connecting workers across 8 rural Indian communities with local employers.",
+      "Built a ranking algorithm sorting matches by occupation, rating, and availability; debugged edge cases across inconsistent rural employer data.",
+      "A/B tested review format after low adoption; simplified to numeric rating, driving 20% lift in job placements in 3 months via NGO-tracked surveys."
     ],
     links: [{ label: "View code in Projects section", url: "index.html#projects" }]
-  },
-  {
-    id: "blumetra-ba",
-    logo: "assets/experience/blumetra-logo.png",
-    role: "Business Analyst",
-    org: "Blumetra Solutions",
-    location: "Pleasanton, CA",
-    dates: "May 2023 – Aug 2023",
-    tags: [],
-    stats: [
-      { value: "20+", label: "User interviews conducted" }
-    ],
-    highlights: [
-      { icon: "🎨", title: "Designed the UX", description: "Built PixelPal's networking platform prototype from 20+ user interviews, synthesized into Figma user flows." },
-      { icon: "📊", title: "Built the dashboards", description: "Applied SQL and Tableau to transform raw data into dynamic dashboards supporting data-driven product decisions." },
-      { icon: "🎤", title: "Pitched leadership", description: "Presented the pitch deck to senior leadership, iteratively refining the product based on executive feedback." }
-    ],
-    bullets: [
-      "Developed UX for PixelPal, a networking platform prototype, conducting 20+ user interviews and synthesizing findings into Figma user flows.",
-      "Applied SQL and Tableau to transform raw data into dynamic dashboards supporting data-driven product decisions.",
-      "Presented pitch deck to senior leadership, iteratively refining the product based on executive feedback."
-    ],
-    links: []
   },
   {
     id: "sthirta",
@@ -233,16 +217,64 @@ window.EXPERIENCE_DATA = [
       { value: "20%", label: "Growth rate" }
     ],
     highlights: [
-      { icon: "🚀", title: "Started from zero", description: "Built a thrift e-commerce brand from scratch at 16 with zero budget, zero team, and zero playbook — just a market gap and a Shopify store." },
-      { icon: "🛍️", title: "Owned the full lifecycle", description: "Created and scaled a zero-to-one e-commerce platform on Shopify and Instagram, from market discovery through GTM execution." },
-      { icon: "💰", title: "Generated real revenue", description: "Launched 10 collections generating $12K in revenue; content strategy drove 5.8K+ views per post." },
-      { icon: "📈", title: "Improved the metrics", description: "Managed UX iterations and analyzed retention data to drive a 20% growth rate and 10% higher conversion." }
+      { icon: "🚀", title: "Started from zero", description: "Founded Sthirta, a non-profit thrift store on Instagram and Shopify, at 16 — zero budget, zero team, zero playbook — donating 100% of profits to rotating NGO causes." },
+      { icon: "🛍️", title: "Owned the full lifecycle", description: "Generated $12K in revenue across 10 drops at 20% growth; used Shopify, Excel, and Google Analytics to track SKU-level engagement, forecast demand, and optimize assortment drop-over-drop." },
+      { icon: "💰", title: "Generated real growth", description: "Drove a 10% higher conversion rate and 5.8K+ average views per post by analyzing SKU-level performance and refining GTM sequencing each drop." },
+      { icon: "📣", title: "Turned customers into ambassadors", description: "Designed a zero-budget sticker campaign that turned customers into organic brand ambassadors, compounding word-of-mouth growth without paid ads." }
     ],
     bullets: [
-      "Built a thrift e-commerce brand from scratch at 16 with zero budget, zero team, and zero playbook — just a market gap, a Shopify store, and an Instagram account.",
-      "Created and scaled a zero-to-one e-commerce platform on Shopify and Instagram, owning the full product lifecycle from market discovery through GTM execution.",
-      "Launched 10 collections generating $12K revenue; optimized content strategy driving 5.8K+ views per post.",
-      "Managed UX iterations and analyzed retention data to drive a 20% growth rate and 10% higher conversion."
+      "Founded Sthirta, a non-profit thrift store on Instagram and Shopify donating 100% of profits to rotating NGO causes — hot meals for daily wage workers, vocational training for women, and school supplies for children.",
+      "Generated $12K in revenue across 10 drops at 20% growth; used Shopify, Excel, and Google Analytics to track SKU-level engagement, forecast demand, and optimize assortment decisions drop-over-drop.",
+      "Drove 10% higher conversion rate and 5.8K+ average views per post by analyzing SKU-level performance and refining GTM sequencing each drop.",
+      "Designed a zero-budget sticker campaign that turned customers into organic brand ambassadors, compounding word-of-mouth growth without paid ads."
+    ],
+    links: []
+  },
+  {
+    id: "digital-delane",
+    role: "Social Media Manager",
+    org: "Digital Delane",
+    location: "Los Angeles, CA — Remote",
+    dates: "Feb 2023 – Oct 2023",
+    tags: ["Amplitude", "TikTok", "Instagram"],
+    stats: [
+      { value: "36%", label: "Engagement lift across 6 creators" },
+      { value: "20%", label: "Brand awareness increase" },
+      { value: "30%", label: "Content performance improvement" },
+      { value: "20%", label: "Brand reach expansion" }
+    ],
+    highlights: [
+      { icon: "🎥", title: "Produced creator content", description: "Produced short-form videos, creator content, and influencer campaigns for 6 Fordham University influencers across TikTok and Instagram." },
+      { icon: "📊", title: "Let the data steer the strategy", description: "Analyzed audience behavior and campaign metrics in Amplitude, iterating on creative strategy, messaging, and formats for a 30% lift in content performance." },
+      { icon: "🤝", title: "Built the partnerships", description: "Built and managed creator partnerships, coordinating content production and optimizing campaign execution based on engagement insights." }
+    ],
+    bullets: [
+      "Increased social media engagement for 6 influencers at Fordham University by 36% and brand awareness by 20% by producing short-form videos, creator content, and influencer campaigns across TikTok and Instagram.",
+      "Improved content performance by 30% by analyzing audience behavior and campaign metrics on Amplitude, and iterating on creative strategy, messaging, and content formats.",
+      "Expanded brand reach by 20% by building and managing creator partnerships, coordinating content production, and optimizing campaign execution based on engagement insights."
+    ],
+    links: []
+  },
+  {
+    id: "blumetra-ba",
+    logo: "assets/experience/blumetra-logo.png",
+    role: "Business Analyst",
+    org: "Blumetra Solutions",
+    location: "Pleasanton, CA",
+    dates: "May 2023 – Aug 2023",
+    tags: [],
+    stats: [
+      { value: "20+", label: "User interviews conducted" }
+    ],
+    highlights: [
+      { icon: "🎨", title: "Designed the UX", description: "Conducted 20+ user interviews for PixelPal, a photographer networking prototype; synthesized findings into Figma user flows that earned C-suite approval as the product prototype direction." },
+      { icon: "📊", title: "Built the dashboards", description: "Applied SQL and Tableau to transform raw data into dynamic dashboards supporting data-driven product decisions." },
+      { icon: "🎤", title: "Pitched leadership", description: "Presented the pitch deck to senior leadership, iteratively refining product direction based on executive feedback." }
+    ],
+    bullets: [
+      "Conducted 20+ user interviews for PixelPal, a photographer networking prototype; synthesized findings into Figma user flows that earned C-suite approval as the product prototype direction.",
+      "Applied SQL and Tableau to transform raw data into dynamic dashboards supporting data-driven product decisions.",
+      "Presented pitch deck to senior leadership; iteratively refined product direction based on executive feedback."
     ],
     links: []
   }

@@ -26,7 +26,8 @@
     "blumetra-apm-intern": [],
     "rose-trust": [],
     "blumetra-ba": [],
-    "sthirta": []
+    "sthirta": [],
+    "digital-delane": []
   };
 
   function cloneDefaults() { return JSON.parse(JSON.stringify(DEFAULT_DATA)); }

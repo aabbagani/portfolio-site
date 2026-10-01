@@ -60,6 +60,7 @@
 
   function cardHTML(exp, index, total) {
     var admin = document.body.classList.contains("admin-mode");
+    var isCurrent = /present/i.test(exp.dates || "");
 
     var tags = (exp.tags || []).length
       ? '<div class="tag-row">' + (exp.tags || []).map(function (t) {
@@ -130,13 +131,13 @@
       : "";
 
     return (
-      '<article class="exp-card reveal" data-exp-id="' + esc(exp.id) + '" data-index="' + index + '">' +
+      '<article class="exp-card reveal' + (isCurrent ? " exp-card-current" : "") + '" data-exp-id="' + esc(exp.id) + '" data-index="' + index + '">' +
         editBtn +
         moveControls +
         '<div class="exp-card-head">' +
           orgBadgeHTML(exp) +
           '<div class="exp-card-head-text">' +
-            '<div class="exp-role">' + esc(exp.role) + "</div>" +
+            '<div class="exp-role">' + esc(exp.role) + (isCurrent ? ' <span class="exp-current-pill">Current</span>' : "") + "</div>" +
             '<div class="exp-org">' + esc(exp.org) + "</div>" +
           "</div>" +
           '<div class="exp-meta">' + esc(exp.location) + "<br />" + esc(exp.dates) + "</div>" +
