@@ -51,7 +51,7 @@ window.EXPERIENCE_DATA = [
     org: "LightsKiddo — an AI-powered OS for film production",
     location: "Remote / New York, NY",
     dates: "June 2026 – Present",
-    tags: [],
+    tags: ["Clerk", "Fly.io", "Vercel"],
     stats: [
       { value: "80+", label: "Bugs found" },
       { value: "30", label: "Production companies researched" },
@@ -80,7 +80,7 @@ window.EXPERIENCE_DATA = [
     org: "CURE Foundation — India's largest charity golf championship",
     location: "Hyderabad, India",
     dates: "Dec 2025 – Feb 2026",
-    tags: ["Tableau", "Microsoft Excel", "Power BI", "Clerk", "Fly.io", "Vercel"],
+    tags: ["Tableau", "Microsoft Excel", "Power BI"],
     stats: [
       { value: "2,500+", label: "Attendees managed on-site" },
       { value: "700+", label: "Stakeholders coordinated" },
