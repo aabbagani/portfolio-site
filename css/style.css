@@ -1239,7 +1239,7 @@ body:not(.admin-mode) .exp-card:hover .scrap-photo:first-child:not(:has(~ .scrap
 .scrap-photo img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   background: repeating-linear-gradient(135deg, var(--bg-elevated), var(--bg-elevated) 10px, var(--surface-hover) 10px, var(--surface-hover) 20px);
 }
