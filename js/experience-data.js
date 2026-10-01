@@ -74,6 +74,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "cure-foundation",
+    logo: "assets/experience/cure-foundation-logo.png",
     role: "Product Operations Lead",
     org: "CURE Foundation",
     location: "Hyderabad, India",
