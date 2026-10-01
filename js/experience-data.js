@@ -101,6 +101,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "louisa-ai",
+    logo: "assets/experience/louisa-ai-logo.png",
     role: "Product Manager Intern",
     org: "Louisa AI",
     location: "New York, NY",
@@ -109,14 +110,14 @@ window.EXPERIENCE_DATA = [
     stats: [
       { value: "18%", label: "Lift in feature engagement" },
       { value: "~20%", label: "Uptime improvement" },
-      { value: "4", label: "Enterprise deployments onboarded" },
+      { value: "60%", label: "Drop in customer support tickets" },
       { value: "7", label: "AI platforms benchmarked" }
     ],
     highlights: [
       { icon: "🤝", title: "Helped close an enterprise client", description: "Co-pitched Louisa's collective intelligence platform to Apollo Global Management on day 3 of the internship; Apollo converted to a paying client." },
       { icon: "📈", title: "Grew engagement", description: "Drove an 18% lift in feature engagement for the AI-curated News feature by tracking MAUs and surfacing insights." },
       { icon: "🛠️", title: "Fixed what was breaking demos", description: "Partnered with engineering to resolve critical link redirect failures, improving platform uptime ~20% before demos at RBC and McKinsey." },
-      { icon: "🎬", title: "Standardized onboarding", description: "Designed onboarding flows for 4 enterprise deployments using CapCut — adopted as the company standard post-internship." },
+      { icon: "🎬", title: "Standardized onboarding", description: "Designed onboarding flows for 4 enterprise deployments using CapCut, cutting customer support tickets 60% — adopted as the company standard post-internship." },
       { icon: "🔍", title: "Scoped the competition", description: "Conducted competitive analysis across 7 AI platforms to identify positioning gaps and inform the product roadmap." }
     ],
     bullets: [

@@ -21,7 +21,7 @@
       { src: "assets/experience/stellantis-1.webp", caption: "Contributions highlighted in Town Hall for driving operational efficiency", fit: "contain" }
     ],
     "louisa-ai": [
-      { src: "assets/experience/louisa-ai-1.jpg", caption: "With Muriel Daccache (Product Strategist) & Relina Vas (Product Manager)" }
+      { src: "assets/experience/louisa-ai-1.webp", caption: "With Muriel Daccache (Product Strategist) & Relina Vas (Product Manager)" }
     ],
     "blumetra-apm-intern": [],
     "rose-trust": [],
