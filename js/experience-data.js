@@ -18,7 +18,7 @@ window.EXPERIENCE_DATA = [
     org: "Blumetra Solutions",
     location: "Pleasanton, CA",
     dates: "Dec 2025 – Present",
-    tags: ["Replit", "Google AI Studio", "Kiro", "Claude"],
+    tags: ["Replit", "Google AI Studio", "Kiro", "Claude", "JIRA", "Confluence"],
     stats: [
       { value: "20 min", label: "Onboarding time, down from months" },
       { value: "5", label: "AI features RICE-prioritized" },
@@ -138,7 +138,7 @@ window.EXPERIENCE_DATA = [
     org: "Stellantis Financial Services",
     location: "Houston, Texas",
     dates: "Jun 2025 – Aug 2025",
-    tags: ["Salesforce Sandbox", "UiPath Studio", "Copilot"],
+    tags: ["Salesforce Sandbox", "UiPath Studio", "Copilot", "JIRA", "Confluence"],
     stats: [
       { value: "100+", label: "Workflows automated" },
       { value: "15+", label: "RPA prototypes built" },
@@ -163,7 +163,7 @@ window.EXPERIENCE_DATA = [
     org: "Blumetra Solutions",
     location: "Pleasanton, California",
     dates: "May 2024 – Aug 2024",
-    tags: [],
+    tags: ["SQL", "Tableau", "Figma", "JIRA"],
     stats: [
       { value: "20+", label: "User interviews conducted" },
       { value: "30%", label: "Cut in resolution time" },
@@ -215,7 +215,7 @@ window.EXPERIENCE_DATA = [
     org: "Sthirta Thrift Store",
     location: "Hyderabad, India",
     dates: "Nov 2020 – Feb 2024",
-    tags: [],
+    tags: ["Google Analytics", "Instagram", "MS Excel"],
     stats: [
       { value: "$12K", label: "Revenue generated" },
       { value: "10", label: "Collections launched" },
@@ -269,7 +269,7 @@ window.EXPERIENCE_DATA = [
     org: "Blumetra Solutions",
     location: "Pleasanton, CA",
     dates: "May 2023 – Aug 2023",
-    tags: [],
+    tags: ["SQL", "Tableau", "Figma"],
     stats: [
       { value: "20+", label: "User interviews conducted" },
       { value: "6", label: "Tableau dashboards built" },
