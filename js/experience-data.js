@@ -268,8 +268,8 @@ window.EXPERIENCE_DATA = [
     tags: [],
     stats: [
       { value: "20+", label: "User interviews conducted" },
-      { value: "1", label: "Prototype direction approved by C-suite" },
-      { value: "SQL + Tableau", label: "Dashboards built for product decisions" }
+      { value: "6", label: "Tableau dashboards built" },
+      { value: "8", label: "Senior leadership presented to" }
     ],
     highlights: [
       { icon: "🎨", title: "Designed the UX", description: "Conducted 20+ user interviews for PixelPal, a photographer networking prototype; synthesized findings into Figma user flows that earned C-suite approval as the product prototype direction." },

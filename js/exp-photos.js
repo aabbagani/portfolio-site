@@ -27,7 +27,7 @@
     "rose-trust": [],
     "blumetra-ba": [],
     "sthirta": [
-      { src: "assets/experience/sthirta-instagram.jpg", caption: "Sthirta's Instagram storefront — thrifted, upcycled, preloved pieces, drop after drop" }
+      { src: "assets/experience/sthirta-instagram.jpg", caption: "Sthirta's Instagram storefront" }
     ],
     "digital-delane": []
   };

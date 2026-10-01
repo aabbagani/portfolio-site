@@ -1209,6 +1209,14 @@ body[data-page="home"] .site-footer {
 }
 .scrap-photo:nth-child(odd) { right: -20px; }
 .scrap-photo:nth-child(even) { left: -20px; }
+
+/* A scrapbook with just one photo has nothing to overlap, so let it run
+   bigger than the peeking-stack size used when several photos share the
+   card edge. */
+.scrap-photo:first-child:not(:has(~ .scrap-photo)) {
+  width: 150px;
+  right: -32px;
+}
 .scrap-photo:nth-child(1) { transform: translateY(-65%) rotate(7deg); }
 .scrap-photo:nth-child(2) { transform: translateY(-20%) rotate(-6deg); }
 .scrap-photo:nth-child(3) { transform: translateY(25%) rotate(5deg); }
@@ -1225,6 +1233,7 @@ body:not(.admin-mode) .exp-card:hover .scrap-photo {
 body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(1) { transform: translateY(-65%) translateX(40px) rotate(0deg); }
 body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(2) { transform: translateY(-20%) translateX(-40px) rotate(0deg); }
 body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(3) { transform: translateY(25%) translateX(40px) rotate(0deg); }
+body:not(.admin-mode) .exp-card:hover .scrap-photo:first-child:not(:has(~ .scrap-photo)) { transform: translateY(-65%) translateX(65px) rotate(0deg); }
 .scrap-photo img {
   display: block;
   width: 100%;
@@ -1280,6 +1289,7 @@ body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(3) { transform: tra
   .scrap-photo { width: 82px; }
   .scrap-photo:nth-child(odd) { right: -8px; }
   .scrap-photo:nth-child(even) { left: -8px; }
+  .scrap-photo:first-child:not(:has(~ .scrap-photo)) { width: 110px; right: -12px; }
 }
 
 /* ===== Admin Mode (client-side only — see README) ===== */
