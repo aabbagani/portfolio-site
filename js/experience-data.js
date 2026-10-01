@@ -80,7 +80,7 @@ window.EXPERIENCE_DATA = [
     org: "CURE Foundation — India's largest charity golf championship",
     location: "Hyderabad, India",
     dates: "Dec 2025 – Feb 2026",
-    tags: ["Tableau", "Microsoft Excel", "Power BI"],
+    tags: ["Tableau", "Microsoft Excel", "Power BI", "Clerk", "Fly.io", "Vercel"],
     stats: [
       { value: "2,500+", label: "Attendees managed on-site" },
       { value: "700+", label: "Stakeholders coordinated" },
