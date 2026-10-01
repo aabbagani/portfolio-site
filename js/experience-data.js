@@ -18,7 +18,7 @@ window.EXPERIENCE_DATA = [
     org: "Blumetra Solutions",
     location: "Pleasanton, CA",
     dates: "Dec 2025 – Present",
-    tags: ["Replit", "Google AI Studio", "Antigravity", "Stitch AI", "Kiro", "Claude"],
+    tags: ["Replit", "Google AI Studio", "Kiro", "Claude"],
     stats: [
       { value: "20 min", label: "Onboarding time, down from months" },
       { value: "5", label: "AI features RICE-prioritized" },
@@ -26,7 +26,7 @@ window.EXPERIENCE_DATA = [
       { value: "10", label: "Competing pitches beaten" }
     ],
     highlights: [
-      { icon: "🏥", title: "Embedded on-site", description: "Scoped a product to cut clinical trial data processing time across the raw-to-gold pipeline at a leading oncology biotech." },
+      { icon: "🏥", title: "Embedded on-site", description: "Scoped and built Clintelligence, a product to cut clinical trial data processing time across the raw-to-gold pipeline at a leading oncology biotech." },
       { icon: "🧪", title: "Prototyped the core feature", description: "Built ClinOps Study Build on Replit and Kiro for Clintelligence, automating EDC-ready study models, CRF forms, edit checks, and UAT plans directly from protocol text." },
       { icon: "🔧", title: "Fixed the onboarding bottleneck", description: "Traced an OCR ingestion failure to watermarked pages and shipped a pre-chunking fix with Claude — cutting study onboarding from months to 20 minutes." },
       { icon: "🛡️", title: "Wrote the guardrails", description: "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty." },
@@ -107,7 +107,7 @@ window.EXPERIENCE_DATA = [
     org: "Louisa AI",
     location: "New York, NY",
     dates: "Aug 2025 – Dec 2025",
-    tags: [],
+    tags: ["Monday.com", "CapCut", "Google AI Studio"],
     stats: [
       { value: "18%", label: "Lift in feature engagement" },
       { value: "~20%", label: "Uptime improvement" },
