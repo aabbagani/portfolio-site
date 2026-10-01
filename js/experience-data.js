@@ -28,7 +28,7 @@ window.EXPERIENCE_DATA = [
     highlights: [
       { icon: "🏥", title: "Embedded on-site", description: "Scoped and built Clintelligence, a product to cut clinical trial data processing time across the raw-to-gold pipeline at a leading oncology biotech." },
       { icon: "🧪", title: "Prototyped the core feature", description: "Built ClinOps Study Build on Replit and Kiro, automating EDC-ready study models, CRF forms, edit checks, and UAT plans from protocol text." },
-      { icon: "🔧", title: "Fixed the onboarding bottleneck", description: "Traced an OCR ingestion failure to watermarked pages and shipped a pre-chunking fix with Claude — cutting study onboarding from months to 20 minutes." },
+      { icon: "🔧", title: "Fixed the onboarding bottleneck", description: "Traced an OCR ingestion failure to watermarked pages and shipped a pre-chunking fix with Claude." },
       { icon: "🛡️", title: "Wrote the guardrails", description: "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty." },
       { icon: "🏆", title: "Helped win the business", description: "Applied RICE prioritization across 5 AI features; Clintelligence beat 10 pitches to become 1 of 4 finalists, then won selection by Exelixis." },
       { icon: "🔁", title: "Ran the process", description: "Owned Jira stories, documented backend architecture in Confluence, and recapped progress in daily standups." }
@@ -224,9 +224,9 @@ window.EXPERIENCE_DATA = [
     ],
     highlights: [
       { icon: "🚀", title: "Started from zero", description: "Founded Sthirta, a non-profit thrift store on Instagram and Shopify at 16 — zero budget, zero team — donating 100% of profits to NGO causes." },
-      { icon: "🛍️", title: "Owned the full lifecycle", description: "Generated $12K across 10 drops at 20% growth; used Shopify, Excel, and Google Analytics to track engagement and optimize assortment drop-over-drop." },
+      { icon: "🛍️", title: "Owned the full lifecycle", description: "Generated $12K across 10 drops at 20% growth; used Shopify, Excel, and Google Analytics to track engagement and optimize assortment each drop." },
       { icon: "💰", title: "Generated real growth", description: "Drove a 10% higher conversion rate and 5.8K+ average views per post by analyzing SKU-level performance and refining GTM sequencing each drop." },
-      { icon: "📣", title: "Turned customers into ambassadors", description: "Designed a zero-budget sticker campaign that turned customers into organic brand ambassadors, compounding word-of-mouth growth without paid ads." }
+      { icon: "📣", title: "Turned customers into ambassadors", description: "Designed a zero-budget sticker campaign that turned customers into brand ambassadors, compounding word-of-mouth growth without paid ads." }
     ],
     bullets: [
       "Founded Sthirta, a non-profit thrift store on Instagram and Shopify donating 100% of profits to rotating NGO causes — hot meals for daily wage workers, vocational training for women, and school supplies for children.",
