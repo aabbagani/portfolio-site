@@ -14,7 +14,7 @@
     "blumetra-apm": [],
     "cure-foundation": [
       { src: "assets/experience/cure-foundation-3.webp", caption: "Anchoring the Golf Tournament Press Meet & Inauguration alongside Indian celebrities", fit: "contain" },
-      { src: "assets/experience/cure-foundation-2.webp", caption: "At the Golf Charity Fundraiser with Founder Padma Shri Dr Vijay Anand Reddy & Dr Shashi Palkonda" },
+      { src: "assets/experience/cure-foundation-2.webp", caption: "At the Golf Charity Fundraiser with Founders Padma Shri Dr Vijay Anand Reddy & Dr Shashi Palkonda" },
       { src: "assets/experience/cure-foundation-1.webp", caption: "At the CURE Foundation Gala" }
     ],
     "stellantis": [
