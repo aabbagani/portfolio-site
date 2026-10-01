@@ -12,35 +12,6 @@
 // how overlapping roles actually read on a career log.
 window.EXPERIENCE_DATA = [
   {
-    id: "lightskiddo",
-    logo: "assets/experience/lightskiddo-logo.png",
-    role: "Product Test Lead Intern",
-    org: "LightsKiddo — an AI-powered OS for film production",
-    location: "Remote / New York, NY",
-    dates: "June 2026 – Present",
-    tags: [],
-    stats: [
-      { value: "80+", label: "Bugs found" },
-      { value: "30", label: "Production companies researched" },
-      { value: "6", label: "Miramax stakeholders interviewed" },
-      { value: "40%", label: "Est. reduction in manual search time" }
-    ],
-    highlights: [
-      { icon: "🐛", title: "Tested the product", description: "Found 80+ bugs across front- and back-end releases and worked directly with the CTO to prioritize fixes." },
-      { icon: "🤖", title: "Found an AI opportunity", description: "Specced recast matching logic using IMDb data across budget, availability, and fit." },
-      { icon: "🔎", title: "Talked to real users", description: "Interviewed production teams to understand their workflows and identify gaps worth solving." },
-      { icon: "⚙️", title: "Built the system behind the testing", description: "Created a repeatable bug-tracking and QA framework instead of handling testing ad hoc." }
-    ],
-    bullets: [
-      "Led product testing across front- and back-end for the platform's beta website.",
-      "Identified 80+ bugs across releases, collaborating directly with the CTO on fixes.",
-      "Specced AI-powered recast matching logic that links IMDb profile data (budget, availability, fit) to cut manual search time by 40%.",
-      "Built an internal bug-tracking process and testing framework to standardize QA documentation across releases.",
-      "Conducted user research across 30 production companies, including interviewing 6 Miramax stakeholders directly, to surface behavioral patterns and feature gaps."
-    ],
-    links: []
-  },
-  {
     id: "blumetra-apm",
     logo: "assets/experience/blumetra-logo.png",
     role: "Associate Product Manager",
@@ -69,6 +40,35 @@ window.EXPERIENCE_DATA = [
       "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty.",
       "Applied RICE across 5 AI features to define build order; contributed to Clintelligence's selection over 9 competitors.",
       "Owned Jira stories for the platform, collaborated with engineering on backend architecture documentation in Confluence, and recapped progress in daily standups."
+    ],
+    links: []
+  },
+  {
+    id: "lightskiddo",
+    logo: "assets/experience/lightskiddo-logo.png",
+    role: "Product Test Lead Intern",
+    org: "LightsKiddo — an AI-powered OS for film production",
+    location: "Remote / New York, NY",
+    dates: "June 2026 – Present",
+    tags: [],
+    stats: [
+      { value: "80+", label: "Bugs found" },
+      { value: "30", label: "Production companies researched" },
+      { value: "6", label: "Miramax stakeholders interviewed" },
+      { value: "40%", label: "Est. reduction in manual search time" }
+    ],
+    highlights: [
+      { icon: "🐛", title: "Tested the product", description: "Found 80+ bugs across front- and back-end releases and worked directly with the CTO to prioritize fixes." },
+      { icon: "🤖", title: "Found an AI opportunity", description: "Specced recast matching logic using IMDb data across budget, availability, and fit." },
+      { icon: "🔎", title: "Talked to real users", description: "Interviewed production teams to understand their workflows and identify gaps worth solving." },
+      { icon: "⚙️", title: "Built the system behind the testing", description: "Created a repeatable bug-tracking and QA framework instead of handling testing ad hoc." }
+    ],
+    bullets: [
+      "Led product testing across front- and back-end for the platform's beta website.",
+      "Identified 80+ bugs across releases, collaborating directly with the CTO on fixes.",
+      "Specced AI-powered recast matching logic that links IMDb profile data (budget, availability, fit) to cut manual search time by 40%.",
+      "Built an internal bug-tracking process and testing framework to standardize QA documentation across releases.",
+      "Conducted user research across 30 production companies, including interviewing 6 Miramax stakeholders directly, to surface behavioral patterns and feature gaps."
     ],
     links: []
   },
@@ -163,7 +163,8 @@ window.EXPERIENCE_DATA = [
     tags: [],
     stats: [
       { value: "20+", label: "User interviews conducted" },
-      { value: "30%", label: "Cut in resolution time" }
+      { value: "30%", label: "Cut in resolution time" },
+      { value: "0→1", label: "Product discovery led (FileVantage)" }
     ],
     highlights: [
       { icon: "📄", title: "Defined the vision", description: "Wrote product vision, user stories, and KPIs for FileVantage, a no-code ETL platform, securing CPO alignment on GTM scope." },
@@ -205,6 +206,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "sthirta",
+    logo: "assets/experience/sthirta-logo.png",
     role: "Founder",
     org: "Sthirta Thrift Store",
     location: "Hyderabad, India",
@@ -232,6 +234,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "digital-delane",
+    logo: "assets/experience/digital-delane-logo.png",
     role: "Social Media Manager",
     org: "Digital Delane",
     location: "Los Angeles, CA — Remote",
@@ -264,7 +267,9 @@ window.EXPERIENCE_DATA = [
     dates: "May 2023 – Aug 2023",
     tags: [],
     stats: [
-      { value: "20+", label: "User interviews conducted" }
+      { value: "20+", label: "User interviews conducted" },
+      { value: "1", label: "Prototype direction approved by C-suite" },
+      { value: "SQL + Tableau", label: "Dashboards built for product decisions" }
     ],
     highlights: [
       { icon: "🎨", title: "Designed the UX", description: "Conducted 20+ user interviews for PixelPal, a photographer networking prototype; synthesized findings into Figma user flows that earned C-suite approval as the product prototype direction." },
