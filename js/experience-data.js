@@ -84,11 +84,11 @@ window.EXPERIENCE_DATA = [
       { value: "2,500+", label: "Attendees managed on-site" },
       { value: "700+", label: "Stakeholders coordinated" },
       { value: "4", label: "Tracking workflows built" },
-      { value: "8th", label: "Edition of the championship" }
+      { value: "20+", label: "Press & news outlets present" }
     ],
     highlights: [
       { icon: "🎤", title: "Led as the point of contact", description: "Head Intern for the 8th edition of the Cancer Crusaders Golf Championship, India's largest charity golf championship." },
-      { icon: "📣", title: "Ran the press moment", description: "Anchored the official press meet and tournament inauguration alongside chief guests Jagapati Babu and Chaitanya Menon." },
+      { icon: "📣", title: "Ran the press moment", description: "Anchored the official press meet and tournament inauguration in front of 20+ press and news outlets, alongside chief guests Jagapati Babu and Chaitanya Menon." },
       { icon: "🗂️", title: "Built the tracking systems", description: "Created 4 workflows from scratch for donor/sponsor data, registrations, and logistics via Excel, Tableau, and Power BI — adopted as the standard for future events." },
       { icon: "🎯", title: "Ran the event floor", description: "Managed on-site operations for 2,500+ attendees and 50 golf players, restructuring workflows in real time to maintain execution quality." }
     ],

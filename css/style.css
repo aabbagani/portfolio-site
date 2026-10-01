@@ -1220,7 +1220,7 @@ body[data-page="home"] .site-footer {
 }
 .scrap-photo:nth-child(1) { transform: translateY(-78%); }
 .scrap-photo:nth-child(2) { transform: translateY(-20%); }
-.scrap-photo:nth-child(3) { transform: translateY(38%); }
+.scrap-photo:nth-child(3) { transform: translateY(24%); }
 .scrap-photo:hover {
   transform: translateY(-50%) scale(1.06) !important;
   z-index: 6;
@@ -1234,7 +1234,7 @@ body:not(.admin-mode) .exp-card:hover .scrap-photo {
 }
 body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(1) { transform: translateY(-78%) translateX(70px); }
 body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(2) { transform: translateY(-20%) translateX(-70px); }
-body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(3) { transform: translateY(38%) translateX(70px); }
+body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(3) { transform: translateY(24%) translateX(70px); }
 body:not(.admin-mode) .exp-card:hover .scrap-photo:first-child:not(:has(~ .scrap-photo)) { transform: translateY(-65%) translateX(110px); }
 .scrap-photo img {
   display: block;
