@@ -18,7 +18,7 @@
       { src: "assets/experience/cure-foundation-3.jpg", caption: "Anchoring the Press Meet & Inauguration: Cancer Crusaders Golf Championship, alongside chief guests Jagapati Babu and Chaitanya Menon" }
     ],
     "stellantis": [
-      { src: "assets/experience/stellantis-1.webp", caption: "Contributions highlighted in Town Hall for driving operational efficiency" }
+      { src: "assets/experience/stellantis-1.webp", caption: "Contributions highlighted in Town Hall for driving operational efficiency", fit: "contain" }
     ],
     "louisa-ai": [
       { src: "assets/experience/louisa-ai-1.jpg", caption: "With Muriel Daccache (Product Strategist) & Relina Vas (Product Manager)" }
@@ -63,9 +63,13 @@
   }
 
   function photoHTML(photo, i, admin) {
+    // Most scrapbook photos are candids where a square crop still reads fine;
+    // a screenshot (like a presentation slide) loses its point if cropped, so
+    // `fit: "contain"` lets a specific photo show in full, letterboxed.
+    var imgStyle = photo.fit === "contain" ? ' style="object-fit: contain; background: var(--bg-elevated);"' : "";
     return (
       '<figure class="scrap-photo">' +
-        '<img src="' + esc(photo.src) + '" alt="' + esc(photo.caption || "") + '" onerror="this.classList.add(\'img-missing\')" />' +
+        '<img src="' + esc(photo.src) + '" alt="' + esc(photo.caption || "") + '"' + imgStyle + ' onerror="this.classList.add(\'img-missing\')" />' +
         (photo.caption ? '<figcaption>' + esc(photo.caption) + "</figcaption>" : "") +
         (admin
           ? '<div class="scrap-controls">' +
