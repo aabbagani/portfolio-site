@@ -139,7 +139,7 @@ window.EXPERIENCE_DATA = [
     org: "Stellantis Financial Services",
     location: "Houston, Texas",
     dates: "Jun 2025 – Aug 2025",
-    tags: ["Salesforce Sandbox", "UiPath Studio", "Copilot", "JIRA", "Confluence"],
+    tags: ["Salesforce Sandbox", "UiPath Studio", "Copilot", "JIRA", "Confluence", "Monday.com"],
     stats: [
       { value: "100+", label: "Workflows automated" },
       { value: "15+", label: "RPA prototypes built" },
