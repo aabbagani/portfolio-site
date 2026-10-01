@@ -58,7 +58,7 @@ window.PROJECTS_DATA = [
   {
     "category": "AI Product (0→1)",
     "name": "MYP Vault: Exam Feedback",
-    "headline": "A RAG system for exam-ready answers",
+    "headline": "A RAG system built to ace IB",
     "description": "MYP students can understand the material yet lose marks because mark schemes are hard to interpret. MYP Vault connects answers to marks, showing students exactly why.",
     "tags": [
       "Claude",
@@ -122,7 +122,7 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "AI Product (0→1)",
-    "name": "Rural Hiring Platform (Rose Trust)",
+    "name": "The Rural Hiring Divide",
     "headline": "Connecting underserved communities to local work",
     "description": "In rural India, hiring runs on informal trust. Workers struggle to find nearby jobs while employers struggle to find reliable talent. This platform matches both.",
     "tags": [

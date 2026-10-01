@@ -131,6 +131,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "stellantis",
+    logo: "assets/experience/stellantis-logo.png",
     role: "IT Software Quality Assurance Analyst Intern",
     org: "Stellantis Financial Services",
     location: "Houston, Texas",
@@ -151,7 +152,7 @@ window.EXPERIENCE_DATA = [
       "Authored and executed 150+ UAT test cases across borrower and agent workflows; tracked defects in Jira and Confluence.",
       "Organized 4 sessions with PMs, POs, and the CIO on prioritization, journey mapping, and release planning; drove alignment across functions and unblocked a critical release; work spotlighted at company-wide Town Hall."
     ],
-    links: [{ label: "View Presentation", url: "" }]
+    links: [{ label: "View Presentation", url: "https://canva.link/ffpqbdoh3ctx122" }]
   },
   {
     id: "blumetra-apm-intern",
@@ -191,7 +192,7 @@ window.EXPERIENCE_DATA = [
     stats: [
       { value: "8", label: "Rural communities connected" },
       { value: "20%", label: "Increase in job placements" },
-      { value: "3 months", label: "User research, building, and deployment" }
+      { value: "3 months", label: "Gap identification → deployment" }
     ],
     highlights: [
       { icon: "🐍", title: "Built the platform", description: "Independently scoped, built, tested, and deployed a Python job-matching platform connecting skilled workers across 8 rural Indian communities with local employers." },

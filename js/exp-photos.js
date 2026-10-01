@@ -18,7 +18,7 @@
       { src: "assets/experience/cure-foundation-3.jpg", caption: "Anchoring the Press Meet & Inauguration: Cancer Crusaders Golf Championship, alongside chief guests Jagapati Babu and Chaitanya Menon" }
     ],
     "stellantis": [
-      { src: "assets/experience/stellantis-1.jpg", caption: "Contributions highlighted in Town Hall for driving operational efficiency" }
+      { src: "assets/experience/stellantis-1.webp", caption: "Contributions highlighted in Town Hall for driving operational efficiency" }
     ],
     "louisa-ai": [
       { src: "assets/experience/louisa-ai-1.jpg", caption: "With Muriel Daccache (Product Strategist) & Relina Vas (Product Manager)" }
