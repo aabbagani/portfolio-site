@@ -182,6 +182,7 @@ window.EXPERIENCE_DATA = [
   },
   {
     id: "rose-trust",
+    logo: "assets/experience/rose-trust-logo.png",
     role: "Python Developer",
     org: "Rose Trust NGO",
     location: "Remote – Hyderabad, India",
@@ -190,7 +191,7 @@ window.EXPERIENCE_DATA = [
     stats: [
       { value: "8", label: "Rural communities connected" },
       { value: "20%", label: "Increase in job placements" },
-      { value: "3", label: "Months to measurable impact" }
+      { value: "3 months", label: "User research, building, and deployment" }
     ],
     highlights: [
       { icon: "🐍", title: "Built the platform", description: "Independently scoped, built, tested, and deployed a Python job-matching platform connecting skilled workers across 8 rural Indian communities with local employers." },
