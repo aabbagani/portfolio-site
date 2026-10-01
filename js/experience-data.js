@@ -224,14 +224,14 @@ window.EXPERIENCE_DATA = [
       { value: "20%", label: "Growth rate" }
     ],
     highlights: [
-      { icon: "🚀", title: "Started from zero", description: "Founded Sthirta, a non-profit thrift store on Instagram and Shopify at 16 — zero budget, zero team — donating 100% of profits to NGO causes." },
-      { icon: "🛍️", title: "Owned the full lifecycle", description: "Generated $12K across 10 drops at 20% growth; used Shopify, Excel, and Google Analytics to track engagement and optimize assortment each drop." },
+      { icon: "🚀", title: "Started from zero", description: "Founded Sthirta, a non-profit thrift store on Instagram at 16 — zero budget, zero team — funding hot meals, training, and school supplies via NGOs." },
+      { icon: "🛍️", title: "Owned the full lifecycle", description: "Generated $12K across 10 drops at 20% growth; used Excel and Google Analytics to track SKU-level engagement and optimize assortment each drop." },
       { icon: "💰", title: "Generated real growth", description: "Drove a 10% higher conversion rate and 5.8K+ average views per post by analyzing SKU-level performance and refining GTM sequencing each drop." },
       { icon: "📣", title: "Turned customers into ambassadors", description: "Designed a zero-budget sticker campaign that turned customers into brand ambassadors, compounding word-of-mouth growth without paid ads." }
     ],
     bullets: [
-      "Founded Sthirta, a non-profit thrift store on Instagram and Shopify donating 100% of profits to rotating NGO causes — hot meals for daily wage workers, vocational training for women, and school supplies for children.",
-      "Generated $12K in revenue across 10 drops at 20% growth; used Shopify, Excel, and Google Analytics to track SKU-level engagement, forecast demand, and optimize assortment decisions drop-over-drop.",
+      "Founded Sthirta, a non-profit thrift store on Instagram donating 100% of profits to rotating NGO causes — hot meals for daily wage workers, vocational training for women, and school supplies for children.",
+      "Generated $12K in revenue across 10 drops at 20% growth; used Excel and Google Analytics to track SKU-level engagement, forecast demand, and optimize assortment decisions drop-over-drop.",
       "Drove 10% higher conversion rate and 5.8K+ average views per post by analyzing SKU-level performance and refining GTM sequencing each drop.",
       "Designed a zero-budget sticker campaign that turned customers into organic brand ambassadors, compounding word-of-mouth growth without paid ads."
     ],
