@@ -107,7 +107,7 @@ window.EXPERIENCE_DATA = [
     org: "Louisa AI",
     location: "New York, NY",
     dates: "Aug 2025 – Dec 2025",
-    tags: ["Monday.com", "CapCut", "Google AI Studio"],
+    tags: ["Monday.com", "Google AI Studio", "CapCut"],
     stats: [
       { value: "18%", label: "Lift in feature engagement" },
       { value: "~20%", label: "Uptime improvement" },
