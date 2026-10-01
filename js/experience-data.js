@@ -27,10 +27,10 @@ window.EXPERIENCE_DATA = [
     ],
     highlights: [
       { icon: "🏥", title: "Embedded on-site", description: "Scoped and built Clintelligence, a product to cut clinical trial data processing time across the raw-to-gold pipeline at a leading oncology biotech." },
-      { icon: "🧪", title: "Prototyped the core feature", description: "Built ClinOps Study Build on Replit and Kiro for Clintelligence, automating EDC-ready study models, CRF forms, edit checks, and UAT plans directly from protocol text." },
+      { icon: "🧪", title: "Prototyped the core feature", description: "Built ClinOps Study Build on Replit and Kiro, automating EDC-ready study models, CRF forms, edit checks, and UAT plans from protocol text." },
       { icon: "🔧", title: "Fixed the onboarding bottleneck", description: "Traced an OCR ingestion failure to watermarked pages and shipped a pre-chunking fix with Claude — cutting study onboarding from months to 20 minutes." },
       { icon: "🛡️", title: "Wrote the guardrails", description: "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty." },
-      { icon: "🏆", title: "Helped win the business", description: "Applied RICE prioritization across 5 AI features to define build order; Clintelligence beat 10 pitches to become 1 of 4 finalists, then was selected by Exelixis, a leading oncology biotech." },
+      { icon: "🏆", title: "Helped win the business", description: "Applied RICE prioritization across 5 AI features; Clintelligence beat 10 pitches to become 1 of 4 finalists, then won selection by Exelixis." },
       { icon: "🔁", title: "Ran the process", description: "Owned Jira stories, documented backend architecture in Confluence, and recapped progress in daily standups." }
     ],
     bullets: [
@@ -88,8 +88,8 @@ window.EXPERIENCE_DATA = [
     ],
     highlights: [
       { icon: "🎤", title: "Led as the point of contact", description: "Head Intern for the 8th edition of the Cancer Crusaders Golf Championship, India's largest charity golf championship." },
-      { icon: "📣", title: "Ran the press moment", description: "Anchored the official press meet and tournament inauguration in front of 20+ press and news outlets, alongside chief guests Jagapati Babu and Chaitanya Menon." },
-      { icon: "🗂️", title: "Built the tracking systems", description: "Created 4 workflows from scratch for donor/sponsor data, registrations, and logistics via Excel, Tableau, and Power BI — adopted as the standard for future events." },
+      { icon: "📣", title: "Ran the press moment", description: "Anchored the official press meet and inauguration for 20+ press outlets, alongside chief guests Jagapati Babu and Chaitanya Menon." },
+      { icon: "🗂️", title: "Built the tracking systems", description: "Created 4 workflows for donor/sponsor data, registrations, and logistics via Excel, Tableau, and Power BI — adopted as the event standard." },
       { icon: "🎯", title: "Ran the event floor", description: "Managed on-site operations for 2,500+ attendees and 50 golf players, restructuring workflows in real time to maintain execution quality." }
     ],
     bullets: [
@@ -118,7 +118,7 @@ window.EXPERIENCE_DATA = [
       { icon: "🤝", title: "Helped close an enterprise client", description: "Co-pitched Louisa's collective intelligence platform to Apollo Global Management on day 3 of the internship; Apollo converted to a paying client." },
       { icon: "📈", title: "Grew engagement", description: "Drove an 18% lift in feature engagement for the AI-curated News feature by tracking MAUs and surfacing insights." },
       { icon: "🛠️", title: "Fixed what was breaking demos", description: "Partnered with engineering to resolve critical link redirect failures, improving platform uptime ~20% before demos at RBC and McKinsey." },
-      { icon: "🎬", title: "Standardized onboarding", description: "Designed onboarding flows for 4 enterprise deployments using CapCut, cutting customer support tickets 60% — adopted as the company standard post-internship." },
+      { icon: "🎬", title: "Standardized onboarding", description: "Designed onboarding flows for 4 enterprise deployments in CapCut, cutting support tickets 60% — adopted as the company standard." },
       { icon: "🔍", title: "Scoped the competition", description: "Conducted competitive analysis across 7 AI platforms to identify positioning gaps and inform the product roadmap." }
     ],
     bullets: [
@@ -197,9 +197,9 @@ window.EXPERIENCE_DATA = [
       { value: "3 months", label: "Gap identification → deployment" }
     ],
     highlights: [
-      { icon: "🐍", title: "Built the platform", description: "Independently scoped, built, tested, and deployed a Python job-matching platform connecting skilled workers across 8 rural Indian communities with local employers." },
+      { icon: "🐍", title: "Built the platform", description: "Independently scoped, built, tested, and deployed a Python platform matching skilled workers across 8 rural Indian communities to local employers." },
       { icon: "🤝", title: "Shaped it with the NGO", description: "Built a ranking algorithm sorting matches by occupation, rating, and availability; debugged edge cases across inconsistent rural employer data." },
-      { icon: "📈", title: "Proved it worked", description: "A/B tested the review format after low adoption; simplified to a numeric rating, driving a 20% lift in job placements in 3 months via NGO-tracked surveys." }
+      { icon: "📈", title: "Proved it worked", description: "A/B tested the review format after low adoption; a numeric rating drove a 20% lift in job placements in 3 months, per NGO-tracked surveys." }
     ],
     bullets: [
       "Independently scoped, built, tested, and deployed a Python job-matching platform connecting workers across 8 rural Indian communities with local employers.",
@@ -223,8 +223,8 @@ window.EXPERIENCE_DATA = [
       { value: "20%", label: "Growth rate" }
     ],
     highlights: [
-      { icon: "🚀", title: "Started from zero", description: "Founded Sthirta, a non-profit thrift store on Instagram and Shopify, at 16 — zero budget, zero team, zero playbook — donating 100% of profits to rotating NGO causes." },
-      { icon: "🛍️", title: "Owned the full lifecycle", description: "Generated $12K in revenue across 10 drops at 20% growth; used Shopify, Excel, and Google Analytics to track SKU-level engagement, forecast demand, and optimize assortment drop-over-drop." },
+      { icon: "🚀", title: "Started from zero", description: "Founded Sthirta, a non-profit thrift store on Instagram and Shopify at 16 — zero budget, zero team — donating 100% of profits to NGO causes." },
+      { icon: "🛍️", title: "Owned the full lifecycle", description: "Generated $12K across 10 drops at 20% growth; used Shopify, Excel, and Google Analytics to track engagement and optimize assortment drop-over-drop." },
       { icon: "💰", title: "Generated real growth", description: "Drove a 10% higher conversion rate and 5.8K+ average views per post by analyzing SKU-level performance and refining GTM sequencing each drop." },
       { icon: "📣", title: "Turned customers into ambassadors", description: "Designed a zero-budget sticker campaign that turned customers into organic brand ambassadors, compounding word-of-mouth growth without paid ads." }
     ],
@@ -252,7 +252,7 @@ window.EXPERIENCE_DATA = [
     ],
     highlights: [
       { icon: "🎥", title: "Produced creator content", description: "Produced short-form videos, creator content, and influencer campaigns for 6 Fordham University influencers across TikTok and Instagram." },
-      { icon: "📊", title: "Let the data steer the strategy", description: "Analyzed audience behavior and campaign metrics in Amplitude, iterating on creative strategy, messaging, and formats for a 30% lift in content performance." },
+      { icon: "📊", title: "Let the data steer the strategy", description: "Analyzed audience behavior and campaign metrics in Amplitude, iterating on strategy and formats for a 30% lift in content performance." },
       { icon: "🤝", title: "Built the partnerships", description: "Built and managed creator partnerships, coordinating content production and optimizing campaign execution based on engagement insights." }
     ],
     bullets: [
@@ -276,7 +276,7 @@ window.EXPERIENCE_DATA = [
       { value: "8", label: "Senior leadership presented to" }
     ],
     highlights: [
-      { icon: "🎨", title: "Designed the UX", description: "Conducted 20+ user interviews for PixelPal, a photographer networking prototype; synthesized findings into Figma user flows that earned C-suite approval as the product prototype direction." },
+      { icon: "🎨", title: "Designed the UX", description: "Conducted 20+ user interviews for PixelPal, a photographer networking prototype; Figma flows from the findings earned C-suite approval." },
       { icon: "📊", title: "Built the dashboards", description: "Applied SQL and Tableau to transform raw data into dynamic dashboards supporting data-driven product decisions." },
       { icon: "🎤", title: "Pitched leadership", description: "Presented the pitch deck to senior leadership, iteratively refining product direction based on executive feedback." }
     ],
