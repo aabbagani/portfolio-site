@@ -78,8 +78,8 @@ window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
     "name": "Beli’s Decision Gap",
-    "headline": "Turning fragmented restaurant discovery into confident, in-app decisions",
-    "description": "Beli helps people discover restaurants, but not decide. Users still bounce between Instagram, Yelp, and Maps to choose. This redesign brings that decision into one place.",
+    "headline": "Turning fragmented restaurant discovery into confident decisions",
+    "description": "Beli helps people discover restaurants, but not decide. Users bounce between Instagram, Yelp, and Maps. This redesign brings decisions into one place.",
     "tags": [
       "Google AI Studio",
       "Figma",
