@@ -4,7 +4,7 @@ window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
     "name": "CliniCalm",
-    "headline": "A quality gate for clinical trial data",
+    "headline": "A second check on AI-structured oncology data",
     "description": "Flatiron Health uses AI to structure oncology data, but trust can break down without real-time validation. CliniCalm flags risky records before they reach analytics.",
     "tags": [
       "Claude",
@@ -31,7 +31,7 @@ window.PROJECTS_DATA = [
   {
     "category": "AI Product (0→1)",
     "name": "Elastic: Habit Tracking",
-    "headline": "A habit system built for real life",
+    "headline": "Progress that survives a bad week",
     "description": "Most habit trackers assume constant motivation. Elastic adapts when life gets messy, replacing broken streaks with flexible goals, recovery, and momentum.",
     "tags": [
       "Google AI Studio",
@@ -78,7 +78,7 @@ window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
     "name": "Beli’s Decision Gap",
-    "headline": "Turning fragmented restaurant discovery into confident decisions",
+    "headline": "No more decision fatigue before dinner",
     "description": "Beli helps people discover restaurants, but not decide. Users bounce between Instagram, Yelp, and Maps. This redesign brings decisions into one place.",
     "tags": [
       "Google AI Studio",
@@ -123,7 +123,7 @@ window.PROJECTS_DATA = [
   {
     "category": "AI Product (0→1)",
     "name": "The Rural Hiring Divide",
-    "headline": "Connecting underserved communities to local work",
+    "headline": "Turning informal trust into verified matches",
     "description": "In rural India, hiring runs on informal trust. Workers struggle to find nearby jobs while employers struggle to find reliable talent. This platform matches both.",
     "tags": [
       "Python",
@@ -147,7 +147,7 @@ window.PROJECTS_DATA = [
   {
     "category": "AI Product (0→1)",
     "name": "Pure Plate",
-    "headline": "Helping users make safe food decisions",
+    "headline": "Answers before the first bite",
     "description": "People with food allergies need help deciding what's safe to eat right now, not just tracking what they've eaten. Pure Plate gives real-time guidance at the moment of choice.",
     "tags": [
       "Figma",
@@ -170,7 +170,7 @@ window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
     "name": "Goodreads: Niche Discovery",
-    "headline": "Fixing popularity bias in Goodreads",
+    "headline": "Surfacing books that actually fit your taste",
     "description": "Goodreads recommendations favor popular books, so lesser-known titles that match a reader's taste rarely surface. This redesign counters the bias toward mainstream picks.",
     "tags": [
       "Python",
@@ -203,7 +203,7 @@ window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
     "name": "LinkedIn: Application Tracking",
-    "headline": "Fixing the black hole after applications",
+    "headline": "Turning application silence into real status",
     "description": "After applying on LinkedIn, users get little visibility into what happens next; the process goes quiet. This adds structured tracking and feedback after submission.",
     "tags": [
       "Figma",
