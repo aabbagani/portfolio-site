@@ -1218,9 +1218,9 @@ body[data-page="home"] .site-footer {
   width: 320px;
   right: -70px;
 }
-.scrap-photo:nth-child(1) { transform: translateY(-78%); }
-.scrap-photo:nth-child(2) { transform: translateY(-20%); }
-.scrap-photo:nth-child(3) { transform: translateY(24%); }
+.scrap-photo:nth-child(1) { transform: translateY(-82%); }
+.scrap-photo:nth-child(2) { transform: translateY(-26%); }
+.scrap-photo:nth-child(3) { transform: translateY(8%); }
 .scrap-photo:hover {
   transform: translateY(-50%) scale(1.06) !important;
   z-index: 6;
@@ -1232,9 +1232,9 @@ body:not(.admin-mode) .exp-card:hover .scrap-photo {
   opacity: 0;
   pointer-events: none;
 }
-body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(1) { transform: translateY(-78%) translateX(70px); }
-body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(2) { transform: translateY(-20%) translateX(-70px); }
-body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(3) { transform: translateY(24%) translateX(70px); }
+body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(1) { transform: translateY(-82%) translateX(70px); }
+body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(2) { transform: translateY(-26%) translateX(-70px); }
+body:not(.admin-mode) .exp-card:hover .scrap-photo:nth-child(3) { transform: translateY(8%) translateX(70px); }
 body:not(.admin-mode) .exp-card:hover .scrap-photo:first-child:not(:has(~ .scrap-photo)) { transform: translateY(-65%) translateX(110px); }
 .scrap-photo img {
   display: block;
