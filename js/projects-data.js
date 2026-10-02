@@ -23,7 +23,7 @@ window.PROJECTS_DATA = [
       },
       {
         "label": "PRD",
-        "url": "assets/projects/clinicalm-prd.pdf"
+        "url": "assets/projects/clinicalm-prd-v2.pdf"
       }
     ],
     "id": "clinicalm"
