@@ -22,7 +22,7 @@ window.EXPERIENCE_DATA = [
     stats: [
       { value: "20 min", label: "Onboarding time, down from months" },
       { value: "5", label: "AI features RICE-prioritized" },
-      { value: "1 of 4", label: "Finalists — won by Exelixis" },
+      { value: "1 of 4", label: "Finalists — won the client" },
       { value: "10", label: "Competing pitches beaten" }
     ],
     highlights: [
@@ -31,7 +31,7 @@ window.EXPERIENCE_DATA = [
       { icon: "🧪", title: "Prototyped the core feature", description: "Built ClinOps Study Build on Replit and Kiro, automating EDC-ready study models, CRF forms, edit checks, and UAT plans from protocol text." },
       { icon: "🔧", title: "Fixed the onboarding bottleneck", description: "Traced an OCR ingestion failure to watermarked pages and shipped a pre-chunking fix with Claude." },
       { icon: "🛡️", title: "Wrote the guardrails", description: "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty." },
-      { icon: "🏆", title: "Helped win the business", description: "Applied RICE prioritization across 5 AI features; Clintelligence beat 10 pitches to become 1 of 4 finalists, then won selection by Exelixis." },
+      { icon: "🏆", title: "Helped win the business", description: "Applied RICE prioritization across 5 AI features; Clintelligence beat 10 pitches to reach 1 of 4 finalists, then won the oncology biotech client." },
       { icon: "🔁", title: "Ran the process", description: "Owned Jira stories, documented backend architecture in Confluence, and recapped progress in daily standups." }
     ],
     bullets: [
