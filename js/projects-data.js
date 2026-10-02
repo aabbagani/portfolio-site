@@ -50,7 +50,7 @@ window.PROJECTS_DATA = [
       },
       {
         "label": "PRD",
-        "url": "https://hjxunlccgefcasxqamtj.supabase.co/storage/v1/object/public/portfolio-uploads/1781199932961-78369745.pdf"
+        "url": "assets/projects/elastic-prd.pdf"
       }
     ],
     "id": "elastic"
@@ -70,7 +70,7 @@ window.PROJECTS_DATA = [
     "links": [
       {
         "label": "PRD",
-        "url": "https://hjxunlccgefcasxqamtj.supabase.co/storage/v1/object/public/portfolio-uploads/1785180305659-623043615.pdf"
+        "url": "assets/projects/myp-vault-prd.pdf"
       }
     ],
     "id": "myp-vault"
@@ -97,7 +97,7 @@ window.PROJECTS_DATA = [
       },
       {
         "label": "PRD",
-        "url": "https://hjxunlccgefcasxqamtj.supabase.co/storage/v1/object/public/portfolio-uploads/1783551152284-280924403.pdf"
+        "url": "assets/projects/beli-prd.pdf"
       }
     ],
     "id": "beli"
@@ -115,7 +115,7 @@ window.PROJECTS_DATA = [
     "links": [
       {
         "label": "PRD",
-        "url": "https://hjxunlccgefcasxqamtj.supabase.co/storage/v1/object/public/portfolio-uploads/1785186898685-324580100.pdf"
+        "url": "assets/projects/duolingo-prd.pdf"
       }
     ],
     "id": "duolingo"
