@@ -16,15 +16,15 @@ window.SKILLS_DATA = [
     tags: [
       "Claude", "AI Prototyping", "RAG Pipelines", "Prompt Engineering", "Python", "SQL",
       "Google AI Studio", "Antigravity", "Replit", "Stitch AI", "Kiro", "Lovable AI",
-      "Cursor", "Rork AI", "UiPath Studio"
+      "Cursor", "Rork AI", "UiPath Studio", "Vercel"
     ]
   },
   {
     id: "ship",
     title: "Ship",
     tags: [
-      "Figma", "Tableau", "Power BI", "Agile SDLC", "JIRA", "Confluence", "Monday.com",
-      "Salesforce Sandbox", "Microsoft Office", "Adobe Creative Cloud",
+      "Figma", "Tableau", "Power BI", "Google Analytics", "Amplitude", "Agile SDLC", "JIRA",
+      "Confluence", "Monday.com", "Salesforce Sandbox", "Microsoft Office", "Adobe Creative Cloud",
       "Organizational Skills", "Multi-Tasking"
     ]
   },
