@@ -170,7 +170,7 @@ window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
     "name": "Goodreads: Niche Discovery",
-    "headline": "Surfacing books that fit your taste",
+    "headline": "Find books that actually fit your taste",
     "description": "Goodreads recommendations favor popular books, so lesser-known titles that match a reader's taste rarely surface. This redesign counters the bias toward mainstream picks.",
     "tags": [
       "Python",
