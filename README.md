@@ -2,7 +2,7 @@
 
 Static site, no build step. Two pages:
 
-- `home.html` — Home: hero → Projects → Skills → Education → Certifications, single continuous scroll with a sticky nav + scrollspy quick-jump.
+- `index.html` — Home: hero → Projects → Skills → Education → Certifications, single continuous scroll with a sticky nav + scrollspy quick-jump.
 - `experience.html` — Experience, its own page.
 
 ## Before this goes live, fill in:
@@ -13,7 +13,7 @@ Static site, no build step. Two pages:
 
 ## Editing Projects (Admin Mode)
 
-The Projects grid on `home.html` is data-driven from `js/projects-data.js` and rendered by `js/projects-render.js`. You can hand-edit that data file directly, or use the built-in Admin Mode:
+The Projects grid on `index.html` is data-driven from `js/projects-data.js` and rendered by `js/projects-render.js`. You can hand-edit that data file directly, or use the built-in Admin Mode:
 
 1. Open the site and click **Admin Mode** (floating button, bottom-right of Home).
 2. Each project card gets a pencil button — click it to edit name, category (dropdown, or "Other…" for a custom one), headline, description, tags, cover photo, and links (add/remove rows freely, leave a URL blank to show it as "link TBD").

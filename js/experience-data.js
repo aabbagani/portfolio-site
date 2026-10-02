@@ -207,7 +207,7 @@ window.EXPERIENCE_DATA = [
       "Built a ranking algorithm sorting matches by occupation, rating, and availability; debugged edge cases across inconsistent rural employer data.",
       "A/B tested review format after low adoption; simplified to numeric rating, driving 20% lift in job placements in 3 months via NGO-tracked surveys."
     ],
-    links: [{ label: "View code in Projects section", url: "home.html#projects" }]
+    links: [{ label: "View code in Projects section", url: "./#projects" }]
   },
   {
     id: "sthirta",
