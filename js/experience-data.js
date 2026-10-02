@@ -51,7 +51,7 @@ window.EXPERIENCE_DATA = [
     org: "LightsKiddo — an AI-powered OS for film production",
     location: "Remote / New York, NY",
     dates: "June 2026 – Present",
-    tags: ["Clerk", "Fly.io", "Vercel"],
+    tags: ["Vercel", "Clerk", "Fly.io"],
     stats: [
       { value: "80+", label: "Bugs found" },
       { value: "30", label: "Production companies researched" },
