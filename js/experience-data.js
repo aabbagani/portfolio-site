@@ -240,7 +240,7 @@ window.EXPERIENCE_DATA = [
   {
     id: "digital-delane",
     logo: "assets/experience/digital-delane-logo.png",
-    role: "Social Media Manager",
+    role: "Social Media Manager Apprenticeship",
     org: "Digital Delane",
     location: "Los Angeles, CA — Remote",
     dates: "Feb 2023 – Oct 2023",
@@ -266,7 +266,7 @@ window.EXPERIENCE_DATA = [
   {
     id: "blumetra-ba",
     logo: "assets/experience/blumetra-logo.png",
-    role: "Business Analyst",
+    role: "Business Analyst Intern",
     org: "Blumetra Solutions",
     location: "Pleasanton, CA",
     dates: "May 2023 – Aug 2023",
