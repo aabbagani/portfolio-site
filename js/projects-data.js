@@ -4,8 +4,8 @@ window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
     "name": "TickTock: Home Delivery Alerts",
-    "headline": "The clinic hears first, not the pet owner",
-    "description": "When a vet-approved prescription stalls in home delivery, the pet owner finds out first. TickTock alerts the clinic first, starting with the pets that run out soonest.",
+    "headline": "Catch stuck orders before the owner calls",
+    "description": "When a vet-approved prescription stalls in home delivery, the pet owner usually spots it before the clinic does. TickTock flags it to the clinic, starting with the pets that run out soonest.",
     "tags": [
       "Claude",
       "GitHub",
