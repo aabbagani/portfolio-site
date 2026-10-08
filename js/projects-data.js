@@ -3,6 +3,33 @@
 window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
+    "name": "TickTock: Home Delivery Alerts",
+    "headline": "The clinic hears first, not the pet owner",
+    "description": "When a vet-approved prescription stalls in home delivery, the pet owner finds out first. TickTock alerts the clinic first, starting with the pets that run out soonest.",
+    "tags": [
+      "Claude",
+      "GitHub",
+      "HTML/CSS"
+    ],
+    "cover": "assets/projects/ticktock-cover.png",
+    "links": [
+      {
+        "label": "Prototype",
+        "url": "https://ticktock.abbagani.com"
+      },
+      {
+        "label": "GitHub Repo",
+        "url": "https://github.com/aabbagani/ticktock"
+      },
+      {
+        "label": "PRD",
+        "url": "assets/projects/ticktock-prd.pdf"
+      }
+    ],
+    "id": "ticktock"
+  },
+  {
+    "category": "Product Improvement",
     "name": "CliniCalm",
     "headline": "A second check on AI-structured oncology data",
     "description": "Flatiron Health uses AI to structure oncology data, but trust can break down without real-time validation. CliniCalm flags risky records before they reach analytics.",
