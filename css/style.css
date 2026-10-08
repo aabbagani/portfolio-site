@@ -1287,7 +1287,7 @@ body:not(.admin-mode) .exp-card:hover .scrap-photo:first-child:not(:has(~ .scrap
 }
 
 @media (max-width: 560px) {
-  .nav-row { height: auto; padding: 12px 0; flex-wrap: wrap; }
+  .site-nav .nav-row { height: auto; padding: 12px 0; flex-wrap: wrap; row-gap: 8px; }
   .site-nav { position: sticky; }
   .primary-links a { padding: 7px 12px; font-size: 0.86rem; }
   .hero-actions { flex-direction: column; align-items: stretch; }
