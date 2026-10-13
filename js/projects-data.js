@@ -159,7 +159,7 @@ window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
     "name": "1,200 Days of Streaks Isn’t Fluency",
-    "headline": "The Fluency Gap, a case study on Duolingo",
+    "headline": "Retention vs. production, a case study on Duolingo",
     "description": "Duolingo rewards recognizing the right answer, not producing language independently. Users can feel fluent in the app, then freeze in a real conversation.",
     "tags": [
       "Figma",
