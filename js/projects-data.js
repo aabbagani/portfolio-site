@@ -3,6 +3,33 @@
 window.PROJECTS_DATA = [
   {
     "category": "Product Improvement",
+    "name": "The Answer After the Answer",
+    "headline": "Proactive Chats for Granicus",
+    "description": "Granicus's AI agent answers the question a resident asks. Proactive Chats shows the next steps they didn't know to ask about, and reminds them only if they opt in.",
+    "tags": [
+      "Claude",
+      "GitHub",
+      "HTML/CSS"
+    ],
+    "cover": "assets/projects/proactive-chats-cover.png",
+    "links": [
+      {
+        "label": "Prototype",
+        "url": "https://proactive.abbagani.com"
+      },
+      {
+        "label": "GitHub Repo",
+        "url": "https://github.com/aabbagani/proactive-chats"
+      },
+      {
+        "label": "PRD",
+        "url": "assets/projects/proactive-chats-prd.pdf"
+      }
+    ],
+    "id": "proactive-chats"
+  },
+  {
+    "category": "Product Improvement",
     "name": "TickTock: Home Delivery Alerts",
     "headline": "Catch stuck orders before the owner calls",
     "description": "When a vet-approved prescription stalls in home delivery, the pet owner usually spots it before the clinic does. TickTock flags it to the clinic, starting with the pets that run out soonest.",
