@@ -111,8 +111,8 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "AI Product (0→1)",
-    "name": "Know Why You Lost the Mark",
-    "headline": "MYP Vault, an AI study assistant for IB students",
+    "name": "MYP Vault: Exam Feedback",
+    "headline": "A RAG system built to ace IB",
     "description": "MYP students can understand the material yet lose marks because mark schemes are hard to interpret. MYP Vault connects answers to marks, showing students exactly why.",
     "tags": [
       "Claude",
