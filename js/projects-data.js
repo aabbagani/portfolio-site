@@ -30,9 +30,9 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "Product Improvement",
-    "name": "Hear It Before the Client Does",
+    "name": "Fix It Before They Notice",
     "headline": "TickTock for Vetcove Home Delivery",
-    "description": "When a vet-approved prescription stalls in home delivery, the pet owner usually spots it before the clinic does. TickTock flags it to the clinic, starting with the pets that run out soonest.",
+    "description": "When a vet-approved prescription stalls in home delivery, the pet owner usually notices first. TickTock alerts the clinic and suggests the fastest fix, starting with the pets that run out soonest.",
     "tags": [
       "Claude",
       "GitHub",
@@ -84,7 +84,7 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "AI Product (0→1)",
-    "name": "Progress That Survives a Bad Week",
+    "name": "Progress on Bad Weeks Too",
     "headline": "Elastic, an adaptive habit tracker",
     "description": "Most habit trackers assume constant motivation. Elastic adapts when life gets messy, replacing broken streaks with flexible goals, recovery, and momentum.",
     "tags": [
@@ -131,8 +131,8 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "Product Improvement",
-    "name": "No More Decision Fatigue Before Meals",
-    "headline": "Decision-ready restaurant pages for Beli",
+    "name": "No More Meal Indecision",
+    "headline": "Decision-ready pages for Beli",
     "description": "Beli helps people discover restaurants, but not decide. Users bounce between Instagram, Yelp, and Maps. This redesign brings decisions into one place.",
     "tags": [
       "Google AI Studio",
@@ -158,8 +158,8 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "Product Improvement",
-    "name": "1,200 Days of Streaks Isn’t Fluency",
-    "headline": "Retention vs. production, a case study on Duolingo",
+    "name": "Streaks Aren’t Fluency",
+    "headline": "Speaking practice for Duolingo",
     "description": "Duolingo rewards recognizing the right answer, not producing language independently. Users can feel fluent in the app, then freeze in a real conversation.",
     "tags": [
       "Figma",
@@ -176,8 +176,8 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "AI Product (0→1)",
-    "name": "Turning Informal Trust into Verified Matches",
-    "headline": "A job-matching platform for rural India",
+    "name": "Trust You Can Hire On",
+    "headline": "Job matching for rural India",
     "description": "In rural India, hiring runs on informal trust. Workers struggle to find nearby jobs while employers struggle to find reliable talent. This platform matches both.",
     "tags": [
       "Python",
