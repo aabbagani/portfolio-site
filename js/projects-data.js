@@ -84,7 +84,7 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "AI Product (0→1)",
-    "name": "Progress on Bad Weeks Too",
+    "name": "Progress on Rest Days Too",
     "headline": "Elastic, an adaptive habit tracker",
     "description": "Most habit trackers assume constant motivation. Elastic adapts when life gets messy, replacing broken streaks with flexible goals, recovery, and momentum.",
     "tags": [
