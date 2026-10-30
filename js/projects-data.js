@@ -96,7 +96,7 @@ window.PROJECTS_DATA = [
     "links": [
       {
         "label": "Prototype",
-        "url": "https://aistudio.google.com/apps/5c8db466-2e66-4b66-b290-d4c17ab80ef5?showPreview=true&showAssistant=true&fullscreenApplet=true"
+        "url": "https://elastic.abbagani.com"
       },
       {
         "label": "PRD",
