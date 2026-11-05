@@ -131,10 +131,13 @@ window.PROJECTS_DATA = [
   },
   {
     "category": "Product Improvement",
-    "name": "No More Meal Indecision",
-    "headline": "Decision-ready pages for Beli",
-    "description": "Beli helps people discover restaurants, but not decide. Users bounce between Instagram, Yelp, and Maps. This redesign brings decisions into one place.",
+    "name": "Proof You Ate There",
+    "headline": "Verified Visit Reviews for Beli",
+    "description": "Every diner I interviewed trusted reviews on other apps more than Beli's. Verified Visit Reviews lets people prove a real visit with a calendar match or a receipt, so readers know which reviews to trust.",
     "tags": [
+      "Claude",
+      "GitHub",
+      "HTML/CSS",
       "Google AI Studio",
       "Figma",
       "Canva"
@@ -143,7 +146,7 @@ window.PROJECTS_DATA = [
     "links": [
       {
         "label": "Prototype",
-        "url": "https://ai.studio/apps/8a146c78-c034-4eda-810b-9af6ede33f84"
+        "url": "https://beli.abbagani.com"
       },
       {
         "label": "PRD",
