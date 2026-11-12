@@ -21,7 +21,7 @@ window.EXPERIENCE_DATA = [
     tags: ["Replit", "Google AI Studio", "Kiro", "Claude", "Databricks", "JIRA", "Confluence"],
     stats: [
       { value: "20 min", label: "Onboarding time, down from months" },
-      { value: "5", label: "AI features RICE-prioritized" },
+      { value: "40+ → 6", label: "New-hire questions, after my onboarding guide" },
       { value: "1 of 4", label: "Finalists — won a top oncology biotech" },
       { value: "10", label: "Competing pitches beaten" }
     ],
@@ -33,7 +33,7 @@ window.EXPERIENCE_DATA = [
       { icon: "🛡️", title: "Wrote the guardrails", description: "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty." },
       { icon: "🏆", title: "Helped win the business", description: "Applied RICE prioritization across 5 AI features; Clintelligence beat 10 pitches to reach 1 of 4 finalists, then won over a top oncology biotech." },
       { icon: "🗺️", title: "Specced FloGentic", description: "Defined specs for FloGentic, an AI clinical-trial data mapping tool, cutting SDTM mapping from days to 20 minutes." },
-      { icon: "📋", title: "Fixed our own onboarding", description: "Gathered requirements from leadership and built onboarding and submission templates in Jira/Confluence, plus a Databricks checklist." },
+      { icon: "📋", title: "Fixed our own onboarding", description: "Our team needed 3 weeks of client walkthroughs and still logged 40+ open questions. I gathered requirements from leadership and built one onboarding guide in Jira/Confluence, with role-based access and a Databricks checklist. The next new hire asked 6." },
       { icon: "📊", title: "Building a data-quality dashboard", description: "Tested studies in Databricks prod and dev to observe the target metrics; now gathering and prioritizing metrics with internal teams and the business." },
       { icon: "🔁", title: "Ran the process", description: "Owned Jira stories, documented backend architecture in Confluence, and recapped progress in daily standups." }
     ],
@@ -44,7 +44,7 @@ window.EXPERIENCE_DATA = [
       "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty.",
       "Applied RICE across 5 AI features to define build order; contributed to Clintelligence beating 10 competing pitches to win a top oncology biotech.",
       "Defined specs for FloGentic, an AI clinical-trial data mapping tool, cutting SDTM mapping from days to 20 minutes.",
-      "Built onboarding and submission templates in Jira/Confluence plus a Databricks checklist from leadership requirements.",
+      "Built a single onboarding guide in Jira/Confluence with a Databricks checklist, cutting new-hire questions from 40+ to 6.",
       "Leading a data-quality dashboard: tested studies in Databricks prod/dev; prioritizing metrics with internal teams and the business.",
       "Owned Jira stories for the platform, collaborated with engineering on backend architecture documentation in Confluence, and recapped progress in daily standups."
     ],
