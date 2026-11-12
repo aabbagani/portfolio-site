@@ -20,14 +20,14 @@ window.EXPERIENCE_DATA = [
     dates: "Dec 2025 – Present",
     tags: ["Replit", "Google AI Studio", "Kiro", "Claude", "Databricks", "JIRA", "Confluence"],
     stats: [
-      { value: "20 min", label: "Onboarding time, down from months" },
+      { value: "40 min", label: "Study onboarding, down from days" },
       { value: "40+ → 6", label: "New-hire questions, after my onboarding guide" },
       { value: "1 of 4", label: "Finalists — won a top oncology biotech" },
       { value: "10", label: "Competing pitches beaten" }
     ],
     highlights: [
       { icon: "🏥", title: "Embedded on-site", description: "Scoped and built Clintelligence, a product to cut clinical trial data processing time across the raw-to-gold pipeline at a leading oncology biotech." },
-      { icon: "⏱️", title: "Cut onboarding time", description: "Clintelligence cut study onboarding from months to 20 minutes." },
+      { icon: "⏱️", title: "Cut onboarding time", description: "A Claude pre-chunking fix for protocol OCR failures cut study onboarding from days to 40 minutes." },
       { icon: "🧪", title: "Prototyped the core feature", description: "Built ClinOps Study Build on Replit and Kiro, automating EDC-ready study models, CRF forms, edit checks, and UAT plans from protocol text." },
       { icon: "🔧", title: "Fixed the onboarding bottleneck", description: "Traced an OCR ingestion failure to watermarked pages and shipped a pre-chunking fix with Claude." },
       { icon: "🛡️", title: "Wrote the guardrails", description: "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty." },
@@ -40,7 +40,7 @@ window.EXPERIENCE_DATA = [
     bullets: [
       "Embedded on-site at a leading oncology biotech; scoping a product to reduce clinical trial data processing time across raw-to-gold pipeline layers.",
       "Prototyped ClinOps Study Build for Clintelligence, an agentic AI clinical trial platform, on Kiro and Replit.",
-      "Built and debugged SDTM metadata logic with Claude; traced an OCR ingestion failure to watermarked pages, implemented a pre-chunking fix, cutting onboarding from months to 20 minutes.",
+      "Built and debugged SDTM metadata logic with Claude; traced an OCR ingestion failure to watermarked pages, implemented a pre-chunking fix, cutting study onboarding from days to 40 minutes.",
       "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty.",
       "Applied RICE across 5 AI features to define build order; contributed to Clintelligence beating 10 competing pitches to win a top oncology biotech.",
       "Defined specs for FloGentic, an AI clinical-trial data mapping tool, cutting SDTM mapping from days to 20 minutes.",
