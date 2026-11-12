@@ -16,9 +16,9 @@ window.EXPERIENCE_DATA = [
     logo: "assets/experience/blumetra-logo.png",
     role: "Associate Product Manager",
     org: "Blumetra Solutions",
-    location: "Pleasanton, CA",
+    location: "Bay Area, CA",
     dates: "Dec 2025 – Present",
-    tags: ["Replit", "Google AI Studio", "Kiro", "Claude", "JIRA", "Confluence"],
+    tags: ["Replit", "Google AI Studio", "Kiro", "Claude", "Databricks", "JIRA", "Confluence"],
     stats: [
       { value: "20 min", label: "Onboarding time, down from months" },
       { value: "5", label: "AI features RICE-prioritized" },
@@ -32,6 +32,9 @@ window.EXPERIENCE_DATA = [
       { icon: "🔧", title: "Fixed the onboarding bottleneck", description: "Traced an OCR ingestion failure to watermarked pages and shipped a pre-chunking fix with Claude." },
       { icon: "🛡️", title: "Wrote the guardrails", description: "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty." },
       { icon: "🏆", title: "Helped win the business", description: "Applied RICE prioritization across 5 AI features; Clintelligence beat 10 pitches to reach 1 of 4 finalists, then won over a top oncology biotech." },
+      { icon: "🗺️", title: "Specced FloGentic", description: "Defined specs for FloGentic, an AI clinical-trial data mapping tool, cutting SDTM mapping from days to 20 minutes." },
+      { icon: "📋", title: "Fixed our own onboarding", description: "Gathered requirements from leadership and built onboarding and submission templates in Jira/Confluence, plus a Databricks checklist." },
+      { icon: "📊", title: "Building a data-quality dashboard", description: "Tested studies in Databricks prod and dev to observe the target metrics; now gathering and prioritizing metrics with internal teams and the business." },
       { icon: "🔁", title: "Ran the process", description: "Owned Jira stories, documented backend architecture in Confluence, and recapped progress in daily standups." }
     ],
     bullets: [
@@ -39,7 +42,10 @@ window.EXPERIENCE_DATA = [
       "Prototyped ClinOps Study Build for Clintelligence, an agentic AI clinical trial platform, on Kiro and Replit.",
       "Built and debugged SDTM metadata logic with Claude; traced an OCR ingestion failure to watermarked pages, implemented a pre-chunking fix, cutting onboarding from months to 20 minutes.",
       "Authored technical specs covering EDC routing logic and hallucination guardrails defining AI behavior under uncertainty.",
-      "Applied RICE across 5 AI features to define build order; contributed to Clintelligence's selection over 9 competitors.",
+      "Applied RICE across 5 AI features to define build order; contributed to Clintelligence beating 10 competing pitches to win a top oncology biotech.",
+      "Defined specs for FloGentic, an AI clinical-trial data mapping tool, cutting SDTM mapping from days to 20 minutes.",
+      "Built onboarding and submission templates in Jira/Confluence plus a Databricks checklist from leadership requirements.",
+      "Leading a data-quality dashboard: tested studies in Databricks prod/dev; prioritizing metrics with internal teams and the business.",
       "Owned Jira stories for the platform, collaborated with engineering on backend architecture documentation in Confluence, and recapped progress in daily standups."
     ],
     links: []
@@ -53,20 +59,20 @@ window.EXPERIENCE_DATA = [
     dates: "June 2026 – Present",
     tags: ["Vercel", "Clerk", "Fly.io"],
     stats: [
-      { value: "80+", label: "Bugs found" },
+      { value: "120+", label: "Bugs found" },
       { value: "30", label: "Production companies researched" },
       { value: "6", label: "Miramax stakeholders interviewed" },
       { value: "40%", label: "Est. reduction in manual search time" }
     ],
     highlights: [
-      { icon: "🐛", title: "Tested the product", description: "Found 80+ bugs across front- and back-end releases and worked directly with the CTO to prioritize fixes." },
+      { icon: "🐛", title: "Tested the product", description: "Found 120+ bugs across front- and back-end releases and worked directly with the CTO to prioritize fixes." },
       { icon: "🤖", title: "Found an AI opportunity", description: "Specced recast matching logic using IMDb data across budget, availability, and fit." },
       { icon: "🔎", title: "Talked to real users", description: "Interviewed production teams to understand their workflows and identify gaps worth solving." },
       { icon: "⚙️", title: "Built the system behind the testing", description: "Created a repeatable bug-tracking and QA framework instead of handling testing ad hoc." }
     ],
     bullets: [
       "Led product testing across front- and back-end for the platform's beta website.",
-      "Identified 80+ bugs across releases, collaborating directly with the CTO on fixes.",
+      "Identified 120+ bugs across releases, collaborating directly with the CTO on fixes.",
       "Specced AI-powered recast matching logic that links IMDb profile data (budget, availability, fit) to cut manual search time by 40%.",
       "Built an internal bug-tracking process and testing framework to standardize QA documentation across releases.",
       "Conducted user research across 30 production companies, including interviewing 6 Miramax stakeholders directly, to surface behavioral patterns and feature gaps."
@@ -162,7 +168,7 @@ window.EXPERIENCE_DATA = [
     logo: "assets/experience/blumetra-logo.png",
     role: "Associate Product Manager Intern",
     org: "Blumetra Solutions",
-    location: "Pleasanton, California",
+    location: "Bay Area, CA",
     dates: "May 2024 – Aug 2024",
     tags: ["SQL", "Tableau", "Figma", "JIRA"],
     stats: [
@@ -190,7 +196,7 @@ window.EXPERIENCE_DATA = [
     role: "Python Developer",
     org: "Rose Trust NGO",
     location: "Remote – Hyderabad, India",
-    dates: "May 2024 – Aug 2024",
+    dates: "Feb 2024 – Aug 2024",
     tags: ["Python", "Excel"],
     stats: [
       { value: "8", label: "Rural communities connected" },
@@ -268,7 +274,7 @@ window.EXPERIENCE_DATA = [
     logo: "assets/experience/blumetra-logo.png",
     role: "Business Analyst Intern",
     org: "Blumetra Solutions",
-    location: "Pleasanton, CA",
+    location: "Bay Area, CA",
     dates: "May 2023 – Aug 2023",
     tags: ["SQL", "Tableau", "Figma"],
     stats: [

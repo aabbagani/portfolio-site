@@ -14,7 +14,7 @@ window.SKILLS_DATA = [
     id: "build",
     title: "Build",
     tags: [
-      "Claude", "AI Prototyping", "RAG Pipelines", "Prompt Engineering", "Python", "SQL",
+      "Claude", "AI Prototyping", "RAG Pipelines", "Prompt Engineering", "Python", "SQL", "Databricks",
       "Google AI Studio", "Antigravity", "Replit", "Stitch AI", "Kiro", "Lovable AI",
       "Cursor", "Rork AI", "UiPath Studio", "Vercel"
     ]
